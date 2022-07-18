@@ -9,7 +9,9 @@ export class HomeComponent implements OnInit {
 
   constructor() { }
 
+  name!: string;
   ngOnInit(): void {
+    this.name = "Nicholas Ellison";
   }
 
 }
