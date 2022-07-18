@@ -7,7 +7,7 @@ import { HomeComponent } from './modules/home/home.component';
 import { CreateProjectNameComponent } from './modules/create-project-name/create-project-name.component';
 import { KpiComponent } from './modules/kpi/kpi.component';
 import { StepperComponent } from './step-process/stepper/stepper.component';
-
+import { FlexLayoutModule } from '@angular/flex-layout';
 
 @NgModule({
   declarations: [
@@ -15,13 +15,10 @@ import { StepperComponent } from './step-process/stepper/stepper.component';
     HomeComponent,
     CreateProjectNameComponent,
     KpiComponent,
-    StepperComponent
+    StepperComponent,
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule
-  ],
+  imports: [BrowserModule, AppRoutingModule, FlexLayoutModule],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
