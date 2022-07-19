@@ -8,42 +8,13 @@
 
 .grid-card {
   border: 1px solid #e9ecef;
-  border-left-width: 10px;
+  //   border-left-width: 10px;
   background: #ffffff;
   box-shadow: 0px 4px 6px rgba(2, 2, 2, 0.25);
   border-radius: 10px;
   padding: 5px 15px;
 }
 
-.item {
-  .btn:disabled {
-    opacity: 1;
-  }
-  .info {
-    border-left-color: #d2f4f2;
-    .btn {
-      background-color: #d2f4f2;
-      color: #000000;
-      border: 0;
-    }
-  }
-  .warning {
-    border-left-color: #ff7b31;
-    .btn {
-      background-color: #ff7b31;
-      color: #000000;
-      border: 0;
-    }
-  }
-  .secondary {
-    border-left-color: #b3d235;
-    .btn {
-      background-color: #b3d235;
-      color: #000000;
-      border: 0;
-    }
-  }
-}
 .btn {
   -webkit-transition: 0.2s all;
   border-radius: 10px;
@@ -84,20 +55,20 @@
   color: #020202;
 }
 
-.text-status {
-  font-style: normal;
-  font-weight: 500;
-  font-size: 12px;
-  line-height: 26px;
-  color: #000000;
-}
-
 .text-description {
   font-style: normal;
   font-weight: 400;
   font-size: 12px;
   line-height: 16px;
   color: #4e4e4e;
+}
+
+.sub-text {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 24px;
+  color: #1b1b1b;
 }
 
 .input-search {
@@ -137,4 +108,34 @@
 }
 ::-webkit-scrollbar-thumb:hover {
   background: #e5e5e5;
+}
+
+.icon-check {
+  margin-top: -1.2rem;
+  margin-right: -1.8rem;
+  margin-bottom: -1.5rem;
+}
+
+:host ::ng-deep.mat-checkbox-frame {
+  border-radius: 50%;
+  background-color: #d9d9d9;
+  border: 0;
+}
+:host ::ng-deep.mat-checkbox-checked.mat-accent .mat-checkbox-background {
+  background-color: #676767;
+  border-radius: 50%;
+  border: 0;
+}
+:host
+  ::ng-deep.mat-checkbox-checked:not(.mat-checkbox-disabled).mat-accent
+  .mat-ripple-element {
+  background: transparent;
+}
+:host
+  ::ng-deep.mat-checkbox:active:not(.mat-checkbox-disabled).mat-accent
+  .mat-ripple-element {
+  background: transparent;
+}
+:host ::ng-deep.mat-checkbox-layout {
+  white-space: break-spaces;
 }

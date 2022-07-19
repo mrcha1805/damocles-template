@@ -1,1 +1,85 @@
-<p>kpi works!</p>
+<div fxLayout="row" fxLayoutAlign="center center" class="grid-item p-4 m-2">
+    <div fxLayout="column" fxLayoutGap="20px" style="width: 900px;">
+        <div fxLayout.gt-sm="row" fxLayout.lt-md="column">
+            <div fxFlex.gt-sm="100%" fxFlex.lt-md="50%" fxLayoutAlign="start none" class="px-2 m-3">
+                <div fxFill>
+                    <div fxLayout="row" fxLayoutAlign="start center" class="text-header mb-2">
+                        KPI List
+                        &nbsp;
+                        <img src="../../../assets/icons/info.svg" width="20" height="20" mat-raised-button
+                            matTooltip="Info" [matTooltipPosition]="position.value!" aria-label="" />
+                    </div>
+                    <div fxLayout="row" fxLayoutAlign="start center" class="text-title mb-2">Industry: Banking</div>
+                    <div fxLayout="row" fxLayoutAlign="center center" class="text-title">
+                        <img class="search-icon" src="../../../assets/icons/search.svg" width="15" height="15" />
+                        <div fxFlex.gt-xs="100%" fxFlex.gt-sm="100%" fxFlex.gt-md="100%" class="input-group mb-3">
+                            <input type="text" class="form-control input-search" placeholder="Project Name"
+                                [(ngModel)]="term">
+                        </div>
+                    </div>
+
+
+
+                    <div class="content-master">
+                        <div class="dropdown">
+                            <span class="dropdown-content">
+                                <div *ngFor="let item of dataMaster| filter: term">
+
+                                    <section>
+                                        <mat-checkbox [checked]="item.selected" [indeterminate]="item.indeterminate"
+                                            (change)="setAllItem($event.checked, item)">
+                                            {{ item.label }}
+                                        </mat-checkbox>
+                                        &nbsp;
+                                        <img src="../../../assets/icons/info.svg" width="15" height="15"
+                                            mat-raised-button matTooltip="Info" [matTooltipPosition]="position.value!"
+                                            aria-label="" />
+                                        &nbsp; &nbsp;
+                                        <img [src]="item.iconSrc" (click)="iconDropdown(!item.optionSubLevel, item)" />
+
+                                        <span [ngStyle]="{ display: !item.optionSubLevel ? 'none' : null }">
+                                            <div class="sublevel" *ngFor="let sub of item.subLevel| filter: term ">
+                                                <mat-checkbox [(ngModel)]="sub.selected"
+                                                    (ngModelChange)="selectSubLevel(sub, item)">
+                                                    {{ sub.label }}
+                                                </mat-checkbox>
+                                            </div>
+                                        </span>
+                                    </section>
+
+                                </div>
+                            </span>
+                        </div>
+                    </div>
+
+
+
+
+                </div>
+            </div>
+            <div fxFlex.gt-sm="100%" fxFlex.lt-md="50%" class="px-2">
+                <div fxLayout="row" class="card border-0 m-3">
+                    <div fxFill class="card border-0 item-top-right">
+                        <div class="card-body">
+                            <h5 class="card-title">Card title</h5>
+                            <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+                            <p class="card-text">Some.</p>
+
+                        </div>
+                    </div>
+                </div>
+                <div fxLayout="row" class="card border-0 m-3">
+                    <div fxFill class="card border-0 item-bottom-right">
+                        <div class="card-body">
+                            <p class="card-title">Card title</p>
+                            <p class="card-text">Job Type - Regular</p>
+                            <p class="card-text">Job Type - Regular</p>
+                            <p class="card-text">Job Type - Regular</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>

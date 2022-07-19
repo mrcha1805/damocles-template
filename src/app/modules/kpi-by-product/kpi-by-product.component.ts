@@ -1,14 +1,14 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl } from '@angular/forms';
 import { TooltipPosition } from '@angular/material/tooltip';
-@Component({
-  selector: 'app-create-project-name',
-  templateUrl: './create-project-name.component.html',
-  styleUrls: ['./create-project-name.component.scss'],
-})
-export class CreateProjectNameComponent implements OnInit {
-  search: any;
 
+@Component({
+  selector: 'app-kpi-by-product',
+  templateUrl: './kpi-by-product.component.html',
+  styleUrls: ['./kpi-by-product.component.scss'],
+})
+export class KpiByProductComponent implements OnInit {
+  search: any;
   positionOptions: TooltipPosition[] = [
     'after',
     'before',
@@ -18,38 +18,38 @@ export class CreateProjectNameComponent implements OnInit {
     'right',
   ];
   position = new FormControl(this.positionOptions[0]);
-  myProjects: any[] = [
+  myKPI: any[] = [
     {
       image: '../../../assets/images/project_default.png',
-      name: 'My insurance1',
+      name: 'Loan',
       description:
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer quis accumsan lorem.',
-      status: 'New request',
+      isSelected: false,
     },
     {
       image: '../../../assets/images/project_default.png',
-      name: 'My insurance2',
+      name: 'Credit Card',
       description:
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer quis accumsan lorem.',
-      status: 'Processing',
+      isSelected: false,
     },
     {
       image: '../../../assets/images/project_default.png',
-      name: 'My insurance3',
+      name: 'Finance',
       description:
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer quis accumsan lorem.',
-      status: 'KPI Ready to use!',
-    },
-    {
-      image: '../../../assets/images/project_default.png',
-      name: 'My insurance4',
-      description:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer quis accumsan lorem.',
-      status: 'Done',
+      isSelected: false,
     },
   ];
 
   constructor() {}
 
   ngOnInit(): void {}
+
+  toggle1(list: any, item: any, index: number) {
+    list.forEach((e: any, i: any) => {
+      if (i !== index) e.isSelected = false;
+    });
+    item.isSelected = !item.isSelected;
+  }
 }

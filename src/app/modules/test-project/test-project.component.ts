@@ -1,14 +1,14 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl } from '@angular/forms';
 import { TooltipPosition } from '@angular/material/tooltip';
-@Component({
-  selector: 'app-create-project-name',
-  templateUrl: './create-project-name.component.html',
-  styleUrls: ['./create-project-name.component.scss'],
-})
-export class CreateProjectNameComponent implements OnInit {
-  search: any;
 
+@Component({
+  selector: 'app-test-project',
+  templateUrl: './test-project.component.html',
+  styleUrls: ['./test-project.component.scss'],
+})
+export class TestProjectComponent implements OnInit {
+  search: any;
   positionOptions: TooltipPosition[] = [
     'after',
     'before',
@@ -18,34 +18,34 @@ export class CreateProjectNameComponent implements OnInit {
     'right',
   ];
   position = new FormControl(this.positionOptions[0]);
-  myProjects: any[] = [
+  myKPI: any[] = [
     {
       image: '../../../assets/images/project_default.png',
-      name: 'My insurance1',
+      name: 'Test KPI',
       description:
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer quis accumsan lorem.',
-      status: 'New request',
+      isSelected: false,
     },
     {
       image: '../../../assets/images/project_default.png',
-      name: 'My insurance2',
+      name: 'App e-Payment User',
       description:
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer quis accumsan lorem.',
-      status: 'Processing',
+      isSelected: false,
     },
     {
       image: '../../../assets/images/project_default.png',
-      name: 'My insurance3',
+      name: 'First Job Search',
       description:
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer quis accumsan lorem.',
-      status: 'KPI Ready to use!',
+      isSelected: false,
     },
     {
       image: '../../../assets/images/project_default.png',
-      name: 'My insurance4',
+      name: 'Support family',
       description:
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer quis accumsan lorem.',
-      status: 'Done',
+      isSelected: false,
     },
   ];
 

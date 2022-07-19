@@ -17,7 +17,10 @@ import { MatInputModule } from '@angular/material/input';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatButtonModule } from '@angular/material/button';
 import { MatSelectModule } from '@angular/material/select';
-
+import { LetsStartComponent } from './modules/lets-start/lets-start.component';
+import { MatTooltipModule } from '@angular/material/tooltip';
+import { TestProjectComponent } from './modules/test-project/test-project.component';
+import { KpiByProductComponent } from './modules/kpi-by-product/kpi-by-product.component';
 
 @NgModule({
   declarations: [
@@ -27,6 +30,9 @@ import { MatSelectModule } from '@angular/material/select';
     KpiComponent,
     StepperComponent,
     FilterSearchPipe,
+    LetsStartComponent,
+    TestProjectComponent,
+    KpiByProductComponent,
   ],
   imports: [
     BrowserModule,
@@ -39,6 +45,7 @@ import { MatSelectModule } from '@angular/material/select';
     MatSelectModule,
     MatCheckboxModule,
     MatButtonModule,
+    MatTooltipModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

@@ -1,0 +1,81 @@
+<div fxLayout="row" fxLayoutAlign="center center" class="grid-item p-4 m-2">
+    <div fxLayout="column" fxLayoutGap="20px" style="width: 556px;">
+        <div fxLayout="row" fxLayoutAlign="center center" class="text-header text-center mb-4">Let’s Start</div>
+        <div fxLayout="column" fxLayoutAlign=" none" class="item">
+            <div fxLayout="column" class="btn card grid-card m-2" *ngFor="let item of LetsStart; let i = index"
+                [ngStyle]="{ border: item.isSelected ? '1px solid #000000' : null }"
+                (click)="toggle1(LetsStart, item, i)">
+                <div *ngIf="item.isSelected" fxLayout="column" fxFill fxLayoutAlign=" end">
+                    <img class="icon-check" src="../../../assets/icons/ic_checkbox.svg" width="32" height="32" />
+                </div>
+                <div class="row">
+                    <div fxLayoutAlign.lt-sm="start center" fxLayoutAlign="center center"
+                        class="col-xs-12 col-sm-2 col-md-2 col-lg-2 p-2">
+                        <img src="{{ item.image }}" width="40" height="40" class="img-fluid rounded-start">
+                    </div>
+                    <div class="col-xs-12 col-sm-10 col-md-10 col-lg-10">
+                        <div class="row p-1">
+                            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 p-1 text-start text-project-name">
+                                {{ item.name }}
+                                &nbsp;
+                                <img src="../../../assets/icons/info.svg" width="20" height="20" mat-raised-button
+                                    matTooltip="Info" [matTooltipPosition]="position.value!" aria-label="" />
+                            </div>
+                        </div>
+                        <div class="row p-1">
+                            <div class="col-12 p-1 text-start text-description">{{ item.description }}</div>
+                        </div>
+                        <div *ngIf="item.target !== undefined" class="row p-1"
+                            [ngStyle]="{ display: !item.isSelected ? 'none' : null }">
+                            <div class="col-12 p-1 text-start sub-text" *ngFor="let sub of item.target; let s = index">
+                                <div class="row">
+                                    <span class="col-8">
+                                        <mat-checkbox [checked]="sub.isSelected" [(ngModel)]="sub.isSelected"
+                                            (click)="toggle3(item, item.target, sub, s)">
+                                            {{ sub.name }}
+                                        </mat-checkbox>
+                                    </span>
+                                    <div class="col-3 text-end">
+                                        <img src="../../../assets/icons/info.svg" width="18" height="18"
+                                            mat-raised-button matTooltip="Info" [matTooltipPosition]="position.value!"
+                                            aria-label="" />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div fxLayout="row" fxLayoutAlign="start center" class="text-my-project text-center px-2 mb-2"
+            *ngIf="myProjects.length > 0">My Projects</div>
+        <div fxLayout="column" fxLayoutAlign=" none" class="item">
+            <div fxLayout="column" class="btn card grid-card m-2" *ngFor="let item of myProjects; let i = index"
+                [ngStyle]="{ border: item.isSelected ? '1px solid #000000' : null }"
+                (click)="toggle2(myProjects, item, i)">
+                <div *ngIf="item.isSelected" fxLayout="column" fxFill fxLayoutAlign=" end">
+                    <img class="icon-check" src="../../../assets/icons/ic_checkbox.svg" width="32" height="32" />
+                </div>
+                <div class="row">
+                    <div fxLayoutAlign.lt-sm="start center" fxLayoutAlign="center center"
+                        class="col-xs-12 col-sm-2 col-md-2 col-lg-2 p-2">
+                        <img src="{{ item.image }}" width="40" height="40" class="img-fluid rounded-start">
+                    </div>
+                    <div class="col-xs-12 col-sm-10 col-md-10 col-lg-10">
+                        <div class="row p-1">
+                            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 p-1 text-start text-project-name">
+                                {{ item.name }}
+                                &nbsp;
+                                <img src="../../../assets/icons/info.svg" width="20" height="20" mat-raised-button
+                                    matTooltip="Info" [matTooltipPosition]="position.value!" aria-label="" />
+                            </div>
+                        </div>
+                        <div class="row p-1">
+                            <div class="col-12 p-1 text-start text-description">{{ item.description }}</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
