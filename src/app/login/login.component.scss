@@ -1,0 +1,89 @@
+// .container {
+//   padding: 10px;
+// }
+
+// .grid-item {
+//   background-color: lightsalmon;
+//   border-radius: 5px;
+//   padding: 10px;
+//   min-width: 300px;
+//   height: 100px;
+//   margin: 5px;
+// }
+
+@mixin font-format($weight, $size, $height, $hexcolor) {
+  font-family: Noto Sans, sans-serif !important;
+  font-style: normal;
+  font-weight: $weight;
+  font-size: $size;
+  line-height: $height;
+  color: $hexcolor;
+  margin: 0;
+}
+
+.container {
+  // margin: 100px;
+  // width: 90%;
+  // height: 90vh;
+  margin: auto;
+  margin-top:5%;
+
+  width: 70%;
+  // padding: 10px;
+  padding-top: 50px;
+  background: #FFFFFF;
+  box-shadow: 0px 4px 6px rgba(2, 2, 2, 0.25);
+  border-radius: 13.1428px;
+
+  .header {
+    @include font-format(700, 32px, 44px, #020202);
+  }
+  .header-1 {
+    @include font-format(700, 14px, 19px, #000000);
+  }
+  .header-2 {
+    @include font-format(700, 16px, 16px, #FFFFFF);
+  }
+  .header-3 {
+    @include font-format(600, 16px, 22px, #000000);
+  }
+  .label-1 {
+    @include font-format(400, 16px, 22px, #000000);
+  }
+  .label-2 {
+    @include font-format(700, 12px, 22px, #020202);
+  }
+  .label-3 {
+    @include font-format(400, 10px, 14px, #000000);
+  }
+  .label-4 {
+    @include font-format(500, 12px, 16px, #020202);
+  }
+  .remember-checkbox {
+    padding-left: 7px;
+    padding-bottom: 5px;
+  }
+  .input-layout {
+    width: 150%;
+    background: #FFFFFF;
+    border: 1px solid #676767;
+    border-radius: 10px;
+    
+  }
+  .row-contents {
+    // margin-top: 20px;
+    //display: block;
+  }
+  .submit-btn{
+    background: #020202;
+    border-radius: 100px;
+    height: 48px;
+    width: 150px;
+  }
+  .row-submit {
+    margin-top: 50px;
+  }
+  .register {
+    cursor: pointer;
+  }
+}

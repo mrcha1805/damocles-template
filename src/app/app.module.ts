@@ -21,6 +21,10 @@ import { LetsStartComponent } from './modules/lets-start/lets-start.component';
 import { MatTooltipModule } from '@angular/material/tooltip';
 import { TestProjectComponent } from './modules/test-project/test-project.component';
 import { KpiByProductComponent } from './modules/kpi-by-product/kpi-by-product.component';
+import { LoginComponent } from './login/login.component';
+import { RegisterComponent } from './register/register/register.component';
+import { VerifyComponent } from './register/verify/verify.component';
+
 
 @NgModule({
   declarations: [
@@ -33,6 +37,9 @@ import { KpiByProductComponent } from './modules/kpi-by-product/kpi-by-product.c
     LetsStartComponent,
     TestProjectComponent,
     KpiByProductComponent,
+     LoginComponent,
+    RegisterComponent,
+    VerifyComponent,
   ],
   imports: [
     BrowserModule,

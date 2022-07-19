@@ -1,0 +1,60 @@
+<!-- <div fxLayout="row wrap" class="container">
+  <div fxFlex *ngFor="let i of [1, 2, 3, 4, 5, 6, 7, 8, 9]">
+    <div class="grid-item" fxLayout="row" fxLayoutAlign="center center">
+      {{ 'Item ' + i }}
+    </div>
+  </div>
+</div> -->
+<div fxLayout="row" fxLayoutAlign="center center" class="container">
+  <form>
+    <p fxLayout="row" fxLayoutAlign="center center " class="header">Login</p>
+    <p fxLayout="row" class="label-1">Login to continue to customer insight data.</p>
+    <div fxLayout="row" class="row-contents" style="display:inline;">
+      <div class="mb-2 mt-2">
+        <p for="emailInput" class="form-label header-1">Email</p>
+        <input type="email" class="form-control input-layout label-2" id="emailInput" aria-describedby="emailHelp">
+      </div>
+    </div>
+    <div fxLayout="row" class="row-contents">
+      <div class="mb-2 mt-2">
+        <label for="passInput" class="form-label header-1">Password</label>
+        <input type="password" class="form-control input-layout label-2" id="passInput">
+      </div>
+    </div>
+    <div fxLayout="row" fxLayoutAlign="space-between center" class="row-contents">
+      <div>
+        <input id="rememberMe" type="checkbox"><span class="label-3 remember-checkbox">Remember me</span>
+      </div>
+      <div>
+        <p class="label-4">Forgot password</p>
+      </div>
+
+    </div>
+    <div fxLayout="row" fxLayoutAlign="center center" class="row-submit">
+      <div class="mb-2">
+        <button type="button" class="header-2 submit-btn" (click)="submit()">Login</button>
+      </div>
+    </div>
+    <div fxLayout="row" fxLayoutAlign="center center">
+      <div class=" mb-3">
+        <u class="header-3 register" (click)="gotoRegister()">Register</u>
+      </div>
+    </div>
+
+    <!-- <div class="mb-3">
+      <label for="exampleInputEmail1" class="form-label">Email address</label>
+      <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+      <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+    </div>
+    <div class="mb-3">
+      <label for="exampleInputPassword1" class="form-label">Password</label>
+      <input type="password" class="form-control" id="exampleInputPassword1">
+    </div>
+    <div class="mb-3 form-check">
+      <input type="checkbox" class="form-check-input" id="exampleCheck1">
+      <label class="form-check-label" for="exampleCheck1">Check me out</label>
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button> -->
+  </form>
+
+</div>
