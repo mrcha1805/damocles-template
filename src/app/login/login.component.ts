@@ -27,6 +27,7 @@ export class LoginComponent implements OnInit {
       console.log('remember');
 
     }
+    this.router.navigateByUrl('/home');
   }
 
   gotoRegister() {
