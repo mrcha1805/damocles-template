@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-register',
@@ -7,9 +8,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RegisterComponent implements OnInit {
 
-  constructor() { }
-
+  constructor(private router: Router) { }
+  industrySelected= "";
+  dropdownIconSrc = "../../../assets/icons/arrow_Close_black.svg";
   ngOnInit(): void {
+    this.industrySelected = "Banking"
+  }
+
+  submit() {
+    this.router.navigateByUrl('/verify');
   }
 
 }

@@ -1,3 +1,56 @@
-<div fxLayout="row" fxLayoutAlign="center center" class="container">
+<!-- <div fxLayout="row" fxLayout="column" fxLayoutAlign="center center" class="container">
+  <p class="header-1 mt-3">Register</p>
   <p>test</p>
+  <p>test</p>
+  <p>test</p>
+</div> -->
+
+<div fxLayout="column" fxLayoutGap="10px" class="container">
+  <div fxLayout="row" fxFlex="33%" class="block-1">
+    <div fxFlex fxLayoutAlign="center center" fxFlexFill class="grid-item header-1 mt-">Register</div>
+  </div>
+  <div fxLayout.gt-xs="row" fxLayoutGap="2px">
+    <div fxLayout="column" fxFlex.gt-xs="50%" fxLayoutAlign="space-around stretch" fxFlexFill class="grid-item ">
+      <div fxLayout="row" fxLayoutAlign="start center" class="header-2">Name</div>
+      <div fxLayout="row" class=" input-group ">
+        <input fxFlexFill type=" text" class="label-1 input-text" placeholder="Input Your Name">
+      </div>
+    </div>
+    <div fxLayout="column" fxFlex.gt-xs="50%" fxLayoutAlign="space-around stretch" fxFlexFill class="grid-item ">
+      <div fxLayout="row" fxLayoutAlign="start center" class="header-2">Lastname</div>
+      <div fxLayout="row" class=" input-group ">
+        <input fxFlexFill type=" text" class="label-1 input-text" placeholder="Input Your Lastname">
+      </div>
+    </div>
+  </div>
+  <div fxLayout.gt-xs="row" fxLayoutGap="2px">
+    <div fxLayout="column" fxFlex.gt-xs="50%" fxLayoutAlign="space-around stretch" fxFlexFill class="grid-item ">
+      <div fxLayout="row" fxLayoutAlign="start center" class="header-2">Email</div>
+      <div fxLayout="row" class=" input-group ">
+        <input fxFlexFill type="password" class="label-1 input-text" placeholder="Input Your Email">
+      </div>
+    </div>
+    <div fxLayout="column" fxFlex.gt-xs="50%" fxLayoutAlign="space-around stretch" fxFlexFill class="grid-item ">
+      <div fxLayout="row" fxLayoutAlign="start center" class="header-2">Mobile Number</div>
+      <div fxLayout="row" class=" input-group ">
+        <input fxFlexFill type="text" class="label-1 input-text" placeholder="Input Your Mobile">
+      </div>
+    </div>
+  </div>
+
+  <div fxLayout="row" fxLayoutGap="10px" fxLayoutAlign="center center" class="mb-4">
+    <p class="header-3">What's your industry?</p>
+  </div>
+  <div fxLayout="row" fxLayoutGap="10px" fxLayoutAlign="center center" class="mb-4">
+    <div fxFlex="30%" fxLayoutAlign="center center" class="dropdown">
+      <button class="dropdown-btn">
+        <img [src]="dropdownIconSrc"
+          style="position: absolute; left: 85%; bottom: 28px; transform: translate(-50%, 100%)" />{{
+        industrySelected }}
+      </button>
+    </div>
+  </div>
+  <div fxLayout="row" fxLayoutGap="10px" fxLayoutAlign="center center" class="mb-4">
+    <button class="btn-submit label-2" (click)="submit()">Submit</button>
+  </div>
 </div>
