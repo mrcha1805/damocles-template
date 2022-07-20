@@ -2,18 +2,27 @@
   <form>
     <p fxLayout="row" fxLayoutAlign="center center " class="header">Login</p>
     <p fxLayout="row" class="label-1">Login to continue to customer insight data.</p>
-    <div fxLayout="row" class="row-contents" style="display:inline;">
-      <div class="mb-2 mt-2">
-        <p for="emailInput" class="form-label header-1">Email</p>
+    <div fxLayout="row" fxLayoutAlign="start center" class="form-label header-1 mt-2">Email</div>
+    <div fxLayout="row" fxLayoutAlign="center center">
+      <div fxFill class="input-group mb-3">
         <input type="email" class="form-control input-layout label-2" id="emailInput" aria-describedby="emailHelp">
       </div>
     </div>
-    <div fxLayout="row" class="row-contents">
-      <div class="mb-2 mt-2">
-        <label for="passwordInput" class="form-label header-1">Password</label>
+    <div fxLayout="row" fxLayoutAlign="start center" class="form-label header-1 mt-2">Password</div>
+    <div fxLayout="row" fxLayoutAlign="center center">
+      <div fxFill class="input-group mb-3">
+
         <input type="password" class="form-control input-layout label-2" id="passwordInput">
       </div>
     </div>
+    <!-- <div fxLayout="row" fxLayoutAlign="start center" class="mb-2">Email</div>
+    <div fxLayout="row" fxLayoutAlign="center center" class="">
+
+      <div fxFill class="input-group mb-3">
+        <input type="text" class="form-control" placeholder="Email">
+      </div>
+    </div> -->
+
     <div fxLayout="row" fxLayoutAlign="space-between center" class="row-contents">
       <div>
         <input id="rememberMe" type="checkbox"><span class="label-3 remember-checkbox">Remember me</span>
