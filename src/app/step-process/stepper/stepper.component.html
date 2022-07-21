@@ -48,8 +48,8 @@
           style="margin-right: 10px;margin-bottom:2px;" src="../../../assets/images/back.svg">Back</button>
     </div>
     <div fxFlex="75%" fxLayoutAlign="center center" fxFlexFill class="grid-item">
-      <div *ngIf="stepCurrent === 1">
-        Master1
+      <div *ngIf="stepCurrent === 1 && userIsExist">
+        <app-lets-start></app-lets-start>
       </div>
       <div *ngIf="stepCurrent === 2">
         Master2
