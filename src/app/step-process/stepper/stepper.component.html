@@ -1,6 +1,72 @@
-<app-create-project-name></app-create-project-name>
+<!-- <app-create-project-name></app-create-project-name>
 <app-lets-start></app-lets-start>
 <app-test-project></app-test-project>
 <app-kpi-by-product></app-kpi-by-product>
 <app-create-kpi-name></app-create-kpi-name>
-<app-kpi></app-kpi>
+<app-kpi></app-kpi> -->
+
+<div fxLayout="column" fxLayoutGap="10px" class="container">
+  <div fxFlex="25%" class="block-1">
+    <div fxFlex fxLayoutAlign="center center" fxFlexFill class="grid-item">
+      <div fxLayout="row" fxLayoutAlign="center center">
+        <div class="header1" fxLayout="column" fxLayoutAlign="center center">
+          <img class="step-action" [src]="stepDisplay(1, stepCurrent)" (click)="stepAction(1)">
+          <p class="m0">Select</p>
+          <p>Project</p>
+        </div>
+        <div [ngClass]="stepCurrent < 2? 'line-nonactive': 'line-active'" fxLayout="column"
+          fxLayoutAlign="center center">
+
+        </div>
+        <div class="header1" fxLayout="column" fxLayoutAlign="center center">
+          <img class="step-action" [src]="stepDisplay(2, stepCurrent)" (click)="stepAction(2)">
+          <p class="m0">Select</p>
+          <p>KPI</p>
+        </div>
+        <div [ngClass]="stepCurrent < 3? 'line-nonactive': 'line-active'" fxLayout="column"
+          fxLayoutAlign="center center">
+        </div>
+        <div class="header1" fxLayout="column" fxLayoutAlign="center center">
+          <img class="step-action" [src]="stepDisplay(3, stepCurrent)" (click)="stepAction(3)">
+          <p class="m0">Select</p>
+          <p>Channel</p>
+        </div>
+        <div [ngClass]="stepCurrent < 4? 'line-nonactive': 'line-active'" fxLayout="column"
+          fxLayoutAlign="center center">
+        </div>
+        <div class="header1" fxLayout="column" fxLayoutAlign="center center">
+          <img class="step-action" [src]="stepDisplay(4, stepCurrent)" (click)="stepAction(4)">
+          <p class="m0">Confirm</p>
+          <p>Media Plan</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div fxLayout="row" fxLayout.lt-sm="column" fxLayoutGap="10px" fxFlex="75%" class="block-2">
+    <div fxFlex fxLayoutAlign="center end" fxFlexFill class="grid-item pb30">
+      <button class="back-btn"><img class="img-icon" style="margin-right: 10px;margin-bottom:2px;"
+          src="../../../assets/images/back.svg">Back</button>
+    </div>
+    <div fxFlex="75%" fxLayoutAlign="center center" fxFlexFill class="grid-item">
+      <div *ngIf="stepCurrent === 1">
+        Master1
+      </div>
+      <div *ngIf="stepCurrent === 2">
+        Master2
+      </div>
+      <div *ngIf="stepCurrent === 3">
+        Master3
+      </div>
+      <div *ngIf="stepCurrent === 4">
+        Master4
+      </div>
+
+    </div>
+    <div fxFlex fxLayoutAlign="center end" fxFlexFill class="grid-item pb30">
+      <button class="next-btn">
+        Next
+        <img class="img-icon" style="margin-left: 10px;margin-bottom:2px;" src="../../../assets/images/next.svg">
+      </button>
+    </div>
+  </div>
+</div>

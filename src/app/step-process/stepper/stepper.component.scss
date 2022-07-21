@@ -1,0 +1,67 @@
+@mixin font-format($weight, $size, $height, $hexcolor) {
+  font-family: Noto Sans, sans-serif !important;
+  font-style: normal;
+  font-weight: $weight;
+  font-size: $size;
+  line-height: $height;
+  color: $hexcolor;
+  margin: 0;
+}
+
+.container {
+  padding: 5px;
+  height: 100vh;
+  .img-icon {
+    width: 11px;
+    height: 15px;
+  }
+  .m0{
+    margin:0;
+  }
+  .header1 {
+    
+    @include font-format(400, 14px, 19px, #4E4E4E);
+  }
+  .step-action {
+    cursor: pointer;
+  }
+  .line-active {
+    border-top: 2px solid #4E4E4E;
+    width: 50px;
+    padding-bottom: 50px;
+  }
+  .line-nonactive {
+    border-top: 2px solid  #E6E6E6;
+    width: 50px;
+    padding-bottom: 50px;
+  }
+  .back-btn {
+    width: 90%;
+    height: 48px;
+    background: #F5F5F5;
+    border-radius: 120.882px;
+    @include font-format(700, 15.71px, 26px, #020202);
+  }
+  .next-btn {
+    width: 90%;
+    height: 48px;
+    background: #020202;
+    border-radius: 120.882px;
+    @include font-format(700, 15.71px, 26px, #FFFFFF);
+  }
+  
+  
+}
+
+.grid-item {
+  //background-color: lightsalmon;
+  border-radius: 5px;
+  padding: 10px;
+  height: 100px;
+}
+.pb30 {
+  padding-bottom: 80px;
+}
+
+
+
