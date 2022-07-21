@@ -31,6 +31,7 @@ import {
   NgxPopperjsOptions,
   NgxPopperjsTriggers,
 } from 'ngx-popperjs';
+import { ExampleComponent } from './modules/example/example.component';
 
 export const TOOLTIP_DEFAULT_OPTIONS: NgxPopperjsOptions = {
   trigger: NgxPopperjsTriggers.hover,
@@ -54,6 +55,7 @@ export const TOOLTIP_DEFAULT_OPTIONS: NgxPopperjsOptions = {
     RegisterComponent,
     VerifyComponent,
     CreateKpiNameComponent,
+    ExampleComponent,
   ],
   imports: [
     BrowserModule,
