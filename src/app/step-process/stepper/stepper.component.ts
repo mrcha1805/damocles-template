@@ -29,4 +29,12 @@ export class StepperComponent implements OnInit {
     this.stepCurrent = index;
   }
 
+  nextMenu() {
+    this.stepCurrent+=1;
+  }
+
+  previousMenu() {
+    this.stepCurrent-= 1;
+  }
+
 }

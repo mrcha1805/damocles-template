@@ -43,9 +43,9 @@
     </div>
   </div>
   <div fxLayout="row" fxLayout.lt-sm="column" fxLayoutGap="10px" fxFlex="75%" class="block-2">
-    <div fxFlex fxLayoutAlign="center end" fxFlexFill class="grid-item pb30">
-      <button class="back-btn"><img class="img-icon" style="margin-right: 10px;margin-bottom:2px;"
-          src="../../../assets/images/back.svg">Back</button>
+    <div fxFlex fxLayoutAlign="center end" fxFlexFill class="grid-item nav-pb">
+      <button *ngIf="stepCurrent > 1 && stepCurrent < 4" class="back-btn" (click)="previousMenu()"><img class="img-icon"
+          style="margin-right: 10px;margin-bottom:2px;" src="../../../assets/images/back.svg">Back</button>
     </div>
     <div fxFlex="75%" fxLayoutAlign="center center" fxFlexFill class="grid-item">
       <div *ngIf="stepCurrent === 1">
@@ -62,8 +62,8 @@
       </div>
 
     </div>
-    <div fxFlex fxLayoutAlign="center end" fxFlexFill class="grid-item pb30">
-      <button class="next-btn">
+    <div fxFlex fxLayoutAlign="center end" fxFlexFill class="grid-item nav-pb">
+      <button *ngIf="stepCurrent > 1 && stepCurrent < 4" class="next-btn" (click)="nextMenu()">
         Next
         <img class="img-icon" style="margin-left: 10px;margin-bottom:2px;" src="../../../assets/images/next.svg">
       </button>
