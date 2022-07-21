@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-stepper',
@@ -7,10 +8,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class StepperComponent implements OnInit {
 
-  constructor() { }
+  constructor(private activatedRoute: ActivatedRoute) { }
   stepCurrent!: number;
+  userIsExist: boolean = false;
   ngOnInit(): void {
     this.stepCurrent = 1;
+    if(this.activatedRoute.snapshot.params.username) {
+      console.log('user is exist');
+      this.userIsExist = true;
+    }
   }
 
   stepDisplay(tab:number, current: number) {

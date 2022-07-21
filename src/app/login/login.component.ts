@@ -27,7 +27,13 @@ export class LoginComponent implements OnInit {
       console.log('remember');
 
     }
-    this.router.navigateByUrl('/home');
+    if(username.value.length > 0) {
+      let param = { username: username.value }
+      this.router.navigate(['/home', param]);
+    }else {
+      this.router.navigateByUrl('/home');
+    }
+    
   }
 
   gotoRegister() {
