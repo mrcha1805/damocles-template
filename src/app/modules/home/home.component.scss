@@ -1,11 +1,20 @@
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@500&display=swap');
+
+@mixin font-format($weight, $size, $height, $hexcolor) {
+  font-family: Noto Sans, sans-serif !important;
+  font-style: normal;
+  font-weight: $weight;
+  font-size: $size;
+  line-height: $height;
+  color: $hexcolor;
+  margin: 0;
+}
 
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Noto Sans', sans-serif;
+  // font-family: 'Noto Sans', sans-serif;
 }
 
 .navbar{
@@ -25,10 +34,11 @@
   }
   .menu-header {
     margin-top: 5px;
+    @include font-format(700, 15.71px, 26px, #FFFFFF);
   }
   .user-container {
     display: inline-flex;
-    margin-right: 12px;
+    margin-right: 35px;
     margin-bottom: 10px;
     .user-icon {
       width: 30px;
@@ -42,7 +52,12 @@
     .user-dropdown {
       width: 6px;
       height: 10px;
-      margin-top: 10px;
+      margin-top: 8px;
+      margin-left: 10px;
+    }
+    .username {
+     
+      @include font-format(400, 12px, 26px, #FFFFFF);
     }
     .line {
       border: 1px solid #4E4E4E;
