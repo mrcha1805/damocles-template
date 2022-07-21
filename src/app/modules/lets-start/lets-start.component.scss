@@ -68,46 +68,21 @@
   font-weight: 400;
   font-size: 14px;
   line-height: 24px;
-  color: #1b1b1b;
+  color: #020202;
 }
 
-.input-search {
+input {
   height: 40px;
   background: #ffffff;
   border: 1px solid #e6e6e6;
   border-radius: 10px;
+}
+
+.input-search {
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
   line-height: 22px;
-}
-::placeholder {
-  color: #e6e6e6;
-  opacity: 1;
-}
-:-ms-input-placeholder {
-  color: #e6e6e6;
-}
-
-.overflow {
-  overflow-y: auto;
-  height: 33vh;
-}
-::-webkit-scrollbar {
-  width: 12px;
-  height: 12px;
-}
-::-webkit-scrollbar-thumb {
-  border: 4px solid rgba(0, 0, 0, 0);
-  background-clip: padding-box;
-  border-radius: 9999px;
-  background-color: #e5e5e5;
-}
-::-webkit-scrollbar-track {
-  background: transparent;
-}
-::-webkit-scrollbar-thumb:hover {
-  background: #e5e5e5;
 }
 
 .icon-check {
@@ -117,25 +92,8 @@
 }
 
 :host ::ng-deep.mat-checkbox-frame {
-  border-radius: 50%;
-  background-color: #d9d9d9;
-  border: 0;
+  border-radius: 50% !important;
 }
 :host ::ng-deep.mat-checkbox-checked.mat-accent .mat-checkbox-background {
-  background-color: #676767;
-  border-radius: 50%;
-  border: 0;
-}
-:host
-  ::ng-deep.mat-checkbox-checked:not(.mat-checkbox-disabled).mat-accent
-  .mat-ripple-element {
-  background: transparent;
-}
-:host
-  ::ng-deep.mat-checkbox:active:not(.mat-checkbox-disabled).mat-accent
-  .mat-ripple-element {
-  background: transparent;
-}
-:host ::ng-deep.mat-checkbox-layout {
-  white-space: break-spaces;
+  border-radius: 50% !important;
 }

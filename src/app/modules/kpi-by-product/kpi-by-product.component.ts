@@ -1,47 +1,38 @@
 import { Component, OnInit } from '@angular/core';
-import { FormControl } from '@angular/forms';
-import { TooltipPosition } from '@angular/material/tooltip';
+import Prototype from '../../data/prototype-data.json';
+import { ThemePalette } from '@angular/material/core';
+import { NgxPopperjsTriggers, NgxPopperjsPlacements } from 'ngx-popperjs';
 
+export interface Task {
+  name: string;
+  completed: boolean;
+  color: ThemePalette;
+  subtasks?: Task[];
+}
 @Component({
   selector: 'app-kpi-by-product',
   templateUrl: './kpi-by-product.component.html',
   styleUrls: ['./kpi-by-product.component.scss'],
 })
 export class KpiByProductComponent implements OnInit {
+  triggers = NgxPopperjsTriggers;
+  placements = NgxPopperjsPlacements;
+  offsetModifiers = [
+    {
+      name: 'offset',
+      options: {
+        offset: [0, 2],
+      },
+    },
+    {
+      name: 'flip',
+      options: {
+        flipVariations: false,
+      },
+    },
+  ];
   search: any;
-  positionOptions: TooltipPosition[] = [
-    'after',
-    'before',
-    'above',
-    'below',
-    'left',
-    'right',
-  ];
-  position = new FormControl(this.positionOptions[0]);
-  myKPI: any[] = [
-    {
-      image: '../../../assets/images/project_default.png',
-      name: 'Loan',
-      description:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer quis accumsan lorem.',
-      isSelected: false,
-    },
-    {
-      image: '../../../assets/images/project_default.png',
-      name: 'Credit Card',
-      description:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer quis accumsan lorem.',
-      isSelected: false,
-    },
-    {
-      image: '../../../assets/images/project_default.png',
-      name: 'Finance',
-      description:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer quis accumsan lorem.',
-      isSelected: false,
-    },
-  ];
-
+  myKPI: any[] = Prototype.KpiByProduct;
   constructor() {}
 
   ngOnInit(): void {}

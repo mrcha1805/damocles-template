@@ -6,55 +6,84 @@
                     <div fxLayout="row" fxLayoutAlign="start center" class="text-header mb-2">
                         KPI List
                         &nbsp;
-                        <img src="../../../assets/icons/info.svg" width="20" height="20" mat-raised-button
-                            matTooltip="Info" [matTooltipPosition]="position.value!" aria-label="" />
+                        <span [popper]="popperContent" [popperTrigger]="triggers.hover"
+                            [popperModifiers]="offsetModifiers">
+                            <img src="../../../assets/icons/info.svg" width="20" height="20" />
+                        </span>
                     </div>
+                    <popper-content #popperContent>
+                        <span>info</span><br />
+                    </popper-content>
                     <div fxLayout="row" fxLayoutAlign="start center" class="text-title mb-2">Industry: Banking</div>
                     <div fxLayout="row" fxLayoutAlign="center center" class="text-title">
                         <img class="search-icon" src="../../../assets/icons/search.svg" width="15" height="15" />
-                        <div fxFlex.gt-xs="100%" fxFlex.gt-sm="100%" fxFlex.gt-md="100%" class="input-group mb-3">
+                        <div fxFill class="input-group mb-3">
                             <input type="text" class="form-control input-search" placeholder="Project Name"
                                 [(ngModel)]="term">
                         </div>
                     </div>
-
-
-
                     <div class="content-master">
                         <div class="dropdown">
                             <span class="dropdown-content">
-                                <div *ngFor="let item of dataMaster| filter: term">
-
-                                    <section>
-                                        <mat-checkbox [checked]="item.selected" [indeterminate]="item.indeterminate"
-                                            (change)="setAllItem($event.checked, item)">
-                                            {{ item.label }}
-                                        </mat-checkbox>
-                                        &nbsp;
-                                        <img src="../../../assets/icons/info.svg" width="15" height="15"
-                                            mat-raised-button matTooltip="Info" [matTooltipPosition]="position.value!"
-                                            aria-label="" />
-                                        &nbsp; &nbsp;
-                                        <img [src]="item.iconSrc" (click)="iconDropdown(!item.optionSubLevel, item)" />
-
-                                        <span [ngStyle]="{ display: !item.optionSubLevel ? 'none' : null }">
-                                            <div class="sublevel" *ngFor="let sub of item.subLevel| filter: term ">
-                                                <mat-checkbox [(ngModel)]="sub.selected"
-                                                    (ngModelChange)="selectSubLevel(sub, item)">
-                                                    {{ sub.label }}
-                                                </mat-checkbox>
-                                            </div>
-                                        </span>
-                                    </section>
-
+                                <div *ngFor="let item of dataMaster | filterKpiDropdown: term; let i = index;">
+                                    <div>
+                                        <div>
+                                            {{ item.group }}
+                                            &nbsp;
+                                            <span [popper]="popperContent2" [popperTrigger]="triggers.hover"
+                                                [popperModifiers]="offsetModifiers">
+                                                <img src="../../../assets/icons/info.svg" width="15" height="15" />
+                                            </span>
+                                            <button class="btn" (click)="iconDropdownGroup(!item.dropdownShow, item)">
+                                                <img [src]="item.iconSrc" width="8" height="4.8" />
+                                            </button>
+                                        </div>
+                                        <popper-content #popperContent2>
+                                            <span>info</span><br />
+                                        </popper-content>
+                                        <div [ngStyle]="{ display: !item.dropdownShow ? 'none' : null }"
+                                            *ngFor="let dataItem of item.data">
+                                            <mat-checkbox [checked]="dataItem.selected"
+                                                [indeterminate]="dataItem.indeterminate"
+                                                (change)="setAllItem($event.checked, dataItem)">
+                                                {{ dataItem.label }}
+                                            </mat-checkbox>
+                                            &nbsp;
+                                            <span [popper]="popperContent3" [popperTrigger]="triggers.hover"
+                                                [popperModifiers]="offsetModifiers">
+                                                <img src="../../../assets/icons/info.svg" width="15" height="15" />
+                                            </span>
+                                            <button class="btn"
+                                                (click)="iconDropdownSubGroup(!dataItem.dropdownShow, dataItem)">
+                                                <img [src]="dataItem.iconSrc" width="8" height="4.8" />
+                                            </button>
+                                            <popper-content #popperContent3>
+                                                <span>info</span><br />
+                                            </popper-content>
+                                            <span [ngStyle]="{ display: !dataItem.dropdownShow ? 'none' : null }">
+                                                <div class="sublevel" *ngFor="let sub of dataItem.subLevel">
+                                                    <mat-checkbox [(ngModel)]="sub.selected"
+                                                        (ngModelChange)="selectSubLevel(sub, dataItem)">
+                                                        {{ sub.label }}
+                                                    </mat-checkbox>
+                                                    &nbsp;
+                                                    <span [popper]="popperContent4" [popperTrigger]="triggers.hover"
+                                                        [popperModifiers]="offsetModifiers">
+                                                        <img src="../../../assets/icons/info.svg" width="15"
+                                                            height="15" />
+                                                    </span>
+                                                    <popper-content #popperContent4>
+                                                        <span>xxxxxxxxxxx</span><br />
+                                                        <span>xxxxxxxxxxx</span><br />
+                                                    </popper-content>
+                                                </div>
+                                            </span>
+                                        </div>
+                                    </div>
                                 </div>
                             </span>
                         </div>
                     </div>
-
-
-
-
                 </div>
             </div>
             <div fxFlex.gt-sm="100%" fxFlex.lt-md="50%" class="px-2">
@@ -79,7 +108,6 @@
                     </div>
                 </div>
             </div>
-
         </div>
     </div>
 </div>

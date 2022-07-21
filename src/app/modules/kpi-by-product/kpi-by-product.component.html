@@ -4,16 +4,20 @@
             <div fxFlex.gt-sm="50%" fxFlex.lt-md="50%" fxLayoutAlign="start center" class="text-header">
                 KPI by Product
                 &nbsp;
-                <img src="../../../assets/icons/info.svg" width="20" height="20" mat-raised-button matTooltip="Info"
-                    [matTooltipPosition]="position.value!" aria-label="" />
+                <span [popper]="popperContent" [popperTrigger]="triggers.hover" [popperModifiers]="offsetModifiers">
+                    <img src="../../../assets/icons/info.svg" width="20" height="20" />
+                </span>
             </div>
             <div fxFlex.gt-sm="50%" fxFlex.lt-md="50%" fxLayoutAlign="end center" class="text-title">
                 Industry: Banking
             </div>
         </div>
+        <popper-content #popperContent>
+            <span>info</span><br />
+        </popper-content>
         <div fxLayout="column" fxLayoutAlign=" none" class="item">
             <div fxLayout="column" class="btn card grid-card m-2" *ngFor="let item of myKPI; let i = index"
-                [ngStyle]="{ border: item.isSelected ? '1px solid #000000' : null }" (click)="toggle1(myKPI, item, i)">
+                [ngStyle]="{ border: item.isSelected ? '1px solid #020202' : null }" (click)="toggle1(myKPI, item, i)">
                 <div *ngIf="item.isSelected" fxLayout="column" fxFill fxLayoutAlign=" end">
                     <img class="icon-check" src="../../../assets/icons/ic_checkbox.svg" width="32" height="32" />
                 </div>
@@ -27,8 +31,10 @@
                             <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 p-1 text-start text-project-name">
                                 {{ item.name }}
                                 &nbsp;
-                                <img src="../../../assets/icons/info.svg" width="20" height="20" mat-raised-button
-                                    matTooltip="Info" [matTooltipPosition]="position.value!" aria-label="" />
+                                <span [popper]="popperContent2" [popperTrigger]="triggers.hover"
+                                    [popperModifiers]="offsetModifiers">
+                                    <img src="../../../assets/icons/info.svg" width="20" height="20" />
+                                </span>
                             </div>
                         </div>
                         <div class="row p-1">
@@ -36,6 +42,9 @@
                         </div>
                     </div>
                 </div>
+                <popper-content #popperContent2>
+                    <span>info</span><br />
+                </popper-content>
             </div>
         </div>
     </div>

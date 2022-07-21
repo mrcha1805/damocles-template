@@ -24,7 +24,19 @@ import { KpiByProductComponent } from './modules/kpi-by-product/kpi-by-product.c
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register/register.component';
 import { VerifyComponent } from './register/verify/verify.component';
+import { CreateKpiNameComponent } from './modules/create-kpi-name/create-kpi-name.component';
+import { FilterKpiDropDownPipe } from 'src/pipes/dropdown.pipe';
+import {
+  NgxPopperjsModule,
+  NgxPopperjsOptions,
+  NgxPopperjsTriggers,
+} from 'ngx-popperjs';
 
+export const TOOLTIP_DEFAULT_OPTIONS: NgxPopperjsOptions = {
+  trigger: NgxPopperjsTriggers.hover,
+  showDelay: 500,
+  ariaRole: 'tooltip',
+};
 
 @NgModule({
   declarations: [
@@ -34,12 +46,14 @@ import { VerifyComponent } from './register/verify/verify.component';
     KpiComponent,
     StepperComponent,
     FilterSearchPipe,
+    FilterKpiDropDownPipe,
     LetsStartComponent,
     TestProjectComponent,
     KpiByProductComponent,
-     LoginComponent,
+    LoginComponent,
     RegisterComponent,
     VerifyComponent,
+    CreateKpiNameComponent,
   ],
   imports: [
     BrowserModule,
@@ -53,6 +67,7 @@ import { VerifyComponent } from './register/verify/verify.component';
     MatCheckboxModule,
     MatButtonModule,
     MatTooltipModule,
+    NgxPopperjsModule.forRoot(TOOLTIP_DEFAULT_OPTIONS),
   ],
   providers: [],
   bootstrap: [AppComponent],

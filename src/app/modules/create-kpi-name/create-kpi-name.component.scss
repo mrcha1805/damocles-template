@@ -49,49 +49,27 @@
 
 .text-title {
   font-style: normal;
-  font-weight: 700;
-  font-size: 20px;
-  line-height: 16px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 23px;
   color: #020202;
 }
 
-.text-my-project {
+.text-attribute {
   font-style: normal;
-  font-weight: 700;
-  font-size: 20px;
-  line-height: 27px;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 33px;
+  display: flex;
+  align-items: center;
   color: #020202;
 }
 
-.text-project-name {
+.text-title-search-input {
   font-style: normal;
   font-weight: 700;
   font-size: 16px;
-  line-height: 20px;
-  color: #020202;
-}
-
-.text-status {
-  font-style: normal;
-  font-weight: 500;
-  font-size: 12px;
-  line-height: 26px;
-  color: #020202;
-}
-
-.text-description {
-  font-style: normal;
-  font-weight: 400;
-  font-size: 12px;
   line-height: 16px;
-  color: #4e4e4e;
-}
-
-.sub-text {
-  font-style: normal;
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 24px;
   color: #020202;
 }
 
@@ -113,6 +91,13 @@ input {
   line-height: 22px;
   padding-left: 40px;
 }
+::placeholder {
+  color: #e6e6e6;
+  opacity: 1;
+}
+:-ms-input-placeholder {
+  color: #e6e6e6;
+}
 
 .overflow {
   overflow-y: auto;
@@ -123,9 +108,4 @@ input {
   margin-top: -1.2rem;
   margin-right: -1.8rem;
   margin-bottom: -1.5rem;
-}
-
-::-webkit-scrollbar {
-  width: 12px !important;
-  height: 12px !important;
 }

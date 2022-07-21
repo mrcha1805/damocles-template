@@ -1,6 +1,14 @@
 import { Component, OnInit } from '@angular/core';
-import { FormControl } from '@angular/forms';
-import { TooltipPosition } from '@angular/material/tooltip';
+import Prototype from '../../data/prototype-data.json';
+import { ThemePalette } from '@angular/material/core';
+import { NgxPopperjsTriggers, NgxPopperjsPlacements } from 'ngx-popperjs';
+
+export interface Task {
+  name: string;
+  completed: boolean;
+  color: ThemePalette;
+  subtasks?: Task[];
+}
 
 @Component({
   selector: 'app-lets-start',
@@ -8,58 +16,24 @@ import { TooltipPosition } from '@angular/material/tooltip';
   styleUrls: ['./lets-start.component.scss'],
 })
 export class LetsStartComponent implements OnInit {
-  positionOptions: TooltipPosition[] = [
-    'after',
-    'before',
-    'above',
-    'below',
-    'left',
-    'right',
-  ];
-  position = new FormControl(this.positionOptions[0]);
-  LetsStart: any[] = [
+  triggers = NgxPopperjsTriggers;
+  placements = NgxPopperjsPlacements;
+  offsetModifiers = [
     {
-      image: '../../../assets/images/project_default.png',
-      name: 'Standard audience',
-      description:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer quis accumsan lorem.',
-      target: [
-        {
-          name: 'Target by Product',
-          isSelected: true,
-        },
-        {
-          name: 'Target by Category',
-          isSelected: false,
-        },
-      ],
-      isSelected: false,
+      name: 'offset',
+      options: {
+        offset: [0, 2],
+      },
     },
     {
-      image: '../../../assets/images/audience.png',
-      name: 'Custom audience',
-      description:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer quis accumsan lorem.',
-      isSelected: false,
+      name: 'flip',
+      options: {
+        flipVariations: false,
+      },
     },
   ];
-
-  myProjects: any[] = [
-    {
-      image: '../../../assets/images/project_default.png',
-      name: 'My insurance',
-      description:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer quis accumsan lorem.',
-      isSelected: false,
-    },
-    {
-      image: '../../../assets/images/project_default.png',
-      name: 'My banking',
-      description:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer quis accumsan lorem.',
-      isSelected: false,
-    },
-  ];
+  LetsStart: any[] = Prototype.LetsStart;
+  myProjects: any[] = Prototype.MyProjects;
 
   constructor() {}
 

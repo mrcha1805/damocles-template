@@ -9,12 +9,13 @@ export interface Task {
   color: ThemePalette;
   subtasks?: Task[];
 }
+
 @Component({
-  selector: 'app-create-project-name',
-  templateUrl: './create-project-name.component.html',
-  styleUrls: ['./create-project-name.component.scss'],
+  selector: 'app-create-kpi-name',
+  templateUrl: './create-kpi-name.component.html',
+  styleUrls: ['./create-kpi-name.component.scss'],
 })
-export class CreateProjectNameComponent implements OnInit {
+export class CreateKpiNameComponent implements OnInit {
   triggers = NgxPopperjsTriggers;
   placements = NgxPopperjsPlacements;
   offsetModifiers = [
@@ -31,9 +32,26 @@ export class CreateProjectNameComponent implements OnInit {
       },
     },
   ];
+  name: any;
   search: any;
-  myProjects: any[] = Prototype.CreateProjectName;
+  dataMaster = Prototype.Kpi;
+  groupList: any[] = [];
+
   constructor() {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.dataMaster.forEach((element) => {
+      this.groupList.push({
+        group: element.group,
+        selected: element.selected,
+      });
+    });
+  }
+
+  toggle1(list: any, item: any, index: number) {
+    list.forEach((e: any, i: any) => {
+      if (i !== index) e.isSelected = false;
+    });
+    item.isSelected = !item.isSelected;
+  }
 }

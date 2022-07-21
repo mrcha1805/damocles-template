@@ -1,0 +1,49 @@
+<div fxLayout="row" fxLayoutAlign="center center" class="grid-item p-4 m-2">
+    <div fxLayout="column" fxLayoutGap="20px" style="width: 900px;">
+        <div fxLayout="column" class="p-2">
+            <div fxFill fxLayoutAlign="start center" class="text-header">
+                Create KPI Name
+                &nbsp;
+                <span [popper]="popperContent" [popperTrigger]="triggers.hover" [popperModifiers]="offsetModifiers">
+                    <img src="../../../assets/icons/info.svg" width="20" height="20" />
+                </span>
+            </div>
+            <popper-content #popperContent>
+                <span>info</span><br />
+            </popper-content>
+            <div fxFill fxLayoutAlign="start center" class="text-title mb-4">
+                Industry: Banking
+            </div>
+            <div fxLayout="row" fxLayoutAlign="start center" class="text-title-search-input mb-2">
+                KPI Name
+            </div>
+            <div fxLayout.gt-sm="row" fxLayout.lt-md="column" class="mt-2 mb-2">
+                <div fxFlex.gt-sm="40%" fxFlex.lt-md="40%" fxLayoutAlign="center center">
+                    <div fxFill class="input-group">
+                        <input type="text" class="form-control input-text" placeholder="" [(ngModel)]="name">
+                    </div>
+                </div>
+            </div>
+            <div fxLayout.gt-sm="row" fxLayout.lt-md="column" class="mt-3">
+                <div fxFlex.gt-sm="67%" fxFlex.lt-md="67%" fxLayoutAlign="start center" class="text-attribute mb-2">
+                    Attribute
+                </div>
+                <div fxFlex.gt-sm="33%" fxFlex.lt-md="33%" fxLayoutAlign="end center">
+                    <img class="search-icon" src="../../../assets/icons/search.svg" width="15" height="15" />
+                    <div fxFill class="input-group">
+                        <input type="text" class="form-control input-search" placeholder="Search" [(ngModel)]="search">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="dropdown p-2">
+            <span class="dropdown-content">
+                <div *ngFor="let item of groupList | filter: search; let i = index;">
+                    <mat-checkbox class="col-12 col-sm-6 col-md-4 col-lg-4" [(ngModel)]="item.selected"
+                        style="float: left;">
+                        {{ item.group }}
+                    </mat-checkbox>
+                </div>
+            </span>
+        </div>
+    </div>

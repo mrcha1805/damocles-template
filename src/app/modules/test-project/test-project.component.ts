@@ -1,53 +1,38 @@
 import { Component, OnInit } from '@angular/core';
-import { FormControl } from '@angular/forms';
-import { TooltipPosition } from '@angular/material/tooltip';
+import Prototype from '../../data/prototype-data.json';
+import { ThemePalette } from '@angular/material/core';
+import { NgxPopperjsTriggers, NgxPopperjsPlacements } from 'ngx-popperjs';
 
+export interface Task {
+  name: string;
+  completed: boolean;
+  color: ThemePalette;
+  subtasks?: Task[];
+}
 @Component({
   selector: 'app-test-project',
   templateUrl: './test-project.component.html',
   styleUrls: ['./test-project.component.scss'],
 })
 export class TestProjectComponent implements OnInit {
+  triggers = NgxPopperjsTriggers;
+  placements = NgxPopperjsPlacements;
+  offsetModifiers = [
+    {
+      name: 'offset',
+      options: {
+        offset: [0, 2],
+      },
+    },
+    {
+      name: 'flip',
+      options: {
+        flipVariations: false,
+      },
+    },
+  ];
   search: any;
-  positionOptions: TooltipPosition[] = [
-    'after',
-    'before',
-    'above',
-    'below',
-    'left',
-    'right',
-  ];
-  position = new FormControl(this.positionOptions[0]);
-  myKPI: any[] = [
-    {
-      image: '../../../assets/images/project_default.png',
-      name: 'Test KPI',
-      description:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer quis accumsan lorem.',
-      isSelected: false,
-    },
-    {
-      image: '../../../assets/images/project_default.png',
-      name: 'App e-Payment User',
-      description:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer quis accumsan lorem.',
-      isSelected: false,
-    },
-    {
-      image: '../../../assets/images/project_default.png',
-      name: 'First Job Search',
-      description:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer quis accumsan lorem.',
-      isSelected: false,
-    },
-    {
-      image: '../../../assets/images/project_default.png',
-      name: 'Support family',
-      description:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer quis accumsan lorem.',
-      isSelected: false,
-    },
-  ];
+  myKPI: any[] = Prototype.TestProject;
 
   constructor() {}
 

@@ -1,25 +1,13 @@
 import { Component, OnInit } from '@angular/core';
+import Prototype from '../../data/prototype-data.json';
 import { ThemePalette } from '@angular/material/core';
-import { HttpClient } from '@angular/common/http';
-import { FormControl } from '@angular/forms';
-import { TooltipPosition } from '@angular/material/tooltip';
+import { NgxPopperjsTriggers, NgxPopperjsPlacements } from 'ngx-popperjs';
+
 export interface Task {
   name: string;
   completed: boolean;
   color: ThemePalette;
   subtasks?: Task[];
-}
-
-export interface Data {
-  member: string[];
-  selected: boolean;
-  label: string;
-  value: string;
-  indeterminate?: boolean;
-  optionSubLevel?: boolean;
-  iconSrc?: string;
-  subCount?: number;
-  subLevel?: Data[];
 }
 
 @Component({
@@ -28,104 +16,107 @@ export interface Data {
   styleUrls: ['./kpi.component.scss'],
 })
 export class KpiComponent implements OnInit {
-  positionOptions: TooltipPosition[] = [
-    'after',
-    'before',
-    'above',
-    'below',
-    'left',
-    'right',
+  triggers = NgxPopperjsTriggers;
+  placements = NgxPopperjsPlacements;
+  offsetModifiers = [
+    {
+      name: 'offset',
+      options: {
+        offset: [0, 2],
+      },
+    },
+    {
+      name: 'flip',
+      options: {
+        flipVariations: false,
+      },
+    },
   ];
-  position = new FormControl(this.positionOptions[0]);
   dropdownIconSrc = '../assets/images/down.png';
   openOption = true;
   selectItemAll = false;
   term = '';
   affinitySelected = '';
-  dataMaster: Data[] = [];
+  index = 0;
+  dataMaster: any = [];
 
-  constructor(private http: HttpClient) {}
+  constructor() {}
 
-  ngOnInit(): void {
+  ngOnInit() {
     this.affinitySelected = '';
     this.selectItemAll = true;
-    this.http
-      .get<Data[]>('../assets/data/affinity-data.json')
-      .subscribe((data: Data[]) => {
-        console.log(data);
-        this.dataMaster = data;
-      });
+    this.dataMaster = Prototype.Kpi;
   }
 
-  selectSubLevel(sub: Data, header: Data) {
+  selectSubLevel(sub: any, header: any) {
     console.log(sub);
     console.log(header);
-    this.dataMaster.find((element) => {
-      if (element.label === header.label) {
-        element.selected = false;
-        console.log('--->' + element.label);
-        if (element.subLevel?.every((t) => t.selected) == true) {
-          element.indeterminate = false;
-          element.selected = true;
-        } else {
-          let unselect = true;
-          element.subLevel?.forEach((sub) => {
-            if (sub.selected) {
-              unselect = false;
-            }
-          });
-          if (unselect) {
-            element.selected = false;
-            element.indeterminate = false;
+
+    this.dataMaster.forEach((element: any) => {
+      element.data.forEach((data: any) => {
+        if (data.label === header.label) {
+          data.selected = false;
+          console.log('--->' + data.label);
+          if (data.subLevel?.every((t: any) => t.selected) == true) {
+            data.indeterminate = false;
+            data.selected = true;
           } else {
-            element.selected = false;
-            element.indeterminate = true;
+            let unselect = true;
+            data.subLevel?.forEach((sub: any) => {
+              if (sub.selected) {
+                unselect = false;
+              }
+            });
+            if (unselect) {
+              data.selected = false;
+              data.indeterminate = false;
+            } else {
+              data.selected = false;
+              data.indeterminate = true;
+            }
           }
         }
-      }
+      });
     });
-    // this.allComplete = this.task.subtasks != null && this.task.subtasks.every(t => t.completed);
   }
 
-  setAllItem(select: boolean, header: Data) {
+  setAllItem(select: boolean, header: any) {
     console.log('setAll');
-    this.dataMaster.find((element) => {
-      if (element.label === header.label) {
-        element.subLevel?.forEach((t) => (t.selected = select));
-      }
+
+    this.dataMaster.forEach((element: any) => {
+      element.data.forEach((data: any) => {
+        if (data.label === header.label) {
+          data.subLevel?.forEach((t: any) => (t.selected = select));
+        }
+      });
     });
   }
+
   selectAll(event: boolean) {
     this.selectItemAll = event;
     console.log(event);
     console.log(this.selectItemAll);
-    this.dataMaster.forEach((data) => {
-      data.selected = this.selectItemAll;
-      if (this.selectItemAll && data.indeterminate) {
-        data.indeterminate = false;
-      }
-      if (!this.selectItemAll) {
-        data.indeterminate = false;
-      }
-      data.subLevel?.forEach((sub) => {
-        sub.selected = this.selectItemAll;
+
+    this.dataMaster.forEach((element: any) => {
+      element.data.forEach((data: any) => {
+        data.selected = this.selectItemAll;
+        if (this.selectItemAll && data.indeterminate) {
+          data.indeterminate = false;
+        }
+        if (!this.selectItemAll) {
+          data.indeterminate = false;
+        }
+        data.subLevel?.forEach((sub: any) => {
+          sub.selected = this.selectItemAll;
+        });
       });
     });
   }
 
-  displaySelection() {
-    this.dataMaster.forEach((data) => {
-      if (data.selected) {
-        this.affinitySelected.concat(data.label);
-        this.affinitySelected.concat(', ');
-      }
-    });
-  }
-
-  iconDropdown(open: boolean, header: Data) {
-    this.dataMaster.find((element) => {
-      if (element.label === header.label) {
-        element.optionSubLevel = open;
+  iconDropdownGroup(open: boolean, header: any) {
+    this.dataMaster.find((element: any) => {
+      if (element.group === header.group) {
+        element.dropdownShow = open;
         if (open) {
           element.iconSrc = '../assets/images/down.png';
         } else {
@@ -134,12 +125,19 @@ export class KpiComponent implements OnInit {
       }
     });
   }
-  openDropdown(open: boolean) {
-    if (open) {
-      this.dropdownIconSrc = '../assets/images/up.png';
-    } else {
-      this.dropdownIconSrc = '../assets/images/down.png';
-    }
-    this.openOption = !this.openOption;
+
+  iconDropdownSubGroup(open: boolean, header: any) {
+    this.dataMaster.find((element: any) => {
+      element.data.find((data: any) => {
+        if (data.label === header.label) {
+          data.dropdownShow = open;
+          if (open) {
+            data.iconSrc = '../assets/images/down.png';
+          } else {
+            data.iconSrc = '../assets/images/up.png';
+          }
+        }
+      });
+    });
   }
 }

@@ -1,0 +1,875 @@
+{
+  "CreateProjectName": [
+    {
+      "image": "../../../assets/images/project_default.png",
+      "name": "My insurance1",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer quis accumsan lorem.",
+      "status": "New request"
+    },
+    {
+      "image": "../../../assets/images/project_default.png",
+      "name": "My insurance2",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer quis accumsan lorem.",
+      "status": "Processing"
+    },
+    {
+      "image": "../../../assets/images/project_default.png",
+      "name": "My insurance3",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer quis accumsan lorem.",
+      "status": "KPI Ready to use!"
+    },
+    {
+      "image": "../../../assets/images/project_default.png",
+      "name": "My insurance4",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer quis accumsan lorem.",
+      "status": "Done"
+    }
+  ],
+
+  "LetsStart": [
+    {
+      "image": "../../../assets/images/project_default.png",
+      "name": "Standard audience",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer quis accumsan lorem.",
+      "target": [
+        {
+          "name": "Target by Product",
+          "isSelected": true
+        },
+        {
+          "name": "Target by Category",
+          "isSelected": false
+        }
+      ],
+      "isSelected": false
+    },
+    {
+      "image": "../../../assets/images/audience.png",
+      "name": "Custom audience",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer quis accumsan lorem.",
+      "target": [],
+      "isSelected": false
+    }
+  ],
+
+  "MyProjects": [
+    {
+      "image": "../../../assets/images/project_default.png",
+      "name": "My insurance",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer quis accumsan lorem.",
+      "isSelected": false
+    },
+    {
+      "image": "../../../assets/images/project_default.png",
+      "name": "My banking",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer quis accumsan lorem.",
+      "target": [],
+      "isSelected": false
+    }
+  ],
+
+  "TestProject": [
+    {
+      "image": "../../../assets/images/project_default.png",
+      "name": "Test KPI",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer quis accumsan lorem.",
+      "isSelected": false
+    },
+    {
+      "image": "../../../assets/images/project_default.png",
+      "name": "App e-Payment User",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer quis accumsan lorem.",
+      "isSelected": false
+    },
+    {
+      "image": "../../../assets/images/project_default.png",
+      "name": "First Job Search",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer quis accumsan lorem.",
+      "isSelected": false
+    },
+    {
+      "image": "../../../assets/images/project_default.png",
+      "name": "Support family",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer quis accumsan lorem.",
+      "isSelected": false
+    }
+  ],
+
+  "KpiByProduct": [
+    {
+      "image": "../../../assets/images/project_default.png",
+      "name": "Loan",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer quis accumsan lorem.",
+      "isSelected": false
+    },
+    {
+      "image": "../../../assets/images/project_default.png",
+      "name": "Credit Card",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer quis accumsan lorem.",
+      "isSelected": false
+    },
+    {
+      "image": "../../../assets/images/project_default.png",
+      "name": "Finance",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer quis accumsan lorem.",
+      "isSelected": false
+    }
+  ],
+
+  "Kpi": [
+    {
+      "group": "Finance",
+      "selected": false,
+      "indeterminate": false,
+      "dropdownShow": false,
+      "iconSrc": "../assets/images/up.png",
+      "data": [
+        {
+          "selected": false,
+          "indeterminate": false,
+          "dropdownShow": false,
+          "iconSrc": "../assets/images/up.png",
+          "label": "Affluence",
+          "subLevel": [
+            {
+              "selected": false,
+              "label": "Job Type - Freelance 1"
+            },
+            {
+              "selected": false,
+              "label": "Job Type - Freelance 2"
+            },
+            {
+              "selected": false,
+              "label": "Job Type - Freelance 3"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "group": "Affinity",
+      "selected": false,
+      "indeterminate": false,
+      "dropdownShow": false,
+      "iconSrc": "../assets/images/up.png",
+      "data": [
+        {
+          "selected": false,
+          "indeterminate": false,
+          "dropdownShow": false,
+          "iconSrc": "../assets/images/up.png",
+          "label": "Automotive",
+          "subLevel": [
+            {
+              "selected": false,
+              "label": "Auto repair"
+            },
+            {
+              "selected": false,
+              "label": "Budget car"
+            },
+            {
+              "selected": false,
+              "label": "Luxury cars"
+            },
+            {
+              "selected": false,
+              "label": "Motorcycles"
+            },
+            {
+              "selected": false,
+              "label": "Off-road vehicles"
+            },
+            {
+              "selected": false,
+              "label": "Automotive - Others"
+            }
+          ]
+        },
+        {
+          "selected": false,
+          "indeterminate": false,
+          "dropdownShow": false,
+          "iconSrc": "../assets/images/up.png",
+          "label": "Books and Literature",
+
+          "subLevel": [
+            {
+              "selected": false,
+              "label": "Children's tips"
+            },
+            {
+              "selected": false,
+              "label": "Healthy books"
+            },
+            {
+              "selected": false,
+              "label": "Magazine"
+            },
+            {
+              "selected": false,
+              "label": "Books and Literature - Others"
+            }
+          ]
+        },
+        {
+          "selected": false,
+          "indeterminate": false,
+          "dropdownShow": false,
+          "iconSrc": "../assets/images/up.png",
+          "label": "Business and Finance",
+
+          "subLevel": [
+            {
+              "selected": false,
+              "label": "Construction industry"
+            },
+            {
+              "selected": false,
+              "label": "Home appliance industry"
+            },
+            {
+              "selected": false,
+              "label": "Business and Finance - Others"
+            }
+          ]
+        },
+        {
+          "selected": false,
+          "indeterminate": false,
+          "dropdownShow": false,
+          "iconSrc": "../assets/images/up.png",
+          "label": "Entertainment",
+
+          "subLevel": [
+            {
+              "selected": false,
+              "label": "Movies"
+            },
+            {
+              "selected": false,
+              "label": "Music and Audio"
+            },
+            {
+              "selected": false,
+              "label": "News and Politics"
+            },
+            {
+              "selected": false,
+              "label": "Video gaming"
+            }
+          ]
+        },
+        {
+          "selected": false,
+          "indeterminate": false,
+          "dropdownShow": false,
+          "iconSrc": "../assets/images/up.png",
+          "label": "Events and Attractions",
+
+          "subLevel": [
+            {
+              "selected": false,
+              "label": "Amusement and Theme parks"
+            },
+            {
+              "selected": false,
+              "label": "Events and Attractions - Others"
+            }
+          ]
+        },
+        {
+          "selected": false,
+          "indeterminate": false,
+          "dropdownShow": false,
+          "iconSrc": "../assets/images/up.png",
+          "label": "Food and Drink",
+
+          "subLevel": [
+            {
+              "selected": false,
+              "label": "Cooking"
+            },
+            {
+              "selected": false,
+              "label": "Dining out"
+            },
+            {
+              "selected": false,
+              "label": "Food delivery"
+            },
+            {
+              "selected": false,
+              "label": "Food & Drink - Others"
+            }
+          ]
+        },
+        {
+          "selected": false,
+          "indeterminate": false,
+          "dropdownShow": false,
+          "iconSrc": "../assets/images/up.png",
+          "label": "Healthy living",
+
+          "subLevel": [
+            {
+              "selected": false,
+              "label": "Fitness and Exercise"
+            },
+            {
+              "selected": false,
+              "label": "Wellness"
+            },
+            {
+              "selected": false,
+              "label": "Healthy living - Others"
+            }
+          ]
+        },
+        {
+          "selected": false,
+          "indeterminate": false,
+          "dropdownShow": false,
+          "iconSrc": "../assets/images/up.png",
+          "label": "Hobbies & Interests",
+
+          "subLevel": [
+            {
+              "selected": false,
+              "label": "Arts and Crafts"
+            },
+            {
+              "selected": false,
+              "label": "Games and Puzzles"
+            },
+            {
+              "selected": false,
+              "label": "Pet"
+            },
+            {
+              "selected": false,
+              "label": "Hobbies & interests - others"
+            }
+          ]
+        },
+        {
+          "selected": false,
+          "indeterminate": false,
+          "dropdownShow": false,
+          "iconSrc": "../assets/images/up.png",
+          "label": "Real estate",
+
+          "subLevel": [
+            {
+              "selected": false,
+              "label": "Real estate buying and Selling"
+            },
+            {
+              "selected": false,
+              "label": "Real estate - Others"
+            }
+          ]
+        },
+        {
+          "selected": false,
+          "indeterminate": false,
+          "dropdownShow": false,
+          "iconSrc": "../assets/images/up.png",
+          "label": "Shopping",
+
+          "subLevel": [
+            {
+              "selected": false,
+              "label": "Electronic"
+            },
+            {
+              "selected": false,
+              "label": "Grocery shopping"
+            },
+            {
+              "selected": false,
+              "label": "Home deceration"
+            },
+            {
+              "selected": false,
+              "label": "Home decoration"
+            },
+            {
+              "selected": false,
+              "label": "Shopping - kids"
+            },
+            {
+              "selected": false,
+              "label": "Shopping - others"
+            }
+          ]
+        },
+        {
+          "selected": false,
+          "indeterminate": false,
+          "dropdownShow": false,
+          "iconSrc": "../assets/images/up.png",
+          "label": "Sports",
+
+          "subLevel": [
+            {
+              "selected": false,
+              "label": "Football"
+            },
+            {
+              "selected": false,
+              "label": "Track and Field"
+            },
+            {
+              "selected": false,
+              "label": "Sports - Others"
+            }
+          ]
+        },
+        {
+          "selected": false,
+          "indeterminate": false,
+          "dropdownShow": false,
+          "iconSrc": "../assets/images/up.png",
+          "label": "Style & Fashion",
+
+          "subLevel": [
+            {
+              "selected": false,
+              "label": "Style & Fashion - Others"
+            }
+          ]
+        },
+        {
+          "selected": false,
+          "indeterminate": false,
+          "dropdownShow": false,
+          "iconSrc": "../assets/images/up.png",
+          "label": "Travel",
+
+          "subLevel": [
+            {
+              "selected": false,
+              "label": "Air"
+            },
+            {
+              "selected": false,
+              "label": "Bed & Breakfasts"
+            },
+            {
+              "selected": false,
+              "label": "Budget travel"
+            },
+            {
+              "selected": false,
+              "label": "Business travel"
+            },
+            {
+              "selected": false,
+              "label": "Car rental"
+            },
+            {
+              "selected": false,
+              "label": "Family travel"
+            },
+            {
+              "selected": false,
+              "label": "Hotels and motels"
+            },
+            {
+              "selected": false,
+              "label": "Rail travel"
+            },
+            {
+              "selected": false,
+              "label": "Remittance"
+            },
+            {
+              "selected": false,
+              "label": "Road trips"
+            },
+            {
+              "selected": false,
+              "label": "Travel Accessories"
+            },
+            {
+              "selected": false,
+              "label": "Travel China"
+            },
+            {
+              "selected": false,
+              "label": "Travel Hong kong"
+            },
+            {
+              "selected": false,
+              "label": "Travel Japan"
+            },
+            {
+              "selected": false,
+              "label": "Travel Korea"
+            },
+            {
+              "selected": false,
+              "label": "Travel Malaysia"
+            },
+            {
+              "selected": false,
+              "label": "Travel Planning"
+            },
+            {
+              "selected": false,
+              "label": "Travel Singapore"
+            },
+            {
+              "selected": false,
+              "label": "Travel Switzerland"
+            },
+            {
+              "selected": false,
+              "label": "Travel UK"
+            },
+            {
+              "selected": false,
+              "label": "Travel USA"
+            },
+            {
+              "selected": false,
+              "label": "Travel - Others"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "group": "Financial Behavior",
+      "selected": false,
+      "indeterminate": false,
+      "dropdownShow": false,
+      "iconSrc": "../assets/images/up.png",
+      "data": [
+        {
+          "selected": false,
+          "indeterminate": false,
+          "dropdownShow": false,
+          "iconSrc": "../assets/images/up.png",
+          "label": "Mock Up",
+          "subLevel": [
+            {
+              "selected": false,
+              "label": "Mock Up 1"
+            },
+            {
+              "selected": false,
+              "label": "Mock Up 2"
+            },
+            {
+              "selected": false,
+              "label": "Mock Up 3"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "group": "Personality Traits",
+      "selected": false,
+      "indeterminate": false,
+      "dropdownShow": false,
+      "iconSrc": "../assets/images/up.png",
+      "data": [
+        {
+          "selected": false,
+          "indeterminate": false,
+          "dropdownShow": false,
+          "iconSrc": "../assets/images/up.png",
+          "label": "Mock Up",
+          "subLevel": [
+            {
+              "selected": false,
+              "label": "Mock Up 1"
+            },
+            {
+              "selected": false,
+              "label": "Mock Up 2"
+            },
+            {
+              "selected": false,
+              "label": "Mock Up 3"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "group": "Product Demand",
+      "selected": false,
+      "indeterminate": false,
+      "dropdownShow": false,
+      "iconSrc": "../assets/images/up.png",
+      "data": [
+        {
+          "selected": false,
+          "indeterminate": false,
+          "dropdownShow": false,
+          "iconSrc": "../assets/images/up.png",
+          "label": "Mock Up",
+          "subLevel": [
+            {
+              "selected": false,
+              "label": "Mock Up 1"
+            },
+            {
+              "selected": false,
+              "label": "Mock Up 2"
+            },
+            {
+              "selected": false,
+              "label": "Mock Up 3"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "group": "Audience Presennce",
+      "selected": false,
+      "indeterminate": false,
+      "dropdownShow": false,
+      "iconSrc": "../assets/images/up.png",
+      "data": [
+        {
+          "selected": false,
+          "indeterminate": false,
+          "dropdownShow": false,
+          "iconSrc": "../assets/images/up.png",
+          "label": "Mock Up",
+          "subLevel": [
+            {
+              "selected": false,
+              "label": "Mock Up 1"
+            },
+            {
+              "selected": false,
+              "label": "Mock Up 2"
+            },
+            {
+              "selected": false,
+              "label": "Mock Up 3"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "group": "Digital Activity",
+      "selected": false,
+      "indeterminate": false,
+      "dropdownShow": false,
+      "iconSrc": "../assets/images/up.png",
+      "data": [
+        {
+          "selected": false,
+          "indeterminate": false,
+          "dropdownShow": false,
+          "iconSrc": "../assets/images/up.png",
+          "label": "Mock Up",
+          "subLevel": [
+            {
+              "selected": false,
+              "label": "Mock Up 1"
+            },
+            {
+              "selected": false,
+              "label": "Mock Up 2"
+            },
+            {
+              "selected": false,
+              "label": "Mock Up 3"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "group": "Life Event",
+      "selected": false,
+      "indeterminate": false,
+      "dropdownShow": false,
+      "iconSrc": "../assets/images/up.png",
+      "data": [
+        {
+          "selected": false,
+          "indeterminate": false,
+          "dropdownShow": false,
+          "iconSrc": "../assets/images/up.png",
+          "label": "Mock Up",
+          "subLevel": [
+            {
+              "selected": false,
+              "label": "Mock Up 1"
+            },
+            {
+              "selected": false,
+              "label": "Mock Up 2"
+            },
+            {
+              "selected": false,
+              "label": "Mock Up 3"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "group": "Life Stage",
+      "selected": false,
+      "indeterminate": false,
+      "dropdownShow": false,
+      "iconSrc": "../assets/images/up.png",
+      "data": [
+        {
+          "selected": false,
+          "indeterminate": false,
+          "dropdownShow": false,
+          "iconSrc": "../assets/images/up.png",
+          "label": "Mock Up",
+          "subLevel": [
+            {
+              "selected": false,
+              "label": "Mock Up 1"
+            },
+            {
+              "selected": false,
+              "label": "Mock Up 2"
+            },
+            {
+              "selected": false,
+              "label": "Mock Up 3"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "group": "Location",
+      "selected": false,
+      "indeterminate": false,
+      "dropdownShow": false,
+      "iconSrc": "../assets/images/up.png",
+      "data": [
+        {
+          "selected": false,
+          "indeterminate": false,
+          "dropdownShow": false,
+          "iconSrc": "../assets/images/up.png",
+          "label": "Mock Up",
+          "subLevel": [
+            {
+              "selected": false,
+              "label": "Mock Up 1"
+            },
+            {
+              "selected": false,
+              "label": "Mock Up 2"
+            },
+            {
+              "selected": false,
+              "label": "Mock Up 3"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "group": "Bank Engagement",
+      "selected": false,
+      "indeterminate": false,
+      "dropdownShow": false,
+      "iconSrc": "../assets/images/up.png",
+      "data": [
+        {
+          "selected": false,
+          "indeterminate": false,
+          "dropdownShow": false,
+          "iconSrc": "../assets/images/up.png",
+          "label": "Mock Up",
+          "subLevel": [
+            {
+              "selected": false,
+              "label": "Mock Up 1"
+            },
+            {
+              "selected": false,
+              "label": "Mock Up 2"
+            },
+            {
+              "selected": false,
+              "label": "Mock Up 3"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "group": "Demographics",
+      "selected": false,
+      "indeterminate": false,
+      "dropdownShow": false,
+      "iconSrc": "../assets/images/up.png",
+      "data": [
+        {
+          "selected": false,
+          "indeterminate": false,
+          "dropdownShow": false,
+          "iconSrc": "../assets/images/up.png",
+          "label": "Mock Up",
+          "subLevel": [
+            {
+              "selected": false,
+              "label": "Mock Up 1"
+            },
+            {
+              "selected": false,
+              "label": "Mock Up 2"
+            },
+            {
+              "selected": false,
+              "label": "Mock Up 3"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "group": "Operational Tasks",
+      "selected": false,
+      "indeterminate": false,
+      "dropdownShow": false,
+      "iconSrc": "../assets/images/up.png",
+      "data": [
+        {
+          "selected": false,
+          "indeterminate": false,
+          "dropdownShow": false,
+          "iconSrc": "../assets/images/up.png",
+          "label": "Mock Up",
+          "subLevel": [
+            {
+              "selected": false,
+              "label": "Mock Up 1"
+            },
+            {
+              "selected": false,
+              "label": "Mock Up 2"
+            },
+            {
+              "selected": false,
+              "label": "Mock Up 3"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
