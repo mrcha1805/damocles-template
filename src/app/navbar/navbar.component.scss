@@ -1,0 +1,74 @@
+
+@mixin font-format($weight, $size, $height, $hexcolor) {
+  font-family: Noto Sans, sans-serif !important;
+  font-style: normal;
+  font-weight: $weight;
+  font-size: $size;
+  line-height: $height;
+  color: $hexcolor;
+  margin: 0;
+}
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  // font-family: 'Noto Sans', sans-serif;
+}
+.nav {
+  cursor: pointer;
+}
+
+.navbar{
+  background: #020202;
+  //background: yellow;
+  box-shadow: 0px 4px 6px rgba(2, 2, 2, 0.25);
+  width: 100%;
+  height: 60px;
+  color: #FFFFFF;
+  .img-nav {
+    width: 22px;
+    height: 22px;
+  }
+  .icon {
+    width: 180px;
+    height: 37px;
+  }
+  .menu-header {
+    margin-top: 5px;
+    @include font-format(700, 15.71px, 26px, #FFFFFF);
+  }
+  .user-container {
+    display: inline-flex;
+    margin-right: 35px;
+    margin-bottom: 10px;
+    .user-icon {
+      width: 30px;
+      height: 30px;
+      margin:0 10px 0 10px;
+    }
+    p {
+      color: #FFFFFF;
+      margin:4px 10px 0 10px;
+    }
+    .user-dropdown {
+      width: 6px;
+      height: 10px;
+      margin-top: 8px;
+      margin-left: 10px;
+    }
+    .username {
+     
+      @include font-format(400, 12px, 26px, #FFFFFF);
+    }
+    .line {
+      border: 1px solid #4E4E4E;
+    }
+    .notification {
+      width: 20px;
+      height: 27px;
+      margin:0 10px 0 10px;
+    }
+  }
+}

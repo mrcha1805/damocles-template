@@ -33,6 +33,8 @@ import {
 } from 'ngx-popperjs';
 import { ExampleComponent } from './modules/example/example.component';
 import { NgApexchartsModule } from 'ng-apexcharts';
+import { DashboardComponent } from './modules/dashboard/dashboard.component';
+import { NavbarComponent } from './navbar/navbar.component';
 
 export const TOOLTIP_DEFAULT_OPTIONS: NgxPopperjsOptions = {
   trigger: NgxPopperjsTriggers.hover,
@@ -57,6 +59,8 @@ export const TOOLTIP_DEFAULT_OPTIONS: NgxPopperjsOptions = {
     VerifyComponent,
     CreateKpiNameComponent,
     ExampleComponent,
+    DashboardComponent,
+    NavbarComponent,
   ],
   imports: [
     BrowserModule,

@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { LoginComponent } from './login/login.component';
+import { DashboardComponent } from './modules/dashboard/dashboard.component';
 import { ExampleComponent } from './modules/example/example.component';
 import { HomeComponent } from './modules/home/home.component';
 import { RegisterComponent } from './register/register/register.component';
@@ -23,6 +24,10 @@ const routes: Routes = [
   {
     path: 'verify',
     component: VerifyComponent,
+  },
+  {
+    path: 'dashboard',
+    component: DashboardComponent,
   },
   {
     path: 'menu',

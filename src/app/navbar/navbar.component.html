@@ -1,0 +1,24 @@
+<div class="navbar d-flex">
+
+  <div class="p-2 flex-grow-1">
+    <img class="p-1 icon" src="../../../assets/images/Logo_Democles.png">
+  </div>
+  <div class="p-2 flex-grow-1 ">
+    <div class="d-flex flex-row bd-highlight mb-3">
+      <div class="p-2 bd-highlight"><img class="img-nav" src="../../../assets/images/home2.svg"></div>
+      <div class="p-2 menu-header">Home</div>
+      <div class="p-2 bd-highlight"><img class="img-nav" src="../../../assets/images/dashboard2.svg"></div>
+      <div class="p-2 menu-header nav" (click)="homeNav()">Dashboard</div>
+    </div>
+  </div>
+  <div class="user-container">
+    <img class="notification" src="../../../assets/images/notification.svg">
+    <div class="line"></div>
+    <img class="user-icon" src="../../../assets/images/default-profile.svg">
+    <p class="username">
+      {{name}}
+    </p>
+    <img class="user-dropdown" src="../../../assets/images/arrow_down.svg">
+  </div>
+
+</div>
