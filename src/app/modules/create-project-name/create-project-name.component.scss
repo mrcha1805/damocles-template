@@ -1,3 +1,13 @@
+@mixin font-format($weight, $size, $height, $hexcolor) {
+  font-family: Noto Sans, sans-serif !important;
+  font-style: normal;
+  font-weight: $weight;
+  font-size: $size;
+  line-height: $height;
+  color: $hexcolor;
+  margin: 0;
+}
+
 .grid-item {
   border: 1px solid #e9ecef;
   background: #ffffff;
@@ -53,51 +63,27 @@
 }
 
 .text-header {
-  font-style: normal;
-  font-weight: 700;
-  font-size: 32px;
-  line-height: 44px;
-  color: #020202;
+  @include font-format(700, 32px, 44px, #020202);
 }
 
 .text-title {
-  font-style: normal;
-  font-weight: 700;
-  font-size: 20px;
-  line-height: 16px;
-  color: #020202;
+  @include font-format(700, 20px, 16px, #020202);
 }
 
 .text-my-project {
-  font-style: normal;
-  font-weight: 700;
-  font-size: 20px;
-  line-height: 27px;
-  color: #020202;
+  @include font-format(700, 20px, 27px, #020202);
 }
 
 .text-project-name {
-  font-style: normal;
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 20px;
-  color: #020202;
+  @include font-format(700, 16px, 20px, #020202);
 }
 
 .text-status {
-  font-style: normal;
-  font-weight: 500;
-  font-size: 12px;
-  line-height: 26px;
-  color: #020202;
+  @include font-format(500, 12px, 26px, #020202);
 }
 
 .text-description {
-  font-style: normal;
-  font-weight: 400;
-  font-size: 12px;
-  line-height: 16px;
-  color: #4e4e4e;
+  @include font-format(400, 12px, 16px, #020202);
 }
 
 input {
@@ -108,10 +94,7 @@ input {
 }
 
 .input-search {
-  font-style: normal;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 22px;
+  @include font-format(400, 16px, 22px, #020202);
 }
 
 .overflow {

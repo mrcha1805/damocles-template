@@ -2,8 +2,8 @@
 <app-lets-start></app-lets-start>
 <app-test-project></app-test-project>
 <app-kpi-by-product></app-kpi-by-product>
-<app-create-kpi-name></app-create-kpi-name>
-<app-kpi></app-kpi> -->
+<app-create-kpi-name></app-create-kpi-name> -->
+<app-kpi></app-kpi>
 
 <div fxLayout="column" fxLayoutGap="10px" class="container">
   <div fxFlex="25%" class="block-1">
@@ -48,7 +48,7 @@
           style="margin-right: 10px;margin-bottom:2px;" src="../../../assets/images/back.svg">Back</button>
     </div>
     <div fxFlex="75%" fxLayoutAlign="center center" fxFlexFill class="grid-item">
-      <div *ngIf="stepCurrent === 1 && userIsExist">
+      <div fxLayout="row" *ngIf="stepCurrent === 1 && userIsExist">
         <app-lets-start></app-lets-start>
       </div>
       <div *ngIf="stepCurrent === 2">

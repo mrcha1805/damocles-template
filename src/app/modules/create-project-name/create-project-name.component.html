@@ -1,52 +1,63 @@
-<div fxLayout="row" fxLayoutAlign="center center" class="grid-item p-4 m-2">
-    <div fxLayout="column" fxLayoutGap="20px" style="width: 556px; height: 450px;">
-        <div fxLayout="row" fxLayoutAlign="center center" class="text-header text-center mb-4">Create Project Name</div>
-        <div fxLayout="row" fxLayoutAlign="center center" class="text-title text-center">Project Name</div>
-        <div fxLayout="row" fxLayoutAlign="center center" class="text-title">
-            <div fxFlex.gt-xs="70%" fxFlex.gt-sm="70%" fxFlex.gt-md="70%" class="input-group mb-3">
-                <input type="text" class="form-control input-search" placeholder="Project Name" [(ngModel)]="search">
-            </div>
-        </div>
-        <div fxLayout="row" fxLayoutAlign="start center" class="text-my-project text-center mb-2"
-            *ngIf="(myProjects | filter: search).length > 0">My Projects</div>
+<div class="grid-item m-2">
+    <div fxLayout="column" class="container">
+        <div fxLayout="row" fxLayout.lt-md="column" fxLayoutGap="10px" fxFlex="50%">
+            <div fxFlex fxHide.lt-md fxLayoutAlign="center center" fxFlexFill class="grid-item-layout"></div>
+            <div fxFlex="75%" fxLayoutAlign="center center" fxFlexFill class="grid-item-layout p-4">
+                <div fxLayout="column" fxLayoutGap="20px">
+                    <div fxLayout="row" fxLayoutAlign="center center" class="text-header text-center mb-4">Create
+                        Project Name</div>
+                    <div fxLayout="row" fxLayoutAlign="center center" class="text-title text-center">Project Name</div>
+                    <div fxLayout="row" fxLayoutAlign="center center" class="text-title">
+                        <div fxFlex.gt-xs="70%" fxFlex.gt-sm="70%" fxFlex.gt-md="70%" class="input-group mb-3">
+                            <input type="text" class="form-control input-search" placeholder="Project Name"
+                                [(ngModel)]="search">
+                        </div>
+                    </div>
+                    <div fxLayout="row" fxLayoutAlign="start center" class="text-my-project text-center mb-2"
+                        *ngIf="(myProjects | filter: search).length > 0">My Projects</div>
 
-        <div fxLayout="column" fxLayoutAlign=" none" class="overflow item">
-            <div fxLayout="row" class="card grid-card m-2"
-                *ngFor="let item of myProjects | filter: search; let i = index" [ngClass]="item.status.toLowerCase().indexOf('request') !== -1 
-                ? 'info' : (item.status.toLowerCase().indexOf('processing') !== -1 ) 
-                ? 'warning': (item.status.toLowerCase().indexOf('done') !== -1) 
-                ? 'secondary'  : 'secondary'">
-                <div class="row">
-                    <div fxLayoutAlign.lt-sm="start center" fxLayoutAlign="center center"
-                        class="col-xs-12 col-sm-2 col-md-2 col-lg-2 p-2">
-                        <img src="{{ item.image }}" width="40" height="40" class="img-fluid rounded-start">
-                    </div>
-                    <div class="col-xs-12 col-sm-10 col-md-10 col-lg-10">
-                        <div class="row p-1">
-                            <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 p-1 text-project-name">
-                                {{ item.name }}
-                                &nbsp;
-                                <span [popper]="popperContent" [popperTrigger]="triggers.hover"
-                                    [popperModifiers]="offsetModifiers">
-                                    <img src="../../../assets/icons/info.svg" width="20" height="20" />
-                                </span>
-                            </div>
-                            <div fxLayoutAlign="end center" class="col-xs-12 col-sm-6 col-md-6 col-lg-6 p-1">
-                                <button type="button" class="btn btn-primary btn-sm px-4 py-0 text-status" disabled>
-                                    {{ item.status }}
-                                </button>
+                    <div fxLayout="column" fxLayoutAlign=" none" class="overflow item">
+                        <div fxLayout="row" class="card grid-card m-2"
+                            *ngFor="let item of myProjects | filter: search; let i = index" [ngClass]="item.status.toLowerCase().indexOf('request') !== -1 
+                            ? 'info' : (item.status.toLowerCase().indexOf('processing') !== -1 ) 
+                            ? 'warning': (item.status.toLowerCase().indexOf('done') !== -1) 
+                            ? 'secondary'  : 'secondary'">
+                            <div class="row">
+                                <div fxLayoutAlign.lt-sm="start center" fxLayoutAlign="center center"
+                                    class="col-xs-12 col-sm-2 col-md-2 col-lg-2 p-2">
+                                    <img src="{{ item.image }}" width="40" height="40" class="img-fluid rounded-start">
+                                </div>
+                                <div class="col-xs-12 col-sm-10 col-md-10 col-lg-10">
+                                    <div class="row p-1">
+                                        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 p-1 text-project-name">
+                                            {{ item.name }}
+                                            &nbsp;
+                                            <span [popper]="popperContent" [popperTrigger]="triggers.hover"
+                                                [popperModifiers]="offsetModifiers">
+                                                <img src="../../../assets/icons/info.svg" width="20" height="20" />
+                                            </span>
+                                        </div>
+                                        <div fxLayoutAlign="end center"
+                                            class="col-xs-12 col-sm-6 col-md-6 col-lg-6 p-1">
+                                            <button type="button" class="btn btn-primary btn-sm px-4 py-0 text-status"
+                                                disabled>
+                                                {{ item.status }}
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="row p-1">
+                                        <div class="col-12 p-1 text-description">{{ item.description }}</div>
+                                    </div>
+                                </div>
+                                <popper-content #popperContent>
+                                    <span>info</span><br />
+                                </popper-content>
                             </div>
                         </div>
-                        <div class="row p-1">
-                            <div class="col-12 p-1 text-description">{{ item.description }}</div>
-                        </div>
                     </div>
-                    <popper-content #popperContent>
-                        <span>info</span><br />
-                    </popper-content>
                 </div>
             </div>
+            <div fxFlex fxHide.lt-md fxLayoutAlign="center center" fxFlexFill class="grid-item-layout"></div>
         </div>
-
     </div>
 </div>

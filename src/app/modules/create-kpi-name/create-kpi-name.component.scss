@@ -1,3 +1,13 @@
+@mixin font-format($weight, $size, $height, $hexcolor) {
+  font-family: Noto Sans, sans-serif !important;
+  font-style: normal;
+  font-weight: $weight;
+  font-size: $size;
+  line-height: $height;
+  color: $hexcolor;
+  margin: 0;
+}
+
 .grid-item {
   border: 1px solid #e9ecef;
   background: #ffffff;
@@ -8,7 +18,6 @@
 
 .grid-card {
   border: 1px solid #e9ecef;
-  //   border-left-width: 10px;
   background: #ffffff;
   box-shadow: 0px 4px 6px rgba(2, 2, 2, 0.25);
   border-radius: 10px;
@@ -23,11 +32,7 @@
   -webkit-filter: brightness(95%);
 }
 .btn-add {
-  font-style: normal;
-  font-weight: 700;
-  font-size: 14px;
-  line-height: 20px;
-  color: #020202;
+  @include font-format(700, 14px, 20px, #020202);
   border-radius: 100px;
   border: 1px solid #020202;
   height: 40px;
@@ -40,37 +45,19 @@
   color: #ffffff;
 }
 .text-header {
-  font-style: normal;
-  font-weight: 700;
-  font-size: 32px;
-  line-height: 44px;
-  color: #020202;
+  @include font-format(700, 32px, 44px, #020202);
 }
 
 .text-title {
-  font-style: normal;
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 23px;
-  color: #020202;
+  @include font-format(500, 16px, 23px, #020202);
 }
 
 .text-attribute {
-  font-style: normal;
-  font-weight: 600;
-  font-size: 24px;
-  line-height: 33px;
-  display: flex;
-  align-items: center;
-  color: #020202;
+  @include font-format(600, 24px, 33px, #020202);
 }
 
 .text-title-search-input {
-  font-style: normal;
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 16px;
-  color: #020202;
+  @include font-format(700, 16px, 16px, #020202);
 }
 
 input {
@@ -85,10 +72,7 @@ input {
   z-index: 5;
 }
 .input-search {
-  font-style: normal;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 22px;
+  @include font-format(700, 16px, 22px, #020202);
   padding-left: 40px;
 }
 ::placeholder {

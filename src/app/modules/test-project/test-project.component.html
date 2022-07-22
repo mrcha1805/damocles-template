@@ -1,53 +1,64 @@
-<div fxLayout="row" fxLayoutAlign="center center" class="grid-item p-4 m-2">
-    <div fxLayout="column" fxLayoutGap="20px" style="width: 556px;">
-        <div fxLayout="row" fxLayoutAlign="center center" class="text-header text-center mb-4">Test Project</div>
-        <div fxLayout.gt-sm="row" fxLayout.lt-md="column" class="p-2 mb-0">
-            <div fxFlex.gt-sm="60%" fxFlex.lt-md="60%" fxLayoutAlign="center center" class="p-2">
-                <img class="search-icon" src="../../../assets/icons/search.svg" width="15" height="15" />
-                <div class="input-group">
-                    <input type="text" class="form-control input-search" placeholder="Search" [(ngModel)]="search">
-                </div>
-            </div>
-            <div fxFlex.gt-sm="40%" fxFlex.lt-md="40%" fxLayoutAlign="end center" class="p-2 px-3">
-                <div fxLayout="row" fxLayoutAlign="end center" class="input-group">
-                    <button type="button" class="btn btn-add">
-                        <img src="../../../assets/icons/add.svg" width="15" height="15" />
-                        &nbsp;
-                        Add KPI
-                    </button>
-                </div>
-            </div>
-        </div>
-        <div fxLayout="row" fxLayoutAlign="start center" class="text-my-project text-center px-2 mb-2"
-            *ngIf="(myKPI | filter: search).length > 0">My KPI</div>
-        <div fxLayout="column" fxLayoutAlign=" none" class="overflow item">
-            <div fxLayout="column" class="btn card grid-card m-2"
-                *ngFor="let item of myKPI | filter: search; let i = index">
-                <div class="row">
-                    <div fxLayoutAlign.lt-sm="start center" fxLayoutAlign="center center"
-                        class="col-xs-12 col-sm-2 col-md-2 col-lg-2 p-2">
-                        <img src="{{ item.image }}" width="40" height="40" class="img-fluid rounded-start">
+<div class="grid-item m-2">
+    <div fxLayout="column" class="container">
+        <div fxLayout="row" fxLayout.lt-md="column" fxLayoutGap="10px" fxFlex="50%">
+            <div fxFlex fxHide.lt-md fxLayoutAlign="center center" fxFlexFill class="grid-item-layout"></div>
+            <div fxFlex="75%" fxLayoutAlign="center center" fxFlexFill class="grid-item-layout p-4">
+                <div fxLayout="column" fxLayoutGap="20px" style="width: 556px;">
+                    <div fxLayout="row" fxLayoutAlign="center center" class="text-header text-center mb-4">Test Project
                     </div>
-                    <div class="col-xs-12 col-sm-10 col-md-10 col-lg-10">
-                        <div class="row p-1">
-                            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 p-1 text-start text-project-name">
-                                {{ item.name }}
-                                &nbsp;
-                                <span [popper]="popperContent" [popperTrigger]="triggers.hover"
-                                    [popperModifiers]="offsetModifiers">
-                                    <img src="../../../assets/icons/info.svg" width="20" height="20" />
-                                </span>
+                    <div fxLayout.gt-sm="row" fxLayout.lt-md="column" class="p-2 mb-0">
+                        <div fxFlex.gt-sm="60%" fxFlex.lt-md="60%" fxLayoutAlign="center center" class="p-2">
+                            <img class="search-icon" src="../../../assets/icons/search.svg" width="15" height="15" />
+                            <div class="input-group">
+                                <input type="text" class="form-control input-search" placeholder="Search"
+                                    [(ngModel)]="search">
                             </div>
                         </div>
-                        <popper-content #popperContent>
-                            <span>info</span><br />
-                        </popper-content>
-                        <div class="row p-1">
-                            <div class="col-12 p-1 text-start text-description">{{ item.description }}</div>
+                        <div fxFlex.gt-sm="40%" fxFlex.lt-md="40%" fxLayoutAlign="end center" class="p-2 px-3">
+                            <div fxLayout="row" fxLayoutAlign="end center" class="input-group">
+                                <button type="button" class="btn btn-add">
+                                    <img src="../../../assets/icons/add.svg" width="15" height="15" />
+                                    &nbsp;
+                                    Add KPI
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div fxLayout="row" fxLayoutAlign="start center" class="text-my-project text-center px-2 mb-2"
+                        *ngIf="(myKPI | filter: search).length > 0">My KPI</div>
+                    <div fxLayout="column" fxLayoutAlign=" none" class="overflow item">
+                        <div fxLayout="column" class="btn card grid-card m-2"
+                            *ngFor="let item of myKPI | filter: search; let i = index">
+                            <div class="row">
+                                <div fxLayoutAlign.lt-sm="start center" fxLayoutAlign="center center"
+                                    class="col-xs-12 col-sm-2 col-md-2 col-lg-2 p-2">
+                                    <img src="{{ item.image }}" width="40" height="40" class="img-fluid rounded-start">
+                                </div>
+                                <div class="col-xs-12 col-sm-10 col-md-10 col-lg-10">
+                                    <div class="row p-1">
+                                        <div
+                                            class="col-xs-12 col-sm-12 col-md-12 col-lg-12 p-1 text-start text-project-name">
+                                            {{ item.name }}
+                                            &nbsp;
+                                            <span [popper]="popperContent" [popperTrigger]="triggers.hover"
+                                                [popperModifiers]="offsetModifiers">
+                                                <img src="../../../assets/icons/info.svg" width="20" height="20" />
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <popper-content #popperContent>
+                                        <span>info</span><br />
+                                    </popper-content>
+                                    <div class="row p-1">
+                                        <div class="col-12 p-1 text-start text-description">{{ item.description }}</div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
+            <div fxFlex fxHide.lt-md fxLayoutAlign="center center" fxFlexFill class="grid-item-layout"></div>
         </div>
     </div>
 </div>

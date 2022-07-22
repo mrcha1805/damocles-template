@@ -35,6 +35,7 @@ import { ExampleComponent } from './modules/example/example.component';
 import { NgApexchartsModule } from 'ng-apexcharts';
 import { DashboardComponent } from './modules/dashboard/dashboard.component';
 import { NavbarComponent } from './navbar/navbar.component';
+import { ThemplateFlexlayoutCustomComponent } from './modules/themplate-flexlayout-custom/themplate-flexlayout-custom.component';
 
 export const TOOLTIP_DEFAULT_OPTIONS: NgxPopperjsOptions = {
   trigger: NgxPopperjsTriggers.hover,
@@ -61,6 +62,7 @@ export const TOOLTIP_DEFAULT_OPTIONS: NgxPopperjsOptions = {
     ExampleComponent,
     DashboardComponent,
     NavbarComponent,
+    ThemplateFlexlayoutCustomComponent,
   ],
   imports: [
     BrowserModule,

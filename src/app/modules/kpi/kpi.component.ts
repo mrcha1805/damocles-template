@@ -1,7 +1,36 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import Prototype from '../../data/prototype-data.json';
+import * as _ from 'lodash';
 import { ThemePalette } from '@angular/material/core';
 import { NgxPopperjsTriggers, NgxPopperjsPlacements } from 'ngx-popperjs';
+import {
+  ApexDataLabels,
+  ApexLegend,
+  ApexStroke,
+  ApexTooltip,
+  ChartComponent,
+} from 'ng-apexcharts';
+
+import {
+  ApexNonAxisChartSeries,
+  ApexResponsive,
+  ApexChart,
+  ApexTheme,
+  ApexTitleSubtitle,
+} from 'ng-apexcharts';
+
+export type ChartOptions = {
+  series: ApexNonAxisChartSeries;
+  chart: ApexChart;
+  responsive: ApexResponsive[];
+  labels: any;
+  theme: ApexTheme;
+  title: ApexTitleSubtitle;
+  legend: ApexLegend;
+  tooltip: ApexTooltip;
+  dataLabels: ApexDataLabels;
+  strock: ApexStroke;
+};
 
 export interface Task {
   name: string;
@@ -16,6 +45,9 @@ export interface Task {
   styleUrls: ['./kpi.component.scss'],
 })
 export class KpiComponent implements OnInit {
+  @ViewChild('chart') chart: ChartComponent | any;
+  public chartOptions: Partial<ChartOptions> | any;
+
   triggers = NgxPopperjsTriggers;
   placements = NgxPopperjsPlacements;
   offsetModifiers = [
@@ -35,17 +67,98 @@ export class KpiComponent implements OnInit {
   dropdownIconSrc = '../assets/images/down.png';
   openOption = true;
   selectItemAll = false;
-  term = '';
+  search = '';
   affinitySelected = '';
   index = 0;
   dataMaster: any = [];
+  summary: number = 0;
 
-  constructor() {}
+  constructor() {
+    this.chartOptions = {
+      series: [155000, 155000, 30000],
+      chart: {
+        width: '100%',
+        type: 'pie',
+        animations: {
+          enabled: true,
+          easing: 'easeinout',
+          speed: 375,
+          animateGradually: {
+            enabled: true,
+            delay: 125,
+          },
+          dynamicAnimation: {
+            enabled: true,
+            speed: 250,
+          },
+        },
+      },
+      labels: ['count 1', 'count 2', 'count 3'],
+      theme: {
+        mode: 'light',
+        monochrome: {
+          enabled: true,
+          color: '#3B4F4D',
+          shadeTo: 'light',
+          shadeIntensity: 0.65,
+        },
+      },
+      tooltip: {
+        enabled: true,
+      },
+      responsive: [
+        {
+          breakpoint: 480,
+          options: {
+            chart: {
+              width: 200,
+            },
+            legend: {
+              position: 'bottom',
+            },
+          },
+        },
+      ],
+      legend: {
+        show: false,
+        position: 'bottom',
+      },
+      dataLabels: {
+        enabled: false,
+        textAnchor: 'middle',
+      },
+      stroke: {
+        show: true,
+        curve: 'smooth',
+        lineCap: 'butt',
+        colors: undefined,
+        width: 2,
+        dashArray: 0,
+      },
+    };
+  }
+
+  recommendedKPI: any[] = [
+    {
+      name: 'Job Type - Regular',
+      summary: 360000,
+    },
+    {
+      name: 'App e-Payment User',
+      summary: 150000,
+    },
+    {
+      name: 'First Job Search',
+      summary: 360000,
+    },
+  ];
 
   ngOnInit() {
     this.affinitySelected = '';
     this.selectItemAll = true;
     this.dataMaster = Prototype.Kpi;
+
+    this.summary = _.sum(this.chartOptions.series);
   }
 
   selectSubLevel(sub: any, header: any) {
