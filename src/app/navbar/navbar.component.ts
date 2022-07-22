@@ -14,8 +14,12 @@ export class NavbarComponent implements OnInit {
     this.name = "Nicholas Ellison";
   }
 
-  homeNav() {
+  dashboardNav() {
     this.router.navigateByUrl('/dashboard');
   }
+  homeNav() {
+    this.router.navigateByUrl('/home');
+  }
+
 
 }

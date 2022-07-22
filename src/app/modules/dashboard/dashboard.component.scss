@@ -1,3 +1,14 @@
+
+@mixin font-format($weight, $size, $height, $hexcolor) {
+  font-family: Noto Sans, sans-serif !important;
+  font-style: normal;
+  font-weight: $weight;
+  font-size: $size;
+  line-height: $height;
+  color: $hexcolor;
+  margin: 0;
+}
+
 .container {
   padding: 5px;
   height: 100vh;
@@ -8,4 +19,23 @@
   border-radius: 5px;
   padding: 10px;
   height: 100px;
+}
+
+.card-container {
+  //background: yellow;
+  background: #FFFFFF;
+  border: 1px solid #FFFFFF;
+  box-shadow: 0px 4px 6px rgba(2, 2, 2, 0.25);
+  border-radius: 10px;
+  padding: 20px;
+  .card-info {
+    margin-top: 20px;
+    background: #B3D235;
+    border-radius: 10px;
+    height: 30px;
+    width: 90%;
+    position: relative;
+   
+    @include font-format(500, 12px, 26px, #020202);
+  }
 }

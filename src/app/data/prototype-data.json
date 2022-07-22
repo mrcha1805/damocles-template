@@ -1,25 +1,25 @@
 {
   "CreateProjectName": [
     {
-      "image": "../../../assets/images/project_default.png",
+      "image": "../../../assets/images/project_default.svg",
       "name": "My insurance1",
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer quis accumsan lorem.",
       "status": "New request"
     },
     {
-      "image": "../../../assets/images/project_default.png",
+      "image": "../../../assets/images/project_default.svg",
       "name": "My insurance2",
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer quis accumsan lorem.",
       "status": "Processing"
     },
     {
-      "image": "../../../assets/images/project_default.png",
+      "image": "../../../assets/images/project_default.svg",
       "name": "My insurance3",
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer quis accumsan lorem.",
       "status": "KPI Ready to use!"
     },
     {
-      "image": "../../../assets/images/project_default.png",
+      "image": "../../../assets/images/project_default.svg",
       "name": "My insurance4",
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer quis accumsan lorem.",
       "status": "Done"
@@ -28,7 +28,7 @@
 
   "LetsStart": [
     {
-      "image": "../../../assets/images/project_default.png",
+      "image": "../../../assets/images/project_default.svg",
       "name": "Standard audience",
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer quis accumsan lorem.",
       "target": [
@@ -54,13 +54,13 @@
 
   "MyProjects": [
     {
-      "image": "../../../assets/images/project_default.png",
+      "image": "../../../assets/images/project_default.svg",
       "name": "My insurance",
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer quis accumsan lorem.",
       "isSelected": false
     },
     {
-      "image": "../../../assets/images/project_default.png",
+      "image": "../../../assets/images/project_default.svg",
       "name": "My banking",
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer quis accumsan lorem.",
       "target": [],
@@ -70,25 +70,25 @@
 
   "TestProject": [
     {
-      "image": "../../../assets/images/project_default.png",
+      "image": "../../../assets/images/project_default.svg",
       "name": "Test KPI",
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer quis accumsan lorem.",
       "isSelected": false
     },
     {
-      "image": "../../../assets/images/project_default.png",
+      "image": "../../../assets/images/project_default.svg",
       "name": "App e-Payment User",
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer quis accumsan lorem.",
       "isSelected": false
     },
     {
-      "image": "../../../assets/images/project_default.png",
+      "image": "../../../assets/images/project_default.svg",
       "name": "First Job Search",
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer quis accumsan lorem.",
       "isSelected": false
     },
     {
-      "image": "../../../assets/images/project_default.png",
+      "image": "../../../assets/images/project_default.svg",
       "name": "Support family",
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer quis accumsan lorem.",
       "isSelected": false
@@ -97,19 +97,19 @@
 
   "KpiByProduct": [
     {
-      "image": "../../../assets/images/project_default.png",
+      "image": "../../../assets/images/project_default.svg",
       "name": "Loan",
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer quis accumsan lorem.",
       "isSelected": false
     },
     {
-      "image": "../../../assets/images/project_default.png",
+      "image": "../../../assets/images/project_default.svg",
       "name": "Credit Card",
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer quis accumsan lorem.",
       "isSelected": false
     },
     {
-      "image": "../../../assets/images/project_default.png",
+      "image": "../../../assets/images/project_default.svg",
       "name": "Finance",
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer quis accumsan lorem.",
       "isSelected": false
