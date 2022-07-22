@@ -32,6 +32,7 @@ import {
   NgxPopperjsTriggers,
 } from 'ngx-popperjs';
 import { ExampleComponent } from './modules/example/example.component';
+import { NgApexchartsModule } from 'ng-apexcharts';
 
 export const TOOLTIP_DEFAULT_OPTIONS: NgxPopperjsOptions = {
   trigger: NgxPopperjsTriggers.hover,
@@ -70,6 +71,7 @@ export const TOOLTIP_DEFAULT_OPTIONS: NgxPopperjsOptions = {
     MatButtonModule,
     MatTooltipModule,
     NgxPopperjsModule.forRoot(TOOLTIP_DEFAULT_OPTIONS),
+    NgApexchartsModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
