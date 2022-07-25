@@ -15,7 +15,7 @@
 }
 
 .grid-item {
-  background-color: lightsalmon;
+  //background-color: lightsalmon;
   border-radius: 5px;
   padding: 10px;
   height: 100px;
@@ -27,6 +27,18 @@
   
 }
 
+.chart-container {
+  background: #FFFFFF;
+  box-shadow: 0px 4px 6px rgba(2, 2, 2, 0.25);
+  border-radius: 10px;
+}
+
+.img-position {
+  padding: 30px 10px 10px 10px;
+  width: 100%;
+  height: auto;
+
+}
 
 .card-container {
   //background: yellow;
