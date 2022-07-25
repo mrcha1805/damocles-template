@@ -42,7 +42,9 @@ export class DashboardComponent implements OnInit {
     },
   ]
   dropdownShow = false;
+  selectChart!: number;
   ngOnInit(): void {
+    this.selectChart = 3;
     this.kpiSelected = this.project[0].name;
   }
 

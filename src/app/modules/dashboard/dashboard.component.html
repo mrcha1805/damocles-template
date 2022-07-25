@@ -46,7 +46,13 @@
     </div>
   </div>
   <div fxLayout="row" fxFlex="90%" class="block-1">
-    <div fxLayoutAlign="center center" fxFlexFill class="chart-container p-2">
+    <div *ngIf="selectChart === 1" fxLayoutAlign="center center" fxFlexFill class="chart-container p-2">
+      <img src="../../../assets/images/chart1.svg" class="img-position " />
+    </div>
+    <div *ngIf="selectChart === 2" fxLayoutAlign="center center" fxFlexFill class="chart-container p-2">
+      <img src="../../../assets/images/chart2.svg" class="img-position " />
+    </div>
+    <div *ngIf="selectChart === 3" fxLayoutAlign="center center" fxFlexFill class="chart-container p-2">
       <img src="../../../assets/images/chart3.svg" class="img-position " />
     </div>
 
