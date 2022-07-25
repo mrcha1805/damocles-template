@@ -35,7 +35,10 @@ import { ExampleComponent } from './modules/example/example.component';
 import { NgApexchartsModule } from 'ng-apexcharts';
 import { DashboardComponent } from './modules/dashboard/dashboard.component';
 import { NavbarComponent } from './navbar/navbar.component';
-import { ThemplateFlexlayoutCustomComponent } from './modules/themplate-flexlayout-custom/themplate-flexlayout-custom.component';
+import { FlexlayoutTemplateComponent } from './modules/example/flexlayout-themplate/flexlayout-template.component';
+import { NgxSliderModule } from '@angular-slider/ngx-slider';
+import { SelectChannelComponent } from './modules/select-channel/select-channel.component';
+import { HighchartsTemplateComponent } from './modules/example/charts-themplate/highcharts-js/highcharts/highcharts-template.component';
 
 export const TOOLTIP_DEFAULT_OPTIONS: NgxPopperjsOptions = {
   trigger: NgxPopperjsTriggers.hover,
@@ -62,7 +65,9 @@ export const TOOLTIP_DEFAULT_OPTIONS: NgxPopperjsOptions = {
     ExampleComponent,
     DashboardComponent,
     NavbarComponent,
-    ThemplateFlexlayoutCustomComponent,
+    FlexlayoutTemplateComponent,
+    SelectChannelComponent,
+    HighchartsTemplateComponent,
   ],
   imports: [
     BrowserModule,
@@ -78,6 +83,7 @@ export const TOOLTIP_DEFAULT_OPTIONS: NgxPopperjsOptions = {
     MatTooltipModule,
     NgxPopperjsModule.forRoot(TOOLTIP_DEFAULT_OPTIONS),
     NgApexchartsModule,
+    NgxSliderModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

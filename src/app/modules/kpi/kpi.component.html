@@ -41,6 +41,7 @@
                                         <popper-content #popperContent2>
                                             <span>info</span><br />
                                         </popper-content>
+
                                         <div [ngStyle]="{ display: !item.dropdownShow ? 'none' : null }"
                                             *ngFor="let dataItem of item.data">
                                             <mat-checkbox [checked]="dataItem.selected"
@@ -60,6 +61,43 @@
                                             <popper-content #popperContent3>
                                                 <span>info</span><br />
                                             </popper-content>
+
+                                            <div class="custom-ngx-slider px-2"
+                                                [ngStyle]="{ display: !dataItem.dropdownShow ? 'none' : null }">
+                                                <div fxLayout="column" class="container">
+                                                    <div fxLayout="row" fxLayout.lt-md="column" fxLayoutGap="10px"
+                                                        fxFlex="50%">
+                                                        <div fxFlex="65%" fxLayoutAlign="center center" fxFlexFill
+                                                            class="grid-item-layout">
+                                                            <ngx-slider [(value)]="dataItem.value"
+                                                                [(highValue)]="dataItem.min" [options]="options">
+                                                            </ngx-slider>
+                                                        </div>
+                                                    </div>
+                                                    <div fxLayout="row" fxLayout.lt-md="column" fxLayoutGap="10px"
+                                                        fxFlex="50%">
+                                                        <div fxFlex="65%" fxLayoutAlign="center center" fxFlexFill
+                                                            class="grid-item-layout">
+                                                            <div fxFlex="100%" fxLayout.gt-sm="row" fxLayout.lt-md="row"
+                                                                fxLayoutAlign="center center" fxFlexFill
+                                                                class="grid-item-layout">
+                                                                <div fxFlex="50%" fxLayoutAlign="start center"
+                                                                    fxFlexFill
+                                                                    class="grid-item-layout font-ngx-slider-span">
+                                                                    <b>Low:</b>&nbsp;{{ dataItem.value.toLocaleString()
+                                                                    }}
+                                                                </div>
+                                                                <div fxFlex="50%" fxLayoutAlign="end center" fxFlexFill
+                                                                    class="grid-item-layout font-ngx-slider-span">
+                                                                    <b>High:</b>&nbsp;{{ dataItem.min.toLocaleString()
+                                                                    }}
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
                                             <span [ngStyle]="{ display: !dataItem.dropdownShow ? 'none' : null }">
                                                 <div class="sublevel" *ngFor="let sub of dataItem.subLevel">
                                                     <mat-checkbox [(ngModel)]="sub.selected"
@@ -88,7 +126,8 @@
             </div>
             <div fxFlex="100%" fxLayout.gt-sm="column" fxLayout.lt-md="column" fxLayoutAlign="center center" fxFlexFill
                 class="grid-item-layout p-4">
-                <div fxFlex="50%" fxLayoutAlign="center center" fxFlexFill class="grid-item-layout p-4 mb-4 box-top-right">
+                <div fxFlex="50%" fxLayoutAlign="center center" fxFlexFill
+                    class="grid-item-layout p-4 mb-4 box-top-right">
                     <div class="container">
                         <div class="text-center font-title-box-right-top p-2 mb-2">
                             Reachable Audience

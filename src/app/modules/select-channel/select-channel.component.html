@@ -1,0 +1,63 @@
+<div class="grid-item m-2">
+    <div fxLayout="column" class="container">
+        <div fxLayout="row" fxLayout.lt-md="column" fxLayoutGap="10px" fxFlex="50%">
+            <div fxFlex="100%" fxLayoutAlign="center center" fxFlexFill class="grid-item-layout p-4">
+                <div fxLayout="column" fxLayoutGap="10px" class="container">
+                    <div fxLayout="row" fxLayoutAlign="start center" class="font-header mb-2">
+                        Select Channel
+                        &nbsp;
+                        <span [popper]="popperContent" [popperTrigger]="triggers.hover"
+                            [popperModifiers]="offsetModifiers">
+                            <img src="../../../assets/icons/info.svg" width="20" height="20" />
+                        </span>
+                    </div>
+                    <popper-content #popperContent>
+                        <span>info</span><br />
+                    </popper-content>
+                    <div fxLayout="row" fxLayoutAlign="start center" class="font-title mb-2">Industry: Banking</div>
+                    <div class="content-master">
+                        <div class="dropdown">
+                            <span class="dropdown-content py-2">
+                                <div class="container" fxLayout.gt-sm="row" fxLayout.lt-md="column"
+                                    *ngFor="let item of dataMaster; let i = index;" class="py-2">
+                                    <div fxFlex.gt-sm="50%" fxFlex.lt-md="50%" fxLayoutAlign="start center"
+                                        class="font-box-right">{{ item.name }}</div>
+                                    <div fxFlex.gt-sm="50%" fxFlex.lt-md="50%" fxLayoutAlign="end center"
+                                        class="font-box-right">
+                                        {{ item.value.toLocaleString() }}
+                                        &nbsp;&nbsp;
+                                        <mat-checkbox [checked]="item.selected" [indeterminate]="item.indeterminate">
+                                        </mat-checkbox>
+                                    </div>
+                                </div>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div fxFlex="100%" fxLayout.gt-sm="column" fxLayout.lt-md="column" fxLayoutAlign="center center" fxFlexFill
+                class="grid-item-layout p-4">
+                <div fxFlex="50%" fxLayoutAlign="center center" fxFlexFill
+                    class="grid-item-layout p-4 mb-4 box-top-right">
+                    <div class="container">
+                        <div class="text-center font-title-box-right-top p-2 mb-2">
+                            Reachable Audience
+                            <span [popper]="popperContent5" [popperTrigger]="triggers.hover"
+                                [popperModifiers]="offsetModifiers">
+                                <img src="../../../assets/icons/info-ligth.svg" width="15" height="15" />
+                            </span>
+                        </div>
+                        <popper-content #popperContent5>
+                            <span>info</span><br />
+                        </popper-content>
+                        <div id="chart" fxLayoutAlign="center center">
+                            <div id="chart-container"></div>
+                        </div>
+                        <div class="py-2 text-center font-summary">{{ summary.toLocaleString() }}&nbsp;Users
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

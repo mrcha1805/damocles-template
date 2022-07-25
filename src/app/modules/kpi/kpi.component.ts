@@ -3,6 +3,7 @@ import Prototype from '../../data/prototype-data.json';
 import * as _ from 'lodash';
 import { ThemePalette } from '@angular/material/core';
 import { NgxPopperjsTriggers, NgxPopperjsPlacements } from 'ngx-popperjs';
+import { LabelType, Options } from '@angular-slider/ngx-slider';
 import {
   ApexDataLabels,
   ApexLegend,
@@ -72,6 +73,29 @@ export class KpiComponent implements OnInit {
   index = 0;
   dataMaster: any = [];
   summary: number = 0;
+
+  options: Options = {
+    floor: 0,
+    ceil: 100,
+    selectionBarGradient: {
+      from: '#B3D235',
+      to: '#B3D235',
+    },
+    translate: (value: number, label: LabelType): string => {
+      switch (label) {
+        case LabelType.Low:
+          return value.toLocaleString();
+        case LabelType.High:
+          return value.toLocaleString();
+        case LabelType.Floor:
+          return '';
+        case LabelType.Ceil:
+          return '';
+        default:
+          return value.toLocaleString();
+      }
+    },
+  };
 
   constructor() {
     this.chartOptions = {

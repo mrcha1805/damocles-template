@@ -52,6 +52,14 @@
   @include font-format(500, 16px, 23px, #020202);
 }
 
+.text-topic {
+  @include font-format(700, 16px, 20px, #020202);
+}
+
+.text-description {
+  @include font-format(400, 12px, 16px, #4e4e4e);
+}
+
 input {
   height: 40px;
   background: #ffffff;
