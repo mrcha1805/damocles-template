@@ -47,7 +47,8 @@
   </div>
   <div fxLayout="row" fxFlex="90%" class="block-1">
     <div *ngIf="selectChart === 1" fxLayoutAlign="center center" fxFlexFill class="chart-container p-2">
-      <img src="../../../assets/images/chart1.svg" class="img-position " />
+      <!-- <img src="../../../assets/images/chart1.svg" class="img-position " /> -->
+      <app-column-stacked-chart></app-column-stacked-chart>
     </div>
     <div *ngIf="selectChart === 2" fxLayoutAlign="center center" fxFlexFill class="chart-container p-2">
       <img src="../../../assets/images/chart2.svg" class="img-position " />

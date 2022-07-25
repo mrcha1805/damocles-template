@@ -39,6 +39,8 @@ import { FlexlayoutTemplateComponent } from './modules/example/flexlayout-thempl
 import { NgxSliderModule } from '@angular-slider/ngx-slider';
 import { SelectChannelComponent } from './modules/select-channel/select-channel.component';
 import { HighchartsTemplateComponent } from './modules/example/charts-themplate/highcharts-js/highcharts/highcharts-template.component';
+import { ColumnStackedChartComponent } from './charts/column-stacked-chart/column-stacked-chart.component';
+import { ColumnDuoStackedChartComponent } from './charts/column-duo-stacked-chart/column-duo-stacked-chart.component';
 
 export const TOOLTIP_DEFAULT_OPTIONS: NgxPopperjsOptions = {
   trigger: NgxPopperjsTriggers.hover,
@@ -68,6 +70,8 @@ export const TOOLTIP_DEFAULT_OPTIONS: NgxPopperjsOptions = {
     FlexlayoutTemplateComponent,
     SelectChannelComponent,
     HighchartsTemplateComponent,
+    ColumnStackedChartComponent,
+    ColumnDuoStackedChartComponent,
   ],
   imports: [
     BrowserModule,
