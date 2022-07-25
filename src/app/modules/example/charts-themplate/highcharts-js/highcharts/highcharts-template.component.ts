@@ -25,6 +25,9 @@ export class HighchartsTemplateComponent implements AfterViewInit {
 
   private createChartGauge(): void {
     const chart = Highcharts.chart('chart-gauge', {
+      accessibility: {
+        enabled: false,
+      },
       chart: {
         type: 'solidgauge',
       },
@@ -101,6 +104,9 @@ export class HighchartsTemplateComponent implements AfterViewInit {
     }
 
     const chart = Highcharts.chart('chart-pie', {
+      accessibility: {
+        enabled: false,
+      },
       chart: {
         type: 'pie',
       },
@@ -152,6 +158,9 @@ export class HighchartsTemplateComponent implements AfterViewInit {
     const chart = Highcharts.chart(
       'chart-column' as any,
       {
+        accessibility: {
+          enabled: false,
+        },
         chart: {
           type: 'column',
         },
@@ -219,6 +228,9 @@ export class HighchartsTemplateComponent implements AfterViewInit {
     }
 
     const chart = Highcharts.chart('chart-line', {
+      accessibility: {
+        enabled: false,
+      },
       chart: {
         type: 'line',
       },

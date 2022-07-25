@@ -3,7 +3,7 @@
         <div fxLayout="row" fxLayout.lt-md="column" fxLayoutGap="10px" fxFlex="50%">
             <div fxFlex fxHide.lt-md fxLayoutAlign="center center" fxFlexFill class="grid-item-layout"></div>
             <div fxFlex="75%" fxLayoutAlign="center center" fxFlexFill class="grid-item-layout p-4">
-                <div fxLayout="column" fxLayoutGap="20px">
+                <div fxFlexFill fxLayout="column" fxLayoutGap="20px">
                     <div fxLayout="row" fxLayoutAlign="center center" class="text-header text-center mb-4">Create
                         Project Name</div>
                     <div fxLayout="row" fxLayoutAlign="center center" class="text-title text-center">Project Name</div>
@@ -16,37 +16,43 @@
                     <div fxLayout="row" fxLayoutAlign="start center" class="text-my-project text-center mb-2"
                         *ngIf="(myProjects | filter: search).length > 0">My Projects</div>
 
-                    <div fxLayout="column" fxLayoutAlign=" none" class="overflow item">
-                        <div fxLayout="row" class="card grid-card m-2"
-                            *ngFor="let item of myProjects | filter: search; let i = index" [ngClass]="item.status.toLowerCase().indexOf('request') !== -1 
+                    <div class="overflow">
+                        <div fxLayout="column" fxLayoutAlign=" none" class="item">
+                            <div fxLayout="row" class="card grid-card m-2"
+                                *ngFor="let item of myProjects | filter: search; let i = index" [ngClass]="item.status.toLowerCase().indexOf('request') !== -1 
                             ? 'info' : (item.status.toLowerCase().indexOf('processing') !== -1 ) 
                             ? 'warning': (item.status.toLowerCase().indexOf('done') !== -1) 
                             ? 'secondary'  : 'secondary'">
-                            <div class="row">
-                                <div fxLayoutAlign.lt-sm="start center" fxLayoutAlign="center center"
-                                    class="col-xs-12 col-sm-2 col-md-2 col-lg-2 p-2">
-                                    <img src="{{ item.image }}" width="40" height="40" class="img-fluid rounded-start">
-                                </div>
-                                <div class="col-xs-12 col-sm-10 col-md-10 col-lg-10">
-                                    <div class="row p-1">
-                                        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 p-1 text-topic">
-                                            {{ item.name }}
-                                            &nbsp;
-                                            <span [popper]="popperContent" [popperTrigger]="triggers.hover"
-                                                [popperModifiers]="offsetModifiers">
-                                                <img src="../../../assets/icons/info.svg" width="20" height="20" />
-                                            </span>
+                                <div fxLayout="column" fxFlexFill fxLayoutAlign="space-between stretch" class="p-2">
+                                    <div fxFlex="15" fxFlexFill fxLayout.lt-sm="column" fxLayout.gt-xs="row"
+                                        fxLayout.lt-md="row" flexLayoutAlign="center center">
+                                        <div fxFlex fxLayout="row" fxLayoutAlign.lt-sm="start center"
+                                            fxLayoutAlign="center center" class="top-div-left p-3">
+                                            <img src="{{ item.image }}" width="40" height="40"
+                                                class="img-fluid rounded-start">
                                         </div>
-                                        <div fxLayoutAlign="end center"
-                                            class="col-xs-12 col-sm-6 col-md-6 col-lg-6 p-1">
-                                            <button type="button" class="btn btn-primary btn-sm px-4 py-0 text-status"
-                                                disabled>
-                                                {{ item.status }}
-                                            </button>
+                                        <div fxFlexFill fxFlex="85" fxLayout="column" fxLayoutAlign="center start"
+                                            class="top-div-right p-3">
+                                            <div fxFlexFill fxLayout.lt-sm="column" fxLayout.gt-xs="row"
+                                                fxLayout.lt-md="row" class="text-start text-topic p-1">
+                                                <div fxFlex flexLayoutAlign="center center">
+                                                    {{ item.name }}
+                                                    &nbsp;
+                                                    <span [popper]="popperContent" [popperTrigger]="triggers.hover"
+                                                        [popperModifiers]="offsetModifiers">
+                                                        <img src="../../../assets/icons/info.svg" width="20"
+                                                            height="20" />
+                                                    </span>
+                                                </div>
+                                                <div fxFlex="50" fxLayout="row" fxLayoutAlign="end center">
+                                                    <button type="button"
+                                                        class="btn btn-primary btn-sm px-4 py-0 text-status" disabled>
+                                                        {{ item.status }}
+                                                    </button>
+                                                </div>
+                                            </div>
+                                            <div class="text-start text-description p-1">{{ item.description }}</div>
                                         </div>
-                                    </div>
-                                    <div class="row p-1">
-                                        <div class="col-12 p-1 text-description">{{ item.description }}</div>
                                     </div>
                                 </div>
                                 <popper-content #popperContent>

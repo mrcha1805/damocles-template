@@ -3,7 +3,7 @@
         <div fxLayout="row" fxLayout.lt-md="column" fxLayoutGap="10px" fxFlex="50%">
             <div fxFlex fxHide.lt-md fxLayoutAlign="center center" fxFlexFill class="grid-item-layout"></div>
             <div fxFlex="75%" fxLayoutAlign="center center" fxFlexFill class="grid-item-layout p-4">
-                <div fxLayout="column" fxLayoutGap="20px" style="width: 900px;">
+                <div fxFlexFill fxLayout="column" fxLayoutGap="20px">
                     <div fxLayout="column" class="p-2">
                         <div fxFill fxLayoutAlign="start center" class="text-header">
                             Create KPI Name
@@ -47,7 +47,7 @@
                     </div>
                     <div class="dropdown p-2">
                         <span class="dropdown-content">
-                            <div *ngFor="let item of groupList | filter: search; let i = index;">
+                            <div *ngFor="let item of groupList | filterAttribute : search : 'group'; let i = index;">
                                 <mat-checkbox class="col-12 col-sm-6 col-md-4 col-lg-4" [(ngModel)]="item.selected"
                                     style="float: left;">
                                     {{ item.group }}

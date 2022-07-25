@@ -31,7 +31,7 @@
 }
 
 .font-title {
-  @include font-format(500, 14px, 15px, #020202);
+  @include font-format(500, 14px, 19px, #020202);
 }
 
 .font-summary {
@@ -47,11 +47,25 @@
 }
 
 .font-box-right {
-  @include font-format(400, 14px, 19px, #020202);
+  @include font-format(500, 16px, 22px, #020202);
+}
+
+.font-total-top {
+  @include font-format(500, 14px, 15px, #020202);
+}
+
+.font-total {
+  @include font-format(700, 16px, 23px, #020202);
 }
 
 .font-ngx-slider-span {
-  @include font-format(400, 10px, 15px, #4e4e4e);
+  @include font-format(400, 10px, 15px, #b3b3b3);
+}
+
+::ng-deep.custom-ngx-slider {
+  .ngx-slider .ngx-slider-span {
+    @include font-format(400, 10px, 15px, #b3b3b3);
+  }
 }
 
 img {
@@ -85,7 +99,3 @@ input {
   height: 22px;
   border-radius: 15px;
 }
-
-// .grid-item {
-//   background-color: lightsalmon !important;
-// }

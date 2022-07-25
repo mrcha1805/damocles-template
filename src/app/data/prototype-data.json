@@ -125,10 +125,6 @@
           "dropdownShow": false,
           "iconSrc": "../assets/images/up.png",
           "label": "Affluence",
-          "value": 0,
-          "min": 0,
-          "max": 100,
-          "subLevelShow": false,
           "subLevel": [
             {
               "selected": false,
@@ -155,10 +151,6 @@
           "dropdownShow": false,
           "iconSrc": "../assets/images/up.png",
           "label": "Automotive",
-          "value": 0,
-          "min": 0,
-          "max": 100,
-          "subLevelShow": false,
           "subLevel": [
             {
               "selected": false,
@@ -192,10 +184,6 @@
           "dropdownShow": false,
           "iconSrc": "../assets/images/up.png",
           "label": "Books and Literature",
-          "value": 0,
-          "min": 0,
-          "max": 100,
-          "subLevelShow": false,
           "subLevel": [
             {
               "selected": false,
@@ -221,10 +209,6 @@
           "dropdownShow": false,
           "iconSrc": "../assets/images/up.png",
           "label": "Business and Finance",
-          "value": 0,
-          "min": 0,
-          "max": 100,
-          "subLevelShow": false,
           "subLevel": [
             {
               "selected": false,
@@ -246,10 +230,6 @@
           "dropdownShow": false,
           "iconSrc": "../assets/images/up.png",
           "label": "Entertainment",
-          "value": 0,
-          "min": 0,
-          "max": 100,
-          "subLevelShow": false,
           "subLevel": [
             {
               "selected": false,
@@ -275,10 +255,6 @@
           "dropdownShow": false,
           "iconSrc": "../assets/images/up.png",
           "label": "Events and Attractions",
-          "value": 0,
-          "min": 0,
-          "max": 100,
-          "subLevelShow": false,
           "subLevel": [
             {
               "selected": false,
@@ -296,10 +272,6 @@
           "dropdownShow": false,
           "iconSrc": "../assets/images/up.png",
           "label": "Food and Drink",
-          "value": 0,
-          "min": 0,
-          "max": 100,
-          "subLevelShow": false,
           "subLevel": [
             {
               "selected": false,
@@ -325,10 +297,6 @@
           "dropdownShow": false,
           "iconSrc": "../assets/images/up.png",
           "label": "Healthy living",
-          "value": 0,
-          "min": 0,
-          "max": 100,
-          "subLevelShow": false,
           "subLevel": [
             {
               "selected": false,
@@ -350,10 +318,6 @@
           "dropdownShow": false,
           "iconSrc": "../assets/images/up.png",
           "label": "Hobbies & Interests",
-          "value": 0,
-          "min": 0,
-          "max": 100,
-          "subLevelShow": false,
           "subLevel": [
             {
               "selected": false,
@@ -379,10 +343,6 @@
           "dropdownShow": false,
           "iconSrc": "../assets/images/up.png",
           "label": "Real estate",
-          "value": 0,
-          "min": 0,
-          "max": 100,
-          "subLevelShow": false,
           "subLevel": [
             {
               "selected": false,
@@ -400,10 +360,6 @@
           "dropdownShow": false,
           "iconSrc": "../assets/images/up.png",
           "label": "Shopping",
-          "value": 0,
-          "min": 0,
-          "max": 100,
-          "subLevelShow": false,
           "subLevel": [
             {
               "selected": false,
@@ -437,10 +393,6 @@
           "dropdownShow": false,
           "iconSrc": "../assets/images/up.png",
           "label": "Sports",
-          "value": 0,
-          "min": 0,
-          "max": 100,
-          "subLevelShow": false,
           "subLevel": [
             {
               "selected": false,
@@ -462,10 +414,6 @@
           "dropdownShow": false,
           "iconSrc": "../assets/images/up.png",
           "label": "Style & Fashion",
-          "value": 0,
-          "min": 0,
-          "max": 100,
-          "subLevelShow": false,
           "subLevel": [
             {
               "selected": false,
@@ -479,10 +427,6 @@
           "dropdownShow": false,
           "iconSrc": "../assets/images/up.png",
           "label": "Travel",
-          "value": 0,
-          "min": 0,
-          "max": 100,
-          "subLevelShow": false,
           "subLevel": [
             {
               "selected": false,
@@ -589,10 +533,6 @@
           "dropdownShow": false,
           "iconSrc": "../assets/images/up.png",
           "label": "Mock Up",
-          "value": 0,
-          "min": 0,
-          "max": 100,
-          "subLevelShow": false,
           "subLevel": [
             {
               "selected": false,
@@ -623,10 +563,6 @@
           "dropdownShow": false,
           "iconSrc": "../assets/images/up.png",
           "label": "Mock Up",
-          "value": 0,
-          "min": 0,
-          "max": 100,
-          "subLevelShow": false,
           "subLevel": [
             {
               "selected": false,
@@ -657,10 +593,6 @@
           "dropdownShow": false,
           "iconSrc": "../assets/images/up.png",
           "label": "Mock Up",
-          "value": 0,
-          "min": 0,
-          "max": 100,
-          "subLevelShow": false,
           "subLevel": [
             {
               "selected": false,
@@ -691,10 +623,6 @@
           "dropdownShow": false,
           "iconSrc": "../assets/images/up.png",
           "label": "Mock Up",
-          "value": 0,
-          "min": 0,
-          "max": 100,
-          "subLevelShow": false,
           "subLevel": [
             {
               "selected": false,
@@ -725,10 +653,6 @@
           "dropdownShow": false,
           "iconSrc": "../assets/images/up.png",
           "label": "Mock Up",
-          "value": 0,
-          "min": 0,
-          "max": 100,
-          "subLevelShow": false,
           "subLevel": [
             {
               "selected": false,
@@ -759,10 +683,6 @@
           "dropdownShow": false,
           "iconSrc": "../assets/images/up.png",
           "label": "Mock Up",
-          "value": 0,
-          "min": 0,
-          "max": 100,
-          "subLevelShow": false,
           "subLevel": [
             {
               "selected": false,
@@ -793,10 +713,6 @@
           "dropdownShow": false,
           "iconSrc": "../assets/images/up.png",
           "label": "Mock Up",
-          "value": 0,
-          "min": 0,
-          "max": 100,
-          "subLevelShow": false,
           "subLevel": [
             {
               "selected": false,
@@ -827,10 +743,6 @@
           "dropdownShow": false,
           "iconSrc": "../assets/images/up.png",
           "label": "Mock Up",
-          "value": 0,
-          "min": 0,
-          "max": 100,
-          "subLevelShow": false,
           "subLevel": [
             {
               "selected": false,
@@ -861,10 +773,6 @@
           "dropdownShow": false,
           "iconSrc": "../assets/images/up.png",
           "label": "Mock Up",
-          "value": 0,
-          "min": 0,
-          "max": 100,
-          "subLevelShow": false,
           "subLevel": [
             {
               "selected": false,
@@ -895,10 +803,6 @@
           "dropdownShow": false,
           "iconSrc": "../assets/images/up.png",
           "label": "Mock Up",
-          "value": 0,
-          "min": 0,
-          "max": 100,
-          "subLevelShow": false,
           "subLevel": [
             {
               "selected": false,
@@ -929,10 +833,6 @@
           "dropdownShow": false,
           "iconSrc": "../assets/images/up.png",
           "label": "Mock Up",
-          "value": 0,
-          "min": 0,
-          "max": 100,
-          "subLevelShow": false,
           "subLevel": [
             {
               "selected": false,
@@ -969,6 +869,307 @@
       "value": 300000,
       "selected": false,
       "indeterminate": false
+    }
+  ],
+  "KpiTest": [
+    {
+      "group": "Finance",
+      "selected": false,
+      "indeterminate": false,
+      "dropdownShow": false,
+      "iconSrc": "../assets/images/up.png",
+      "slider": false,
+      "value": 0,
+      "min": 0,
+      "max": 100,
+      "subLevel": [
+        {
+          "selected": false,
+          "indeterminate": false,
+          "label": "Job Type - Freelance"
+        },
+        {
+          "selected": false,
+          "indeterminate": false,
+          "label": "Job Type - Employee"
+        }
+      ]
+    },
+    {
+      "group": "Affinity",
+      "selected": false,
+      "indeterminate": false,
+      "dropdownShow": false,
+      "iconSrc": "../assets/images/up.png",
+      "slider": false,
+      "value": 0,
+      "min": 0,
+      "max": 100,
+      "subLevel": [
+        {
+          "selected": false,
+          "indeterminate": false,
+          "label": "Mock Up 1"
+        },
+        {
+          "selected": false,
+          "indeterminate": false,
+          "label": "Mock Up 2"
+        }
+      ]
+    },
+    {
+      "group": "Financial Behavior",
+      "selected": false,
+      "indeterminate": false,
+      "dropdownShow": false,
+      "iconSrc": "../assets/images/up.png",
+      "slider": false,
+      "value": 0,
+      "min": 0,
+      "max": 100,
+      "subLevel": [
+        {
+          "selected": false,
+          "indeterminate": false,
+          "label": "Mock Up 1"
+        },
+        {
+          "selected": false,
+          "indeterminate": false,
+          "label": "Mock Up 2"
+        }
+      ]
+    },
+    {
+      "group": "Personality Traits",
+      "selected": false,
+      "indeterminate": false,
+      "dropdownShow": false,
+      "iconSrc": "../assets/images/up.png",
+      "slider": true,
+      "value": 0,
+      "min": 0,
+      "max": 100,
+      "subLevel": [
+        {
+          "selected": false,
+          "indeterminate": false,
+          "label": "Mock Up 1"
+        },
+        {
+          "selected": false,
+          "indeterminate": false,
+          "label": "Mock Up 2"
+        }
+      ]
+    },
+    {
+      "group": "Product Demand",
+      "selected": false,
+      "indeterminate": false,
+      "dropdownShow": false,
+      "iconSrc": "../assets/images/up.png",
+      "slider": false,
+      "value": 0,
+      "min": 0,
+      "max": 100,
+      "subLevel": [
+        {
+          "selected": false,
+          "indeterminate": false,
+          "label": "Mock Up 1"
+        },
+        {
+          "selected": false,
+          "indeterminate": false,
+          "label": "Mock Up 2"
+        }
+      ]
+    },
+    {
+      "group": "Audience Presennce",
+      "selected": false,
+      "indeterminate": false,
+      "dropdownShow": false,
+      "iconSrc": "../assets/images/up.png",
+      "slider": false,
+      "value": 0,
+      "min": 0,
+      "max": 100,
+      "subLevel": [
+        {
+          "selected": false,
+          "indeterminate": false,
+          "label": "Mock Up 1"
+        },
+        {
+          "selected": false,
+          "indeterminate": false,
+          "label": "Mock Up 2"
+        }
+      ]
+    },
+    {
+      "group": "Digital Activity",
+      "selected": false,
+      "indeterminate": false,
+      "dropdownShow": false,
+      "iconSrc": "../assets/images/up.png",
+      "slider": false,
+      "value": 0,
+      "min": 0,
+      "max": 100,
+      "subLevel": [
+        {
+          "selected": false,
+          "indeterminate": false,
+          "label": "Mock Up 1"
+        },
+        {
+          "selected": false,
+          "indeterminate": false,
+          "label": "Mock Up 2"
+        }
+      ]
+    },
+    {
+      "group": "Life Event",
+      "selected": false,
+      "indeterminate": false,
+      "dropdownShow": false,
+      "iconSrc": "../assets/images/up.png",
+      "slider": false,
+      "value": 0,
+      "min": 0,
+      "max": 100,
+      "subLevel": [
+        {
+          "selected": false,
+          "indeterminate": false,
+          "label": "Mock Up 1"
+        },
+        {
+          "selected": false,
+          "indeterminate": false,
+          "label": "Mock Up 2"
+        }
+      ]
+    },
+    {
+      "group": "Life Stage",
+      "selected": false,
+      "indeterminate": false,
+      "dropdownShow": false,
+      "iconSrc": "../assets/images/up.png",
+      "slider": false,
+      "value": 0,
+      "min": 0,
+      "max": 100,
+      "subLevel": [
+        {
+          "selected": false,
+          "indeterminate": false,
+          "label": "Mock Up 1"
+        },
+        {
+          "selected": false,
+          "indeterminate": false,
+          "label": "Mock Up 2"
+        }
+      ]
+    },
+    {
+      "group": "Location",
+      "selected": false,
+      "indeterminate": false,
+      "dropdownShow": false,
+      "iconSrc": "../assets/images/up.png",
+      "slider": false,
+      "value": 0,
+      "min": 0,
+      "max": 100,
+      "subLevel": [
+        {
+          "selected": false,
+          "indeterminate": false,
+          "label": "Mock Up 1"
+        },
+        {
+          "selected": false,
+          "indeterminate": false,
+          "label": "Mock Up 2"
+        }
+      ]
+    },
+    {
+      "group": "Bank Engagement",
+      "selected": false,
+      "indeterminate": false,
+      "dropdownShow": false,
+      "iconSrc": "../assets/images/up.png",
+      "slider": false,
+      "value": 0,
+      "min": 0,
+      "max": 100,
+      "subLevel": [
+        {
+          "selected": false,
+          "indeterminate": false,
+          "label": "Mock Up 1"
+        },
+        {
+          "selected": false,
+          "indeterminate": false,
+          "label": "Mock Up 2"
+        }
+      ]
+    },
+    {
+      "group": "Demographics",
+      "selected": false,
+      "indeterminate": false,
+      "dropdownShow": false,
+      "iconSrc": "../assets/images/up.png",
+      "slider": false,
+      "value": 0,
+      "min": 0,
+      "max": 100,
+      "subLevel": [
+        {
+          "selected": false,
+          "indeterminate": false,
+          "label": "Mock Up 1"
+        },
+        {
+          "selected": false,
+          "indeterminate": false,
+          "label": "Mock Up 2"
+        }
+      ]
+    },
+    {
+      "group": "Operational Tasks",
+      "selected": false,
+      "indeterminate": false,
+      "dropdownShow": false,
+      "iconSrc": "../assets/images/up.png",
+      "slider": false,
+      "value": 0,
+      "min": 0,
+      "max": 100,
+      "subLevel": [
+        {
+          "selected": false,
+          "indeterminate": false,
+          "label": "Mock Up 1"
+        },
+        {
+          "selected": false,
+          "indeterminate": false,
+          "label": "Mock Up 2"
+        }
+      ]
     }
   ]
 }

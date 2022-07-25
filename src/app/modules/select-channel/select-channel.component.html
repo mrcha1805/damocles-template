@@ -1,8 +1,8 @@
 <div class="grid-item m-2">
     <div fxLayout="column" class="container">
-        <div fxLayout="row" fxLayout.lt-md="column" fxLayoutGap="10px" fxFlex="50%">
-            <div fxFlex="100%" fxLayoutAlign="center center" fxFlexFill class="grid-item-layout p-4">
-                <div fxLayout="column" fxLayoutGap="10px" class="container">
+        <div fxLayout="row" fxLayout.lt-md="column" fxLayoutGap="10px">
+            <div fxLayoutAlign="center center" class="grid-item-layout p-4 box-top-left" fxFlex>
+                <div fxFlexFill fxLayout="column" fxLayoutGap="10px" class="container">
                     <div fxLayout="row" fxLayoutAlign="start center" class="font-header mb-2">
                         Select Channel
                         &nbsp;
@@ -33,12 +33,51 @@
                             </span>
                         </div>
                     </div>
+                    <div fxFlex fxLayout="row" fxLayoutAlign="center end" class="grid-item-layout">
+                        <div class="container p-4 box-top-right">
+                            <div fxFlex fxLayout.lt-sm="column" fxLayout.gt-xs="row" fxLayout.lt-md="row"
+                                flexLayoutAlign="center center">
+                                <div fxFlex fxLayout="column" class="top-div-left">
+                                    <div fxFlex fxLayout="row" fxLayoutAlign="start center"
+                                        class="top-div-left font-total-top">
+                                        Reach
+                                    </div>
+                                    <div fxFlex fxLayout="column" fxLayoutAlign="start center"
+                                        class="top-div-left custom-ngx-slider">
+                                        <ngx-slider [(value)]="value" [(highValue)]="highValue" [options]="options">
+                                        </ngx-slider>
+                                    </div>
+                                    <div fxFlex fxLayout="column" fxLayoutAlign="start center" class="top-div-left">
+                                        <div fxFlexFill fxLayoutAlign="start center" class="top-div-left">
+                                            <div fxFlex fxLayoutAlign="start center"
+                                                class="top-div-left font-ngx-slider-span">
+                                                {{ value.toLocaleString() }}&nbsp;%
+                                            </div>
+                                            <div fxFlex="50" fxLayoutAlign="end center"
+                                                class="top-div-left font-ngx-slider-span">
+                                                {{ highValue.toLocaleString() }}&nbsp;%
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div fxFlex="50" fxLayout="column" class="top-div-left">
+                                    <div fxFlex fxLayout="row" fxLayoutAlign="end start"
+                                        class="top-div-left font-total-top">
+                                        Cost
+                                    </div>
+                                    <div fxFlex fxLayout="row" fxLayoutAlign="end start"
+                                        class="top-div-left font-total">
+                                        500,000 THB
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div fxFlex="100%" fxLayout.gt-sm="column" fxLayout.lt-md="column" fxLayoutAlign="center center" fxFlexFill
+            <div fxFlex fxLayout.gt-sm="column" fxLayout.lt-md="column" fxLayoutAlign="center center" fxFlexFill
                 class="grid-item-layout p-4">
-                <div fxFlex="50%" fxLayoutAlign="center center" fxFlexFill
-                    class="grid-item-layout p-4 mb-4 box-top-right">
+                <div fxFlex fxLayoutAlign="center center" fxFlexFill class="grid-item-layout p-4 box-top-right">
                     <div class="container">
                         <div class="text-center font-title-box-right-top p-2 mb-2">
                             Reachable Audience
@@ -51,7 +90,7 @@
                             <span>info</span><br />
                         </popper-content>
                         <div id="chart" fxLayoutAlign="center center">
-                            <div id="chart-container"></div>
+                            <div id="chart-container" style="width: 85% !important;"></div>
                         </div>
                         <div class="py-2 text-center font-summary">{{ summary.toLocaleString() }}&nbsp;Users
                         </div>

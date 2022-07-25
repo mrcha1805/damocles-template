@@ -25,7 +25,7 @@ import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register/register.component';
 import { VerifyComponent } from './register/verify/verify.component';
 import { CreateKpiNameComponent } from './modules/create-kpi-name/create-kpi-name.component';
-import { FilterKpiDropDownPipe } from 'src/pipes/dropdown.pipe';
+import { FilterKpiDropDownPipe } from 'src/pipes/dropdownKpi.pipe';
 import {
   NgxPopperjsModule,
   NgxPopperjsOptions,
@@ -41,6 +41,10 @@ import { SelectChannelComponent } from './modules/select-channel/select-channel.
 import { HighchartsTemplateComponent } from './modules/example/charts-themplate/highcharts-js/highcharts/highcharts-template.component';
 import { ColumnStackedChartComponent } from './charts/column-stacked-chart/column-stacked-chart.component';
 import { ColumnDuoStackedChartComponent } from './charts/column-duo-stacked-chart/column-duo-stacked-chart.component';
+import { MediaPlanComponent } from './modules/media-plan/media-plan.component';
+import { KpiTestComponent } from './modules/kpi-test/kpi-test.component';
+import { FilterAttributePipe } from 'src/pipes/search-attribute.pipe';
+import { FilterKpiTestDropDownPipe } from 'src/pipes/dropdownKpiTest.pipe';
 
 export const TOOLTIP_DEFAULT_OPTIONS: NgxPopperjsOptions = {
   trigger: NgxPopperjsTriggers.hover,
@@ -72,6 +76,10 @@ export const TOOLTIP_DEFAULT_OPTIONS: NgxPopperjsOptions = {
     HighchartsTemplateComponent,
     ColumnStackedChartComponent,
     ColumnDuoStackedChartComponent,
+    MediaPlanComponent,
+    KpiTestComponent,
+    FilterAttributePipe,
+    FilterKpiTestDropDownPipe,
   ],
   imports: [
     BrowserModule,

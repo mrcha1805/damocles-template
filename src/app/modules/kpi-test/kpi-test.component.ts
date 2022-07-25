@@ -41,11 +41,11 @@ export interface Task {
 }
 
 @Component({
-  selector: 'app-kpi',
-  templateUrl: './kpi.component.html',
-  styleUrls: ['./kpi.component.scss'],
+  selector: 'app-kpi-test',
+  templateUrl: './kpi-test.component.html',
+  styleUrls: ['./kpi-test.component.scss'],
 })
-export class KpiComponent implements OnInit {
+export class KpiTestComponent implements OnInit {
   @ViewChild('chart') chart: ChartComponent | any;
   public chartOptions: Partial<ChartOptions> | any;
 
@@ -180,7 +180,7 @@ export class KpiComponent implements OnInit {
   ngOnInit() {
     this.affinitySelected = '';
     this.selectItemAll = true;
-    this.dataMaster = Prototype.Kpi;
+    this.dataMaster = Prototype.KpiTest;
 
     this.summary = _.sum(this.chartOptions.series);
   }
@@ -190,26 +190,26 @@ export class KpiComponent implements OnInit {
     console.log(header);
 
     this.dataMaster.forEach((element: any) => {
-      element.data.forEach((data: any) => {
-        if (data.label === header.label && element.group === item.group) {
-          data.selected = false;
+      element.subLevel.forEach((data: any) => {
+        if (element.group === item.group) {
+          element.selected = false;
           console.log('--->' + data.label);
-          if (data.subLevel?.every((t: any) => t.selected) == true) {
-            data.indeterminate = false;
-            data.selected = true;
+          if (element.subLevel?.every((t: any) => t.selected) == true) {
+            element.indeterminate = false;
+            element.selected = true;
           } else {
             let unselect = true;
-            data.subLevel?.forEach((sub: any) => {
+            element.subLevel?.forEach((sub: any) => {
               if (sub.selected) {
                 unselect = false;
               }
             });
             if (unselect) {
-              data.selected = false;
-              data.indeterminate = false;
+              element.selected = false;
+              element.indeterminate = false;
             } else {
-              data.selected = false;
-              data.indeterminate = true;
+              element.selected = false;
+              element.indeterminate = true;
             }
           }
         }
@@ -217,15 +217,12 @@ export class KpiComponent implements OnInit {
     });
   }
 
-  setAllItem(select: boolean, header: any, item: any) {
+  setAllItem(select: boolean, header: any) {
     console.log('setAll');
-
-    this.dataMaster.forEach((element: any) => {
-      element.data.forEach((data: any) => {
-        if (data.label === header.label && element.group === item.group) {
-          data.subLevel?.forEach((t: any) => (t.selected = select));
-        }
-      });
+    this.dataMaster.find((element: any) => {
+      if (element.group === header.group) {
+        element.subLevel?.forEach((t: any) => (t.selected = select));
+      }
     });
   }
 

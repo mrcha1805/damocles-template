@@ -72,7 +72,7 @@ input {
   z-index: 5;
 }
 .input-search {
-  @include font-format(700, 16px, 22px, #020202);
+  @include font-format(400, 16px, 22px, #020202);
   padding-left: 40px;
 }
 ::placeholder {
@@ -85,7 +85,7 @@ input {
 
 .overflow {
   overflow-y: auto;
-  height: 33vh;
+  height: 40vh;
 }
 
 .icon-check {

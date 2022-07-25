@@ -4,7 +4,7 @@
             <div fxFlex fxLayoutAlign="center center" fxFlexFill class="grid-item-layout p-4">
                 <div fxLayout="column" fxLayoutGap="10px" class="container">
                     <div fxLayout="row" fxLayoutAlign="start center" class="font-header mb-2">
-                        KPI List
+                        KPI Test
                         &nbsp;
                         <span [popper]="popperContent" [popperTrigger]="triggers.hover"
                             [popperModifiers]="offsetModifiers">
@@ -25,10 +25,13 @@
                     <div class="content-master">
                         <div class="dropdown">
                             <span class="dropdown-content">
-                                <div *ngFor="let item of dataMaster | filterKpiDropdown: search; let i = index;">
+                                <div *ngFor="let item of dataMaster | filterKpiTestDropdown : search; let i = index;">
                                     <div>
                                         <div>
-                                            {{ item.group }}
+                                            <mat-checkbox [checked]="item.selected" [indeterminate]="item.indeterminate"
+                                                (change)="setAllItem($event.checked, item)">
+                                                {{ item.group }}
+                                            </mat-checkbox>
                                             &nbsp;
                                             <span [popper]="popperContent2" [popperTrigger]="triggers.hover"
                                                 [popperModifiers]="offsetModifiers">
@@ -42,44 +45,58 @@
                                             <span>info</span><br />
                                         </popper-content>
 
-                                        <div [ngStyle]="{ display: !item.dropdownShow ? 'none' : null }"
-                                            *ngFor="let dataItem of item.data">
-                                            <mat-checkbox [checked]="dataItem.selected"
-                                                [indeterminate]="dataItem.indeterminate"
-                                                (change)="setAllItem($event.checked, dataItem, item)">
-                                                {{ dataItem.label }}
+                                        <div [ngStyle]="{ display: !item.dropdownShow || item.slider ? 'none' : null }"
+                                            *ngFor="let sub of item.subLevel" class="mx-4">
+                                            <mat-checkbox [checked]="sub.selected" [indeterminate]="sub.indeterminate"
+                                                (change)="selectSubLevel($event.checked, sub, item)"
+                                                [(ngModel)]="sub.selected">
+                                                {{ sub.label }}
                                             </mat-checkbox>
                                             &nbsp;
                                             <span [popper]="popperContent3" [popperTrigger]="triggers.hover"
                                                 [popperModifiers]="offsetModifiers">
                                                 <img src="../../../assets/icons/info.svg" width="15" height="15" />
                                             </span>
-                                            <button class="btn"
-                                                (click)="iconDropdownSubGroup(!dataItem.dropdownShow, dataItem)">
-                                                <img [src]="dataItem.iconSrc" width="8" height="4.8" />
-                                            </button>
                                             <popper-content #popperContent3>
                                                 <span>info</span><br />
                                             </popper-content>
-                                            <span [ngStyle]="{ display: !dataItem.dropdownShow ? 'none' : null }">
-                                                <div class="sublevel" *ngFor="let sub of dataItem.subLevel">
-                                                    <mat-checkbox [(ngModel)]="sub.selected"
-                                                        (ngModelChange)="selectSubLevel(sub, dataItem, item)">
-                                                        {{ sub.label }}
-                                                    </mat-checkbox>
-                                                    &nbsp;
-                                                    <span [popper]="popperContent4" [popperTrigger]="triggers.hover"
-                                                        [popperModifiers]="offsetModifiers">
-                                                        <img src="../../../assets/icons/info.svg" width="15"
-                                                            height="15" />
-                                                    </span>
-                                                    <popper-content #popperContent4>
-                                                        <span>xxxxxxxxxxx</span><br />
-                                                        <span>xxxxxxxxxxx</span><br />
-                                                    </popper-content>
-                                                </div>
-                                            </span>
                                         </div>
+
+                                        <div class="custom-ngx-slider px-2"
+                                            [ngStyle]="{ display: !item.dropdownShow || !item.slider ? 'none' : null }">
+                                            <div fxLayout="column" class="container">
+                                                <div fxLayout="row" fxLayout.lt-md="column" fxLayoutGap="10px"
+                                                    fxFlex="50%">
+                                                    <div fxFlex="65%" fxLayoutAlign="center center" fxFlexFill
+                                                        class="grid-item-layout">
+                                                        <ngx-slider [(value)]="item.value" [(highValue)]="item.min"
+                                                            [options]="options">
+                                                        </ngx-slider>
+                                                    </div>
+                                                </div>
+                                                <div fxLayout="row" fxLayout.lt-md="column" fxLayoutGap="10px"
+                                                    fxFlex="50%">
+                                                    <div fxFlex="65%" fxLayoutAlign="center center" fxFlexFill
+                                                        class="grid-item-layout">
+                                                        <div fxFlex="100%" fxLayout.gt-sm="row" fxLayout.lt-md="row"
+                                                            fxLayoutAlign="center center" fxFlexFill
+                                                            class="grid-item-layout">
+                                                            <div fxFlex="50%" fxLayoutAlign="start center" fxFlexFill
+                                                                class="grid-item-layout font-ngx-slider-span">
+                                                                <b>Low:</b>&nbsp;{{ item.value.toLocaleString()
+                                                                }}
+                                                            </div>
+                                                            <div fxFlex="50%" fxLayoutAlign="end center" fxFlexFill
+                                                                class="grid-item-layout font-ngx-slider-span">
+                                                                <b>High:</b>&nbsp;{{ item.min.toLocaleString()
+                                                                }}
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
                                     </div>
                                 </div>
                             </span>

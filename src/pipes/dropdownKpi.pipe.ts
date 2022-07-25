@@ -4,8 +4,6 @@ import * as _ from 'lodash';
 @Pipe({ name: 'filterKpiDropdown' })
 export class FilterKpiDropDownPipe implements PipeTransform {
   transform(value: any, search: string): any {
-    search = search.toLowerCase();
-
     var arrowDown = '../assets/images/down.png';
     var arrowUp = '../assets/images/up.png';
 
@@ -21,6 +19,8 @@ export class FilterKpiDropDownPipe implements PipeTransform {
       });
       return value;
     }
+
+    search = search.toLowerCase();
 
     var result = value.filter((item: any) => {
       return JSON.stringify(item).toLowerCase().includes(search);
