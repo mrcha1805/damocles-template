@@ -8,7 +8,8 @@ import {
   ApexResponsive,
   ApexXAxis,
   ApexLegend,
-  ApexFill
+  ApexFill,
+  ApexYAxis
 } from "ng-apexcharts";
 
 export type ChartOptions = {
@@ -17,6 +18,7 @@ export type ChartOptions = {
   dataLabels: ApexDataLabels;
   plotOptions: ApexPlotOptions;
   responsive: ApexResponsive[];
+  yaxis: ApexYAxis;
   xaxis: ApexXAxis;
   legend: ApexLegend;
   fill: ApexFill;
@@ -31,6 +33,9 @@ export class ColumnStackedChartComponent implements OnInit {
   public chartOptions!: Partial<ChartOptions>| any;
   constructor() { 
     this.chartOptions = {
+      
+      // colors: ['#FFBD98', '#808080', '#A48EE2', '#E1F594', '#FFA36F', '#7F61D6', '#4E4E4E', '#D5F169'],
+      colors: ['#D5F169', '#4E4E4E', '#7F61D6', '#FFA36F', '#E1F594', '#A48EE2', '#808080', '#FFBD98'],
       series: [
         {
           name: "Travel",
@@ -97,6 +102,10 @@ export class ColumnStackedChartComponent implements OnInit {
  
         }
       },
+      yaxis: {
+        tickAmount: 4,
+        //  reversed: true,
+      },
       xaxis: {
         type: "category",
         categories: [
@@ -117,9 +126,14 @@ export class ColumnStackedChartComponent implements OnInit {
       },
       legend: {
         position: "right",
-        offsetY: 40
+        offsetY: 40,
+        labels: {
+          
+          useSeriesColors: false,
+        },
       },
       fill: {
+        colors: ['#D5F169', '#4E4E4E', '#7F61D6', '#FFA36F', '#E1F594', '#A48EE2', '#808080', '#FFBD98'],
         opacity: 1
       }
     };
