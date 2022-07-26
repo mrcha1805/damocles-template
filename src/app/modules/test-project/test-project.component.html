@@ -1,10 +1,14 @@
 <div class="grid-item m-2">
     <div fxLayout="column" class="container">
-        <div fxLayout="row" fxLayout.lt-md="column" fxLayoutGap="10px" fxFlex="50%">
-            <div fxFlex fxHide.lt-md fxLayoutAlign="center center" fxFlexFill class="grid-item-layout"></div>
-            <div fxFlex="75%" fxLayoutAlign="center center" fxFlexFill class="grid-item-layout p-4">
+        <div fxLayout="row" fxLayout.lt-md="column" fxLayoutGap="10px" fxFlex="50">
+            <div fxFlex fxLayoutAlign="start center" fxFlexFill class="btn grid-item-layout py-4"
+                (click)="sendDataToParent()">
+                <img src="../../../assets/icons/previous.svg" width="20" height="30" />
+            </div>
+            <div fxFlex="85" fxLayoutAlign="center center" fxFlexFill class="grid-item-layout p-4">
                 <div fxFlexFill fxLayout="column" fxLayoutGap="20px">
-                    <div fxLayout="row" fxLayoutAlign="center center" class="text-header text-center mb-4">Test Project
+                    <div fxLayout="row" fxLayoutAlign="center center" class="text-header text-center mb-4">
+                        <span>Test Project</span>
                     </div>
                     <div fxLayout.gt-sm="row" fxLayout.lt-md="column" class="p-2 mb-0">
                         <div fxFlex.gt-sm="60%" fxFlex.lt-md="60%" fxLayoutAlign="center center" class="p-2">
@@ -29,17 +33,17 @@
                     <div class="overflow">
                         <div fxLayout="column" fxLayoutAlign=" none" class="item">
                             <div fxLayout="column" class="btn card grid-card m-2"
-                                *ngFor="let item of myKPI | filter: search; let i = index">
+                                *ngFor="let item of myKPI | filter: search; let i = index" (click)="onDashboard(item)">
                                 <div fxLayout="column" fxFlexFill fxLayoutAlign="space-between stretch" class="p-2">
                                     <div fxFlex="15" fxFlexFill fxLayout.lt-sm="column" fxLayout.gt-xs="row"
                                         fxLayout.lt-md="row" flexLayoutAlign="center center">
                                         <div fxFlex fxLayout="row" fxLayoutAlign.lt-sm="start center"
-                                            fxLayoutAlign="center center" class="top-div-left p-3">
+                                            fxLayoutAlign="center center" class="top-div-left mr-3">
                                             <img src="{{ item.image }}" width="40" height="40"
                                                 class="img-fluid rounded-start">
                                         </div>
-                                        <div fxFlexFill fxFlex="85" fxLayout="column" fxLayoutAlign="center start"
-                                            class="top-div-right p-3">
+                                        <div fxFlexFill fxFlex="85" fxFlex.lt-sm="100" fxLayout="column"
+                                            fxLayoutAlign="center start" class="top-div-right p-3 px-0">
                                             <div class="text-start text-topic p-1">
                                                 {{ item.name }}
                                                 &nbsp;

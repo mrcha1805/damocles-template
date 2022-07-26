@@ -29,7 +29,7 @@
   border-radius: 10px;
 }
 .btn:hover {
-  -webkit-filter: brightness(95%);
+  // -webkit-filter: brightness(95%);
 }
 .btn-add {
   @include font-format(700, 14px, 20px, #020202);

@@ -66,7 +66,7 @@
                                             [ngStyle]="{ display: !item.dropdownShow || !item.slider ? 'none' : null }">
                                             <div fxLayout="column" class="container">
                                                 <div fxLayout="row" fxLayout.lt-md="column" fxLayoutGap="10px"
-                                                    fxFlex="50%">
+                                                    fxFlex="50">
                                                     <div fxFlex="65%" fxLayoutAlign="center center" fxFlexFill
                                                         class="grid-item-layout">
                                                         <ngx-slider [(value)]="item.value" [(highValue)]="item.min"
@@ -75,18 +75,18 @@
                                                     </div>
                                                 </div>
                                                 <div fxLayout="row" fxLayout.lt-md="column" fxLayoutGap="10px"
-                                                    fxFlex="50%">
+                                                    fxFlex="50">
                                                     <div fxFlex="65%" fxLayoutAlign="center center" fxFlexFill
                                                         class="grid-item-layout">
                                                         <div fxFlex="100%" fxLayout.gt-sm="row" fxLayout.lt-md="row"
                                                             fxLayoutAlign="center center" fxFlexFill
                                                             class="grid-item-layout">
-                                                            <div fxFlex="50%" fxLayoutAlign="start center" fxFlexFill
+                                                            <div fxFlex="50" fxLayoutAlign="start center" fxFlexFill
                                                                 class="grid-item-layout font-ngx-slider-span">
                                                                 <b>Low:</b>&nbsp;{{ item.value.toLocaleString()
                                                                 }}
                                                             </div>
-                                                            <div fxFlex="50%" fxLayoutAlign="end center" fxFlexFill
+                                                            <div fxFlex="50" fxLayoutAlign="end center" fxFlexFill
                                                                 class="grid-item-layout font-ngx-slider-span">
                                                                 <b>High:</b>&nbsp;{{ item.min.toLocaleString()
                                                                 }}

@@ -103,19 +103,6 @@ export class KpiTestComponent implements OnInit {
       chart: {
         width: '100%',
         type: 'pie',
-        animations: {
-          enabled: true,
-          easing: 'easeinout',
-          speed: 375,
-          animateGradually: {
-            enabled: true,
-            delay: 125,
-          },
-          dynamicAnimation: {
-            enabled: true,
-            speed: 250,
-          },
-        },
       },
       labels: ['count 1', 'count 2', 'count 3'],
       theme: {

@@ -1,12 +1,5 @@
-<!-- <app-create-project-name></app-create-project-name>
-<app-lets-start></app-lets-start>
-<app-test-project></app-test-project>
-<app-kpi-by-product></app-kpi-by-product>
-<app-create-kpi-name></app-create-kpi-name>
-<app-kpi></app-kpi> -->
-
-<div fxLayout="column" fxLayoutGap="10px" class="container">
-  <div fxFlex="25%" class="block-1">
+<div fxFlexFill fxLayout="column" fxLayoutGap="10px" class="container p-4">
+  <div fxFlex="25%" class="block-1" *ngIf="stepToggleShow">
     <div fxFlex fxLayoutAlign="center center" fxFlexFill class="grid-item">
       <div fxLayout="row" fxLayoutAlign="center center">
         <div class="header1" fxLayout="column" fxLayoutAlign="center center">
@@ -16,7 +9,6 @@
         </div>
         <div [ngClass]="stepCurrent < 2? 'line-nonactive': 'line-active'" fxLayout="column"
           fxLayoutAlign="center center">
-
         </div>
         <div class="header1" fxLayout="column" fxLayoutAlign="center center">
           <img class="step-action" [src]="stepDisplay(2, stepCurrent)" (click)="stepAction(2)">
@@ -42,31 +34,60 @@
       </div>
     </div>
   </div>
-  <div fxLayout="row" fxLayout.lt-sm="column" fxLayoutGap="10px" fxFlex="75%" class="block-2">
-    <div fxFlex fxLayoutAlign="center end" fxFlexFill class="grid-item nav-pb">
-      <button *ngIf="stepCurrent > 1 && stepCurrent < 4" class="back-btn" (click)="previousMenu()"><img class="img-icon"
-          style="margin-right: 10px;margin-bottom:2px;" src="../../../assets/images/back.svg">Back</button>
-    </div>
-    <div fxFlex="75%" fxLayoutAlign="center center" fxFlexFill class="grid-item">
-      <div fxLayout="row" *ngIf="stepCurrent === 1 && userIsExist">
-        <app-lets-start></app-lets-start>
-      </div>
-      <div *ngIf="stepCurrent === 2">
-        Master2
-      </div>
-      <div *ngIf="stepCurrent === 3">
-        Master3
-      </div>
-      <div *ngIf="stepCurrent === 4">
-        Master4
-      </div>
 
-    </div>
-    <div fxFlex fxLayoutAlign="center end" fxFlexFill class="grid-item nav-pb">
-      <button *ngIf="stepCurrent > 1 && stepCurrent < 4" class="next-btn" (click)="nextMenu()">
-        Next
-        <img class="img-icon" style="margin-left: 10px;margin-bottom:2px;" src="../../../assets/images/next.svg">
-      </button>
+  <div class="grid-item">
+    <div fxLayout="column">
+      <div fxLayout="row" fxLayout.lt-md="column" fxLayoutGap="10px" fxFlex>
+        <div fxFlex fxLayoutAlign="center end" fxFlexFill class="grid-item-layout p-2">
+          <button *ngIf="stepCurrent > 1 && stepCurrent <= 4 && buttonShow" class="back-btn"
+            (click)="previousMenu()"><img class="img-icon" style="margin-right: 10px;margin-bottom:2px;"
+              src="../../../assets/images/back.svg">Back</button>
+        </div>
+
+        <div fxFlex="75" fxFlex.lt-md="100" fxLayoutAlign="center center" fxFlexFill class="grid-item-layout">
+          <div fxFlexFill *ngIf="stepCurrent === 1">
+            <app-lets-start (outputFromChild)="receiveChildData($event)"></app-lets-start>
+          </div>
+          <div fxFlexFill *ngIf="stepCurrent === 2">
+            <div *ngIf="permissionTarget == 1" [ngStyle]="{ display: nextToKpiList ? 'none' : null }">
+              <app-kpi-by-product (outputFromChild)="receiveChildDataKpiByProduct($event)"></app-kpi-by-product>
+            </div>
+            <div *ngIf="permissionTarget == 1 && nextToKpiList">
+              <app-kpi></app-kpi>
+            </div>
+
+            <div *ngIf="permissionTarget == 2" [ngStyle]="{ display: nextToKpiTest ? 'none' : null }">
+              <app-create-kpi-name></app-create-kpi-name>
+            </div>
+            <div *ngIf="permissionTarget == 2 && nextToKpiTest">
+              <app-kpi-test></app-kpi-test>
+            </div>
+
+            <div *ngIf="permissionTarget == 3">
+              <app-test-project (outputFromChild)="receiveChildDataTestProduct($event)"
+                (outputFromChildDashboard)="receiveChildDataTestProduct($event)"></app-test-project>
+            </div>
+          </div>
+
+          <div fxFlexFill *ngIf="stepCurrent === 3">
+            <div *ngIf="permissionTarget == 1 || permissionTarget == 2">
+              <app-select-channel></app-select-channel>
+            </div>
+          </div>
+
+          <div fxFlexFill *ngIf="stepCurrent === 4">
+            <div *ngIf="permissionTarget == 1 || permissionTarget == 2">
+              <app-media-plan></app-media-plan>
+            </div>
+          </div>
+        </div>
+
+        <div fxFlex fxLayoutAlign="center end" fxFlexFill class="grid-item-layout p-2">
+          <button *ngIf="stepCurrent > 1 && stepCurrent <= 4 && buttonShow" class="next-btn" (click)="nextMenu()">
+            Next
+            <img class="img-icon" style="margin-left: 10px;margin-bottom:2px;" src="../../../assets/images/next.svg">
+          </button>
+        </div>
+      </div>
     </div>
   </div>
-</div>

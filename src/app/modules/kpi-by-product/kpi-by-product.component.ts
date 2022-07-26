@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import Prototype from '../../data/prototype-data.json';
 import { ThemePalette } from '@angular/material/core';
 import { NgxPopperjsTriggers, NgxPopperjsPlacements } from 'ngx-popperjs';
@@ -15,6 +15,8 @@ export interface Task {
   styleUrls: ['./kpi-by-product.component.scss'],
 })
 export class KpiByProductComponent implements OnInit {
+  @Output() outputFromChild = new EventEmitter<string>();
+
   triggers = NgxPopperjsTriggers;
   placements = NgxPopperjsPlacements;
   offsetModifiers = [
@@ -41,6 +43,10 @@ export class KpiByProductComponent implements OnInit {
     list.forEach((e: any, i: any) => {
       if (i !== index) e.isSelected = false;
     });
-    item.isSelected = !item.isSelected;
+    item.isSelected = true;
+
+    setTimeout(() => {
+      this.outputFromChild.emit('selected');
+    }, 500);
   }
 }

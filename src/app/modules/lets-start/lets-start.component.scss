@@ -24,12 +24,20 @@
   padding: 5px 15px;
 }
 
+.grid-card-selected:hover {
+  box-shadow: 0px 4px 6px rgba(2, 2, 2, 0.25) !important;
+}
+.grid-card:hover {
+  border: 1px solid #b3d235;
+  box-shadow: 0px 4px 6px rgba(179, 210, 53, 0.25);
+}
+
 .btn {
   -webkit-transition: 0.2s all;
   border-radius: 10px;
 }
 .btn:hover {
-  -webkit-filter: brightness(95%);
+  // -webkit-filter: brightness(95%);
 }
 
 .text-header {
@@ -78,6 +86,19 @@ input {
 }
 :host ::ng-deep.mat-checkbox-checked.mat-accent .mat-checkbox-background {
   border-radius: 50% !important;
+}
+
+.bg-target {
+  height: 40px;
+  background: #ffffff;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25) !important;
+  border-radius: 5px;
+}
+.bg-target:hover {
+  background: #ffffff;
+  border: 1px solid #b3d235;
+  box-shadow: 0px 4px 6px rgba(179, 210, 53, 0.25);
+  border-radius: 5px;
 }
 
 // .top-div-left {

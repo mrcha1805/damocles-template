@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import Prototype from '../../data/prototype-data.json';
 import { ThemePalette } from '@angular/material/core';
 import { NgxPopperjsTriggers, NgxPopperjsPlacements } from 'ngx-popperjs';
@@ -15,6 +15,9 @@ export interface Task {
   styleUrls: ['./test-project.component.scss'],
 })
 export class TestProjectComponent implements OnInit {
+  @Output() outputFromChild: EventEmitter<string> = new EventEmitter();
+  @Output() outputFromChildDashboard: EventEmitter<string> = new EventEmitter();
+
   triggers = NgxPopperjsTriggers;
   placements = NgxPopperjsPlacements;
   offsetModifiers = [
@@ -37,4 +40,12 @@ export class TestProjectComponent implements OnInit {
   constructor() {}
 
   ngOnInit(): void {}
+
+  sendDataToParent() {
+    this.outputFromChild.emit('previous');
+  }
+
+  onDashboard(e: any) {
+    this.outputFromChildDashboard.emit(e);
+  }
 }

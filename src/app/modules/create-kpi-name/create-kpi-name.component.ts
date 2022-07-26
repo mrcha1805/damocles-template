@@ -52,6 +52,6 @@ export class CreateKpiNameComponent implements OnInit {
     list.forEach((e: any, i: any) => {
       if (i !== index) e.isSelected = false;
     });
-    item.isSelected = !item.isSelected;
+    item.isSelected = true;
   }
 }

@@ -1,7 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import Prototype from '../../data/prototype-data.json';
 import { ThemePalette } from '@angular/material/core';
 import { NgxPopperjsTriggers, NgxPopperjsPlacements } from 'ngx-popperjs';
+import { ActivatedRoute } from '@angular/router';
 
 export interface Task {
   name: string;
@@ -16,6 +17,8 @@ export interface Task {
   styleUrls: ['./lets-start.component.scss'],
 })
 export class LetsStartComponent implements OnInit {
+  @Output() outputFromChild = new EventEmitter<string>();
+
   triggers = NgxPopperjsTriggers;
   placements = NgxPopperjsPlacements;
   offsetModifiers = [
@@ -35,9 +38,16 @@ export class LetsStartComponent implements OnInit {
   LetsStart: any[] = Prototype.LetsStart;
   myProjects: any[] = Prototype.MyProjects;
 
-  constructor() {}
+  token: any = null;
+  target: string = '';
 
-  ngOnInit(): void {}
+  constructor(public activatedRoute: ActivatedRoute) {}
+
+  ngOnInit(): void {
+    console.log('token : ', this.activatedRoute.snapshot.params.username);
+
+    this.token = this.activatedRoute.snapshot.params.username;
+  }
 
   toggle1(list: any, item: any, index: number) {
     list.forEach((e: any, i: any) => {
@@ -46,7 +56,8 @@ export class LetsStartComponent implements OnInit {
     this.myProjects.forEach((e: any) => {
       e.isSelected = false;
     });
-    item.isSelected = !item.isSelected;
+
+    item.isSelected = true;
   }
 
   toggle2(list: any, item: any, index: number) {
@@ -56,7 +67,7 @@ export class LetsStartComponent implements OnInit {
     this.LetsStart.forEach((e: any) => {
       e.isSelected = false;
     });
-    item.isSelected = !item.isSelected;
+    item.isSelected = true;
   }
 
   toggle3(itemList: any, target: any, item: any, index: number) {
@@ -65,5 +76,16 @@ export class LetsStartComponent implements OnInit {
     });
     item.isSelected = false;
     itemList.isSelected = false;
+  }
+
+  setTarget(permissionTarget: string) {
+    if (Number(permissionTarget) !== 1) {
+      this.target = permissionTarget;
+      console.log('target : ', this.target);
+
+      setTimeout(() => {
+        this.outputFromChild.emit(permissionTarget);
+      }, 500);
+    }
   }
 }

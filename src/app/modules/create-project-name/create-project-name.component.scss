@@ -25,6 +25,14 @@
   padding: 5px 15px;
 }
 
+.grid-card-selected:hover {
+  box-shadow: 0px 4px 6px rgba(2, 2, 2, 0.25) !important;
+}
+.grid-card:hover {
+  border: 1px solid #b3d235;
+  box-shadow: 0px 4px 6px rgba(179, 210, 53, 0.25);
+}
+
 .item {
   .btn:disabled {
     opacity: 1;
@@ -59,7 +67,7 @@
   border-radius: 10px;
 }
 .btn:hover {
-  -webkit-filter: brightness(95%);
+  // -webkit-filter: brightness(95%);
 }
 
 .text-header {

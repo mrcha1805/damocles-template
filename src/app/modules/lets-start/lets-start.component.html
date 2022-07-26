@@ -1,8 +1,8 @@
 <div class="grid-item m-2">
     <div fxLayout="column" class="container">
-        <div fxLayout="row" fxLayout.lt-md="column" fxLayoutGap="10px" fxFlex="50%">
+        <div fxLayout="row" fxLayout.lt-md="column" fxLayoutGap="10px" fxFlex="50">
             <div fxFlex fxHide.lt-md fxLayoutAlign="center center" fxFlexFill class="grid-item-layout"></div>
-            <div fxFlex="75%" fxLayoutAlign="center center" fxFlexFill class="grid-item-layout p-4">
+            <div fxFlex="85" fxLayoutAlign="center center" fxFlexFill class="grid-item-layout p-4">
                 <div fxFlexFill fxLayout="column" fxLayoutGap="20px">
                     <div fxLayout="row" fxLayoutAlign="center center" class="text-header text-center mb-4">Let’s Start
                     </div>
@@ -10,22 +10,23 @@
                         <div fxLayout="column" class="btn card grid-card m-2"
                             *ngFor="let item of LetsStart; let i = index"
                             [ngStyle]="{ border: item.isSelected ? '1px solid #020202' : null }"
-                            (click)="toggle1(LetsStart, item, i)">
+                            [ngClass]="{'grid-card-selected': item.isSelected }">
                             <div *ngIf="item.isSelected" fxLayout="column" fxFill fxLayoutAlign=" end">
                                 <img class="icon-check" src="../../../assets/icons/ic_checkbox.svg" width="32"
                                     height="32" />
                             </div>
 
-                            <div fxLayout="column" fxFlexFill fxLayoutAlign="space-between stretch" class="p-2">
+                            <div fxLayout="column" fxFlexFill fxLayoutAlign="space-between stretch" class="p-2"
+                                (click)="toggle1(LetsStart, item, i)" (click)="setTarget(item.targetValue)">
                                 <div fxFlex="15" fxFlexFill fxLayout.lt-sm="column" fxLayout.gt-xs="row"
                                     fxLayout.lt-md="row" flexLayoutAlign="center center">
                                     <div fxFlex fxLayout="row" fxLayoutAlign.lt-sm="start center"
-                                        fxLayoutAlign="center center" class="top-div-left p-3">
+                                        fxLayoutAlign="center center" class="top-div-left mr-3">
                                         <img src="{{ item.image }}" width="40" height="40"
                                             class="img-fluid rounded-start">
                                     </div>
-                                    <div fxFlexFill fxFlex="85" fxLayout="column" fxLayoutAlign="center start"
-                                        class="top-div-right p-3">
+                                    <div fxFlexFill fxFlex="85" fxFlex.lt-sm="100" fxLayout="column"
+                                        fxLayoutAlign="center start" class="top-div-right p-3 px-0">
                                         <div class="text-start text-topic p-1">
                                             {{ item.name }}
                                             &nbsp;
@@ -38,47 +39,103 @@
                                     </div>
                                 </div>
                             </div>
+
+                            <div fxLayout="column" fxFlexFill fxLayoutAlign="space-between stretch" class="p-2 pt-0"
+                                [ngStyle]="{ display: !item.isSelected ? 'none' : null }">
+                                <div fxFlex="15" fxFlexFill fxLayout.lt-sm="column" fxLayout.gt-xs="row"
+                                    fxLayout.lt-md="row" flexLayoutAlign="center center">
+                                    <div fxFlex fxLayout="row" fxLayoutAlign.lt-sm="start center"
+                                        fxLayoutAlign="center center" class="top-div-left mr-3"
+                                        (click)="toggle1(LetsStart, item, i)">
+                                    </div>
+                                    <div fxFlexFill fxFlex="85" fxFlex.lt-sm="100" fxFlex.lt-sm="100" fxLayout="column"
+                                        fxLayoutAlign="center start" class="top-div-right p-3 py-0 px-0">
+                                        <div fxLayout="column" fxFlexFill fxLayoutAlign="space-between stretch"
+                                            *ngIf="item.target.length > 0" class="p-1">
+                                            <div fxFlex fxLayout="row" flexLayoutAlign="center center"
+                                                class="p-1 text-start sub-text"
+                                                *ngFor="let sub of item.target; let s = index">
+                                                <div fxFlex fxLayout="row" fxLayoutAlign="start center"
+                                                    class="top-div-left">
+                                                    <!-- <span>
+                                                        <mat-checkbox [checked]="sub.isSelected"
+                                                            [(ngModel)]="sub.isSelected"
+                                                            (click)="toggle3(item, item.target, sub, s)">
+                                                            {{ sub.name }}
+                                                            &nbsp;
+                                                            <span [popper]="popperContent2"
+                                                                [popperTrigger]="triggers.hover"
+                                                                [popperModifiers]="offsetModifiers">
+                                                                <img src="../../../assets/icons/info.svg" width="20"
+                                                                    height="20" />
+                                                            </span>
+                                                        </mat-checkbox>
+                                                    </span> -->
+                                                    <div fxFlexFill fxLayoutAlign="start center"
+                                                        class="btn p-2 px-3 bg-target" (click)="setTarget('1.1')">
+                                                        {{ sub.name }}
+                                                        &nbsp;
+                                                        <span [popper]="popperContent2" [popperTrigger]="triggers.hover"
+                                                            [popperModifiers]="offsetModifiers">
+                                                            <img src="../../../assets/icons/info.svg" width="20"
+                                                                height="20" />
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                                <popper-content #popperContent2>
+                                                    <span>info</span><br />
+                                                </popper-content>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
                             <popper-content #popperContent>
                                 <span>info</span><br />
                             </popper-content>
                         </div>
                     </div>
-                    <div fxLayout="row" fxLayoutAlign="start center" class="text-my-project text-center px-2 mb-2"
-                        *ngIf="myProjects.length > 0">My Projects</div>
-                    <div fxLayout="column" fxLayoutAlign=" none" class="item">
-                        <div fxLayout="column" class="btn card grid-card m-2"
-                            *ngFor="let item of myProjects; let i = index"
-                            [ngStyle]="{ border: item.isSelected ? '1px solid #020202' : null }"
-                            (click)="toggle2(myProjects, item, i)">
-                            <div *ngIf="item.isSelected" fxLayout="column" fxFill fxLayoutAlign=" end">
-                                <img class="icon-check" src="../../../assets/icons/ic_checkbox.svg" width="32"
-                                    height="32" />
-                            </div>
-                            <div fxLayout="column" fxFlexFill fxLayoutAlign="space-between stretch" class="p-2">
-                                <div fxFlex="15" fxFlexFill fxLayout.lt-sm="column" fxLayout.gt-xs="row"
-                                    fxLayout.lt-md="row" flexLayoutAlign="center center">
-                                    <div fxFlex fxLayout="row" fxLayoutAlign.lt-sm="start center"
-                                        fxLayoutAlign="center center" class="top-div-left p-3">
-                                        <img src="{{ item.image }}" width="40" height="40"
-                                            class="img-fluid rounded-start">
-                                    </div>
-                                    <div fxFlexFill fxFlex="85" fxLayout="column" fxLayoutAlign="center start"
-                                        class="top-div-right p-3">
-                                        <div class="text-start text-topic p-1">
-                                            {{ item.name }}
-                                            &nbsp;
-                                            <span [popper]="popperContent2" [popperTrigger]="triggers.hover"
-                                                [popperModifiers]="offsetModifiers">
-                                                <img src="../../../assets/icons/info.svg" width="20" height="20" />
-                                            </span>
+                    <div [ngStyle]="{ display: token === undefined ? 'none' : null }">
+                        <div fxLayout="row" fxLayoutAlign="start center" class="text-my-project text-center px-2 mb-2"
+                            *ngIf="myProjects.length > 0">My Projects</div>
+                        <div fxLayout="column" fxLayoutAlign=" none" class="item">
+                            <div fxLayout="column" class="btn card grid-card m-2"
+                                *ngFor="let item of myProjects; let i = index"
+                                [ngStyle]="{ border: item.isSelected ? '1px solid #020202' : null }"
+                                [ngClass]="{'grid-card-selected': item.isSelected }"
+                                (click)="toggle2(myProjects, item, i)" (click)="setTarget(item.targetValue)">
+                                <div *ngIf="item.isSelected" fxLayout="column" fxFill fxLayoutAlign=" end">
+                                    <img class="icon-check" src="../../../assets/icons/ic_checkbox.svg" width="32"
+                                        height="32" />
+                                </div>
+                                <div fxLayout="column" fxFlexFill fxLayoutAlign="space-between stretch" class="p-2">
+                                    <div fxFlex="15" fxFlexFill fxLayout.lt-sm="column" fxLayout.gt-xs="row"
+                                        fxLayout.lt-md="row" flexLayoutAlign="center center">
+                                        <div fxFlex fxLayout="row" fxLayoutAlign.lt-sm="start center"
+                                            fxLayoutAlign="center center" class="top-div-left mr-3">
+                                            <img src="{{ item.image }}" width="40" height="40"
+                                                class="img-fluid rounded-start">
                                         </div>
-                                        <div class="text-start text-description p-1">{{ item.description }}</div>
+                                        <div fxFlexFill fxFlex="85" fxFlex.lt-sm="100" fxFlex.lt-sm="100"
+                                            fxLayout="column" fxLayoutAlign="center start"
+                                            class="top-div-right p-3 px-0">
+                                            <div class="text-start text-topic p-1">
+                                                {{ item.name }}
+                                                &nbsp;
+                                                <span [popper]="popperContent2" [popperTrigger]="triggers.hover"
+                                                    [popperModifiers]="offsetModifiers">
+                                                    <img src="../../../assets/icons/info.svg" width="20" height="20" />
+                                                </span>
+                                            </div>
+                                            <div class="text-start text-description p-1">{{ item.description }}</div>
+                                        </div>
                                     </div>
                                 </div>
+                                <popper-content #popperContent2>
+                                    <span>info</span><br />
+                                </popper-content>
                             </div>
-                            <popper-content #popperContent2>
-                                <span>info</span><br />
-                            </popper-content>
                         </div>
                     </div>
                 </div>

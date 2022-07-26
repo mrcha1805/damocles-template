@@ -40,14 +40,16 @@
           "isSelected": false
         }
       ],
-      "isSelected": false
+      "isSelected": false,
+      "targetValue": 1
     },
     {
       "image": "../../../assets/images/audience.png",
       "name": "Custom audience",
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer quis accumsan lorem.",
       "target": [],
-      "isSelected": false
+      "isSelected": false,
+      "targetValue": 2
     }
   ],
   "MyProjects": [
@@ -55,14 +57,16 @@
       "image": "../../../assets/images/project_default.svg",
       "name": "My insurance",
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer quis accumsan lorem.",
-      "isSelected": false
+      "isSelected": false,
+      "targetValue": 3
     },
     {
       "image": "../../../assets/images/project_default.svg",
       "name": "My banking",
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer quis accumsan lorem.",
       "target": [],
-      "isSelected": false
+      "isSelected": false,
+      "targetValue": 4
     }
   ],
   "TestProject": [
