@@ -8,7 +8,7 @@
 
         <div fxLayout="row" fxLayoutGap="2px" fxFlex="100%" class="block-1">
           <div fxFlex="15%" fxLayoutAlign="center center" fxFlexFill class="grid-item1">
-            <img src="../../../assets/images/project_default.svg" width="40" height="40" />
+            <img src="./assets/images/project_default.svg" width="40" height="40" />
           </div>
           <div fxFlex="55%" fxLayoutAlign="start center" fxFlexFill class="grid-item1 ">
             <div fxLayout="column" fxFlexFill>
@@ -16,7 +16,7 @@
                 <div fxLayoutAlign="start center" fxFlexFill class=" project-detail">
                   Test Project&nbsp;&nbsp;
                   <span [popper]="popperContent" [popperTrigger]="triggers.hover" [popperModifiers]="offsetModifiers">
-                    <img src="../../../assets/icons/info.svg" width="20" height="20" />
+                    <img src="./assets/icons/info.svg" width="20" height="20" />
                   </span>
                 </div>
               </div>
@@ -46,14 +46,14 @@
 
   <div fxLayout="row" fxFlex="90%" class="block-1">
     <div *ngIf="kpiValue == 1" fxLayoutAlign="center center" fxFlexFill class="chart-container p-2">
-      <!-- <img src="../../../assets/images/chart1.svg" class="img-position " /> -->
+      <!-- <img src="./assets/images/chart1.svg" class="img-position " /> -->
       <app-column-stacked-chart></app-column-stacked-chart>
     </div>
     <div *ngIf="kpiValue == 2" fxLayoutAlign="center center" fxFlexFill class="chart-container p-2">
-      <img src="../../../assets/images/chart2.svg" class="img-position " />
+      <img src="./assets/images/chart2.svg" class="img-position " />
     </div>
     <div *ngIf="kpiValue == 3" fxLayoutAlign="center center" fxFlexFill class="chart-container p-2">
-      <img src="../../../assets/images/chart3.svg" class="img-position " />
+      <img src="./assets/images/chart3.svg" class="img-position " />
     </div>
 
   </div>

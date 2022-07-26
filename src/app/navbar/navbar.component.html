@@ -1,30 +1,30 @@
 <div fxLayout.gt-xs="row" fxLayout.lt-md="column" fxLayoutAlign="space-between center" class="navbar">
-  <div class="grid-item"><img class="p-1 icon" src="../../../assets/images/Logo_Democles.png"></div>
+  <div class="grid-item"><img class="p-1 icon" src="./assets/images/Logo_Democles.png"></div>
   <div class="grid-item">
     <div fxLayout="row" fxLayoutAlign="center center" fxLayoutAlign.lt-md="start center">
       <div class="grid-item" fxLayout="row">
-        <div class="bd-highlight"><img class="img-nav" src="../../../assets/images/home2.svg"></div>
+        <div class="bd-highlight"><img class="img-nav" src="./assets/images/home2.svg"></div>
         <div class="p-1 menu-header nav" (click)="homeNav()">Home</div>
       </div>
       <div *ngIf='dashboardActive' class="grid-item" fxLayout="row">
-        <div class="bd-highlight"><img class="img-nav" src="../../../assets/images/dashboard3.svg"></div>
+        <div class="bd-highlight"><img class="img-nav" src="./assets/images/dashboard3.svg"></div>
         <div class="p-1 menu-header-active nav" (click)="dashboardNav()">Dashboard</div>
       </div>
       <div *ngIf='!dashboardActive' class="grid-item" fxLayout="row">
-        <div class="bd-highlight"><img class="img-nav" src="../../../assets/images/dashboard2.svg"></div>
+        <div class="bd-highlight"><img class="img-nav" src="./assets/images/dashboard2.svg"></div>
         <div class="p-1 menu-header nav" (click)="dashboardNav()">Dashboard</div>
       </div>
     </div>
   </div>
   <div class="grid-item">
     <div class="user-container">
-      <img class="notification" src="../../../assets/images/notification.svg">
+      <img class="notification" src="./assets/images/notification.svg">
       <div class="line"></div>
-      <img class="user-icon" src="../../../assets/images/default-profile.svg">
+      <img class="user-icon" src="./assets/images/default-profile.svg">
       <p class="username">
         {{name}}
       </p>
-      <img class="user-dropdown" src="../../../assets/images/arrow_down.svg">
+      <img class="user-dropdown" src="./assets/images/arrow_down.svg">
     </div>
   </div>
 </div>

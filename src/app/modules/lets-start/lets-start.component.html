@@ -12,8 +12,7 @@
                             [ngStyle]="{ border: item.isSelected ? '1px solid #020202' : null }"
                             [ngClass]="{'grid-card-selected': item.isSelected }">
                             <div *ngIf="item.isSelected" fxLayout="column" fxFill fxLayoutAlign=" end">
-                                <img class="icon-check" src="../../../assets/icons/ic_checkbox.svg" width="32"
-                                    height="32" />
+                                <img class="icon-check" src="./assets/icons/ic_checkbox.svg" width="32" height="32" />
                             </div>
 
                             <div fxLayout="column" fxFlexFill fxLayoutAlign="space-between stretch" class="p-2"
@@ -32,7 +31,7 @@
                                             &nbsp;
                                             <span [popper]="popperContent" [popperTrigger]="triggers.hover"
                                                 [popperModifiers]="offsetModifiers">
-                                                <img src="../../../assets/icons/info.svg" width="20" height="20" />
+                                                <img src="./assets/icons/info.svg" width="20" height="20" />
                                             </span>
                                         </div>
                                         <div class="text-start text-description p-1">{{ item.description }}</div>
@@ -66,7 +65,7 @@
                                                             <span [popper]="popperContent2"
                                                                 [popperTrigger]="triggers.hover"
                                                                 [popperModifiers]="offsetModifiers">
-                                                                <img src="../../../assets/icons/info.svg" width="20"
+                                                                <img src="./assets/icons/info.svg" width="20"
                                                                     height="20" />
                                                             </span>
                                                         </mat-checkbox>
@@ -77,8 +76,7 @@
                                                         &nbsp;
                                                         <span [popper]="popperContent2" [popperTrigger]="triggers.hover"
                                                             [popperModifiers]="offsetModifiers">
-                                                            <img src="../../../assets/icons/info.svg" width="20"
-                                                                height="20" />
+                                                            <img src="./assets/icons/info.svg" width="20" height="20" />
                                                         </span>
                                                     </div>
                                                 </div>
@@ -106,7 +104,7 @@
                                 [ngClass]="{'grid-card-selected': item.isSelected }"
                                 (click)="toggle2(myProjects, item, i)" (click)="setTarget(item.targetValue)">
                                 <div *ngIf="item.isSelected" fxLayout="column" fxFill fxLayoutAlign=" end">
-                                    <img class="icon-check" src="../../../assets/icons/ic_checkbox.svg" width="32"
+                                    <img class="icon-check" src="./assets/icons/ic_checkbox.svg" width="32"
                                         height="32" />
                                 </div>
                                 <div fxLayout="column" fxFlexFill fxLayoutAlign="space-between stretch" class="p-2">
@@ -125,7 +123,7 @@
                                                 &nbsp;
                                                 <span [popper]="popperContent2" [popperTrigger]="triggers.hover"
                                                     [popperModifiers]="offsetModifiers">
-                                                    <img src="../../../assets/icons/info.svg" width="20" height="20" />
+                                                    <img src="./assets/icons/info.svg" width="20" height="20" />
                                                 </span>
                                             </div>
                                             <div class="text-start text-description p-1">{{ item.description }}</div>

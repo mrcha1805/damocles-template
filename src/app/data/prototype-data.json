@@ -1,25 +1,25 @@
 {
   "CreateProjectName": [
     {
-      "image": "../../../assets/images/project_default.svg",
+      "image": "./assets/images/project_default.svg",
       "name": "My insurance1",
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer quis accumsan lorem.",
       "status": "New request"
     },
     {
-      "image": "../../../assets/images/project_default.svg",
+      "image": "./assets/images/project_default.svg",
       "name": "My insurance2",
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer quis accumsan lorem.",
       "status": "Processing"
     },
     {
-      "image": "../../../assets/images/project_default.svg",
+      "image": "./assets/images/project_default.svg",
       "name": "My insurance3",
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer quis accumsan lorem.",
       "status": "KPI Ready to use!"
     },
     {
-      "image": "../../../assets/images/project_default.svg",
+      "image": "./assets/images/project_default.svg",
       "name": "My insurance4",
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer quis accumsan lorem.",
       "status": "Done"
@@ -27,7 +27,7 @@
   ],
   "LetsStart": [
     {
-      "image": "../../../assets/images/project_default.svg",
+      "image": "./assets/images/project_default.svg",
       "name": "Standard audience",
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer quis accumsan lorem.",
       "target": [
@@ -44,7 +44,7 @@
       "targetValue": 1
     },
     {
-      "image": "../../../assets/images/audience.png",
+      "image": "./assets/images/audience.png",
       "name": "Custom audience",
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer quis accumsan lorem.",
       "target": [],
@@ -54,14 +54,14 @@
   ],
   "MyProjects": [
     {
-      "image": "../../../assets/images/project_default.svg",
+      "image": "./assets/images/project_default.svg",
       "name": "My insurance",
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer quis accumsan lorem.",
       "isSelected": false,
       "targetValue": 3
     },
     {
-      "image": "../../../assets/images/project_default.svg",
+      "image": "./assets/images/project_default.svg",
       "name": "My banking",
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer quis accumsan lorem.",
       "target": [],
@@ -71,25 +71,25 @@
   ],
   "TestProject": [
     {
-      "image": "../../../assets/images/project_default.svg",
+      "image": "./assets/images/project_default.svg",
       "name": "Test KPI",
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer quis accumsan lorem.",
       "isSelected": false
     },
     {
-      "image": "../../../assets/images/project_default.svg",
+      "image": "./assets/images/project_default.svg",
       "name": "App e-Payment User",
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer quis accumsan lorem.",
       "isSelected": false
     },
     {
-      "image": "../../../assets/images/project_default.svg",
+      "image": "./assets/images/project_default.svg",
       "name": "First Job Search",
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer quis accumsan lorem.",
       "isSelected": false
     },
     {
-      "image": "../../../assets/images/project_default.svg",
+      "image": "./assets/images/project_default.svg",
       "name": "Support family",
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer quis accumsan lorem.",
       "isSelected": false
@@ -97,19 +97,19 @@
   ],
   "KpiByProduct": [
     {
-      "image": "../../../assets/images/project_default.svg",
+      "image": "./assets/images/project_default.svg",
       "name": "Loan",
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer quis accumsan lorem.",
       "isSelected": false
     },
     {
-      "image": "../../../assets/images/project_default.svg",
+      "image": "./assets/images/project_default.svg",
       "name": "Credit Card",
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer quis accumsan lorem.",
       "isSelected": false
     },
     {
-      "image": "../../../assets/images/project_default.svg",
+      "image": "./assets/images/project_default.svg",
       "name": "Finance",
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer quis accumsan lorem.",
       "isSelected": false
@@ -121,13 +121,13 @@
       "selected": false,
       "indeterminate": false,
       "dropdownShow": false,
-      "iconSrc": "../assets/images/up.png",
+      "iconSrc": "./assets/images/up.png",
       "data": [
         {
           "selected": false,
           "indeterminate": false,
           "dropdownShow": false,
-          "iconSrc": "../assets/images/up.png",
+          "iconSrc": "./assets/images/up.png",
           "label": "Affluence",
           "subLevel": [
             {
@@ -147,13 +147,13 @@
       "selected": false,
       "indeterminate": false,
       "dropdownShow": false,
-      "iconSrc": "../assets/images/up.png",
+      "iconSrc": "./assets/images/up.png",
       "data": [
         {
           "selected": false,
           "indeterminate": false,
           "dropdownShow": false,
-          "iconSrc": "../assets/images/up.png",
+          "iconSrc": "./assets/images/up.png",
           "label": "Automotive",
           "subLevel": [
             {
@@ -186,7 +186,7 @@
           "selected": false,
           "indeterminate": false,
           "dropdownShow": false,
-          "iconSrc": "../assets/images/up.png",
+          "iconSrc": "./assets/images/up.png",
           "label": "Books and Literature",
           "subLevel": [
             {
@@ -211,7 +211,7 @@
           "selected": false,
           "indeterminate": false,
           "dropdownShow": false,
-          "iconSrc": "../assets/images/up.png",
+          "iconSrc": "./assets/images/up.png",
           "label": "Business and Finance",
           "subLevel": [
             {
@@ -232,7 +232,7 @@
           "selected": false,
           "indeterminate": false,
           "dropdownShow": false,
-          "iconSrc": "../assets/images/up.png",
+          "iconSrc": "./assets/images/up.png",
           "label": "Entertainment",
           "subLevel": [
             {
@@ -257,7 +257,7 @@
           "selected": false,
           "indeterminate": false,
           "dropdownShow": false,
-          "iconSrc": "../assets/images/up.png",
+          "iconSrc": "./assets/images/up.png",
           "label": "Events and Attractions",
           "subLevel": [
             {
@@ -274,7 +274,7 @@
           "selected": false,
           "indeterminate": false,
           "dropdownShow": false,
-          "iconSrc": "../assets/images/up.png",
+          "iconSrc": "./assets/images/up.png",
           "label": "Food and Drink",
           "subLevel": [
             {
@@ -299,7 +299,7 @@
           "selected": false,
           "indeterminate": false,
           "dropdownShow": false,
-          "iconSrc": "../assets/images/up.png",
+          "iconSrc": "./assets/images/up.png",
           "label": "Healthy living",
           "subLevel": [
             {
@@ -320,7 +320,7 @@
           "selected": false,
           "indeterminate": false,
           "dropdownShow": false,
-          "iconSrc": "../assets/images/up.png",
+          "iconSrc": "./assets/images/up.png",
           "label": "Hobbies & Interests",
           "subLevel": [
             {
@@ -345,7 +345,7 @@
           "selected": false,
           "indeterminate": false,
           "dropdownShow": false,
-          "iconSrc": "../assets/images/up.png",
+          "iconSrc": "./assets/images/up.png",
           "label": "Real estate",
           "subLevel": [
             {
@@ -362,7 +362,7 @@
           "selected": false,
           "indeterminate": false,
           "dropdownShow": false,
-          "iconSrc": "../assets/images/up.png",
+          "iconSrc": "./assets/images/up.png",
           "label": "Shopping",
           "subLevel": [
             {
@@ -395,7 +395,7 @@
           "selected": false,
           "indeterminate": false,
           "dropdownShow": false,
-          "iconSrc": "../assets/images/up.png",
+          "iconSrc": "./assets/images/up.png",
           "label": "Sports",
           "subLevel": [
             {
@@ -416,7 +416,7 @@
           "selected": false,
           "indeterminate": false,
           "dropdownShow": false,
-          "iconSrc": "../assets/images/up.png",
+          "iconSrc": "./assets/images/up.png",
           "label": "Style & Fashion",
           "subLevel": [
             {
@@ -429,7 +429,7 @@
           "selected": false,
           "indeterminate": false,
           "dropdownShow": false,
-          "iconSrc": "../assets/images/up.png",
+          "iconSrc": "./assets/images/up.png",
           "label": "Travel",
           "subLevel": [
             {
@@ -529,13 +529,13 @@
       "selected": false,
       "indeterminate": false,
       "dropdownShow": false,
-      "iconSrc": "../assets/images/up.png",
+      "iconSrc": "./assets/images/up.png",
       "data": [
         {
           "selected": false,
           "indeterminate": false,
           "dropdownShow": false,
-          "iconSrc": "../assets/images/up.png",
+          "iconSrc": "./assets/images/up.png",
           "label": "Mock Up",
           "subLevel": [
             {
@@ -559,13 +559,13 @@
       "selected": false,
       "indeterminate": false,
       "dropdownShow": false,
-      "iconSrc": "../assets/images/up.png",
+      "iconSrc": "./assets/images/up.png",
       "data": [
         {
           "selected": false,
           "indeterminate": false,
           "dropdownShow": false,
-          "iconSrc": "../assets/images/up.png",
+          "iconSrc": "./assets/images/up.png",
           "label": "Mock Up",
           "subLevel": [
             {
@@ -589,13 +589,13 @@
       "selected": false,
       "indeterminate": false,
       "dropdownShow": false,
-      "iconSrc": "../assets/images/up.png",
+      "iconSrc": "./assets/images/up.png",
       "data": [
         {
           "selected": false,
           "indeterminate": false,
           "dropdownShow": false,
-          "iconSrc": "../assets/images/up.png",
+          "iconSrc": "./assets/images/up.png",
           "label": "Mock Up",
           "subLevel": [
             {
@@ -619,13 +619,13 @@
       "selected": false,
       "indeterminate": false,
       "dropdownShow": false,
-      "iconSrc": "../assets/images/up.png",
+      "iconSrc": "./assets/images/up.png",
       "data": [
         {
           "selected": false,
           "indeterminate": false,
           "dropdownShow": false,
-          "iconSrc": "../assets/images/up.png",
+          "iconSrc": "./assets/images/up.png",
           "label": "Mock Up",
           "subLevel": [
             {
@@ -649,13 +649,13 @@
       "selected": false,
       "indeterminate": false,
       "dropdownShow": false,
-      "iconSrc": "../assets/images/up.png",
+      "iconSrc": "./assets/images/up.png",
       "data": [
         {
           "selected": false,
           "indeterminate": false,
           "dropdownShow": false,
-          "iconSrc": "../assets/images/up.png",
+          "iconSrc": "./assets/images/up.png",
           "label": "Mock Up",
           "subLevel": [
             {
@@ -679,13 +679,13 @@
       "selected": false,
       "indeterminate": false,
       "dropdownShow": false,
-      "iconSrc": "../assets/images/up.png",
+      "iconSrc": "./assets/images/up.png",
       "data": [
         {
           "selected": false,
           "indeterminate": false,
           "dropdownShow": false,
-          "iconSrc": "../assets/images/up.png",
+          "iconSrc": "./assets/images/up.png",
           "label": "Mock Up",
           "subLevel": [
             {
@@ -709,13 +709,13 @@
       "selected": false,
       "indeterminate": false,
       "dropdownShow": false,
-      "iconSrc": "../assets/images/up.png",
+      "iconSrc": "./assets/images/up.png",
       "data": [
         {
           "selected": false,
           "indeterminate": false,
           "dropdownShow": false,
-          "iconSrc": "../assets/images/up.png",
+          "iconSrc": "./assets/images/up.png",
           "label": "Mock Up",
           "subLevel": [
             {
@@ -739,13 +739,13 @@
       "selected": false,
       "indeterminate": false,
       "dropdownShow": false,
-      "iconSrc": "../assets/images/up.png",
+      "iconSrc": "./assets/images/up.png",
       "data": [
         {
           "selected": false,
           "indeterminate": false,
           "dropdownShow": false,
-          "iconSrc": "../assets/images/up.png",
+          "iconSrc": "./assets/images/up.png",
           "label": "Mock Up",
           "subLevel": [
             {
@@ -769,13 +769,13 @@
       "selected": false,
       "indeterminate": false,
       "dropdownShow": false,
-      "iconSrc": "../assets/images/up.png",
+      "iconSrc": "./assets/images/up.png",
       "data": [
         {
           "selected": false,
           "indeterminate": false,
           "dropdownShow": false,
-          "iconSrc": "../assets/images/up.png",
+          "iconSrc": "./assets/images/up.png",
           "label": "Mock Up",
           "subLevel": [
             {
@@ -799,13 +799,13 @@
       "selected": false,
       "indeterminate": false,
       "dropdownShow": false,
-      "iconSrc": "../assets/images/up.png",
+      "iconSrc": "./assets/images/up.png",
       "data": [
         {
           "selected": false,
           "indeterminate": false,
           "dropdownShow": false,
-          "iconSrc": "../assets/images/up.png",
+          "iconSrc": "./assets/images/up.png",
           "label": "Mock Up",
           "subLevel": [
             {
@@ -829,13 +829,13 @@
       "selected": false,
       "indeterminate": false,
       "dropdownShow": false,
-      "iconSrc": "../assets/images/up.png",
+      "iconSrc": "./assets/images/up.png",
       "data": [
         {
           "selected": false,
           "indeterminate": false,
           "dropdownShow": false,
-          "iconSrc": "../assets/images/up.png",
+          "iconSrc": "./assets/images/up.png",
           "label": "Mock Up",
           "subLevel": [
             {
@@ -881,7 +881,7 @@
       "selected": false,
       "indeterminate": false,
       "dropdownShow": false,
-      "iconSrc": "../assets/images/up.png",
+      "iconSrc": "./assets/images/up.png",
       "slider": false,
       "value": 0,
       "min": 0,
@@ -904,7 +904,7 @@
       "selected": false,
       "indeterminate": false,
       "dropdownShow": false,
-      "iconSrc": "../assets/images/up.png",
+      "iconSrc": "./assets/images/up.png",
       "slider": false,
       "value": 0,
       "min": 0,
@@ -927,7 +927,7 @@
       "selected": false,
       "indeterminate": false,
       "dropdownShow": false,
-      "iconSrc": "../assets/images/up.png",
+      "iconSrc": "./assets/images/up.png",
       "slider": false,
       "value": 0,
       "min": 0,
@@ -950,7 +950,7 @@
       "selected": false,
       "indeterminate": false,
       "dropdownShow": false,
-      "iconSrc": "../assets/images/up.png",
+      "iconSrc": "./assets/images/up.png",
       "slider": true,
       "value": 0,
       "min": 0,
@@ -973,7 +973,7 @@
       "selected": false,
       "indeterminate": false,
       "dropdownShow": false,
-      "iconSrc": "../assets/images/up.png",
+      "iconSrc": "./assets/images/up.png",
       "slider": false,
       "value": 0,
       "min": 0,
@@ -996,7 +996,7 @@
       "selected": false,
       "indeterminate": false,
       "dropdownShow": false,
-      "iconSrc": "../assets/images/up.png",
+      "iconSrc": "./assets/images/up.png",
       "slider": false,
       "value": 0,
       "min": 0,
@@ -1019,7 +1019,7 @@
       "selected": false,
       "indeterminate": false,
       "dropdownShow": false,
-      "iconSrc": "../assets/images/up.png",
+      "iconSrc": "./assets/images/up.png",
       "slider": false,
       "value": 0,
       "min": 0,
@@ -1042,7 +1042,7 @@
       "selected": false,
       "indeterminate": false,
       "dropdownShow": false,
-      "iconSrc": "../assets/images/up.png",
+      "iconSrc": "./assets/images/up.png",
       "slider": false,
       "value": 0,
       "min": 0,
@@ -1065,7 +1065,7 @@
       "selected": false,
       "indeterminate": false,
       "dropdownShow": false,
-      "iconSrc": "../assets/images/up.png",
+      "iconSrc": "./assets/images/up.png",
       "slider": false,
       "value": 0,
       "min": 0,
@@ -1088,7 +1088,7 @@
       "selected": false,
       "indeterminate": false,
       "dropdownShow": false,
-      "iconSrc": "../assets/images/up.png",
+      "iconSrc": "./assets/images/up.png",
       "slider": false,
       "value": 0,
       "min": 0,
@@ -1111,7 +1111,7 @@
       "selected": false,
       "indeterminate": false,
       "dropdownShow": false,
-      "iconSrc": "../assets/images/up.png",
+      "iconSrc": "./assets/images/up.png",
       "slider": false,
       "value": 0,
       "min": 0,
@@ -1134,7 +1134,7 @@
       "selected": false,
       "indeterminate": false,
       "dropdownShow": false,
-      "iconSrc": "../assets/images/up.png",
+      "iconSrc": "./assets/images/up.png",
       "slider": false,
       "value": 0,
       "min": 0,
@@ -1157,7 +1157,7 @@
       "selected": false,
       "indeterminate": false,
       "dropdownShow": false,
-      "iconSrc": "../assets/images/up.png",
+      "iconSrc": "./assets/images/up.png",
       "slider": false,
       "value": 0,
       "min": 0,

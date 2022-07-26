@@ -10,7 +10,7 @@
                             &nbsp;
                             <span [popper]="popperContent" [popperTrigger]="triggers.hover"
                                 [popperModifiers]="offsetModifiers">
-                                <img src="../../../assets/icons/info.svg" width="20" height="20" />
+                                <img src="./assets/icons/info.svg" width="20" height="20" />
                             </span>
                         </div>
                         <popper-content #popperContent>
@@ -36,8 +36,7 @@
                                 Attribute
                             </div>
                             <div fxFlex.gt-sm="33%" fxFlex.lt-md="33%" fxLayoutAlign="end center">
-                                <img class="search-icon" src="../../../assets/icons/search.svg" width="15"
-                                    height="15" />
+                                <img class="search-icon" src="./assets/icons/search.svg" width="15" height="15" />
                                 <div fxFill class="input-group">
                                     <input type="text" class="form-control input-search" placeholder="Search"
                                         [(ngModel)]="search">

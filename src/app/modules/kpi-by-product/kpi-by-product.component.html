@@ -10,7 +10,7 @@
                             &nbsp;
                             <span [popper]="popperContent" [popperTrigger]="triggers.hover"
                                 [popperModifiers]="offsetModifiers">
-                                <img src="../../../assets/icons/info.svg" width="20" height="20" />
+                                <img src="./assets/icons/info.svg" width="20" height="20" />
                             </span>
                         </div>
                         <div fxFlex.gt-sm="30%" fxFlex.lt-md="50%" fxLayoutAlign="end center" class="text-title">
@@ -25,8 +25,7 @@
                             [ngStyle]="{ border: item.isSelected ? '1px solid #020202' : null }"
                             [ngClass]="{'grid-card-selected': item.isSelected }" (click)="toggle1(myKPI, item, i)">
                             <div *ngIf="item.isSelected" fxLayout="column" fxFill fxLayoutAlign=" end">
-                                <img class="icon-check" src="../../../assets/icons/ic_checkbox.svg" width="32"
-                                    height="32" />
+                                <img class="icon-check" src="./assets/icons/ic_checkbox.svg" width="32" height="32" />
                             </div>
                             <div fxLayout="column" fxFlexFill fxLayoutAlign="space-between stretch" class="p-2">
                                 <div fxFlex="15" fxFlexFill fxLayout.lt-sm="column" fxLayout.gt-xs="row"
@@ -43,7 +42,7 @@
                                             &nbsp;
                                             <span [popper]="popperContent2" [popperTrigger]="triggers.hover"
                                                 [popperModifiers]="offsetModifiers">
-                                                <img src="../../../assets/icons/info.svg" width="20" height="20" />
+                                                <img src="./assets/icons/info.svg" width="20" height="20" />
                                             </span>
                                         </div>
                                         <div class="text-start text-description p-1">{{ item.description }}</div>

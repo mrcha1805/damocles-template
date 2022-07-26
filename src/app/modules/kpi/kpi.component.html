@@ -8,7 +8,7 @@
                         &nbsp;
                         <span [popper]="popperContent" [popperTrigger]="triggers.hover"
                             [popperModifiers]="offsetModifiers">
-                            <img src="../../../assets/icons/info.svg" width="20" height="20" />
+                            <img src="./assets/icons/info.svg" width="20" height="20" />
                         </span>
                     </div>
                     <popper-content #popperContent>
@@ -16,7 +16,7 @@
                     </popper-content>
                     <div fxLayout="row" fxLayoutAlign="start center" class="font-title mb-2">Industry: Banking</div>
                     <div fxLayout="row" fxLayoutAlign="center center" class="font-title">
-                        <img class="search-icon" src="../../../assets/icons/search.svg" width="15" height="15" />
+                        <img class="search-icon" src="./assets/icons/search.svg" width="15" height="15" />
                         <div fxFill class="input-group mb-3">
                             <input type="text" class="form-control input-search" placeholder="Search"
                                 [(ngModel)]="search">
@@ -32,7 +32,7 @@
                                             &nbsp;
                                             <span [popper]="popperContent2" [popperTrigger]="triggers.hover"
                                                 [popperModifiers]="offsetModifiers">
-                                                <img src="../../../assets/icons/info.svg" width="15" height="15" />
+                                                <img src="./assets/icons/info.svg" width="15" height="15" />
                                             </span>
                                             <button class="btn" (click)="iconDropdownGroup(!item.dropdownShow, item)">
                                                 <img [src]="item.iconSrc" width="8" height="4.8" />
@@ -52,7 +52,7 @@
                                             &nbsp;
                                             <span [popper]="popperContent3" [popperTrigger]="triggers.hover"
                                                 [popperModifiers]="offsetModifiers">
-                                                <img src="../../../assets/icons/info.svg" width="15" height="15" />
+                                                <img src="./assets/icons/info.svg" width="15" height="15" />
                                             </span>
                                             <button class="btn"
                                                 (click)="iconDropdownSubGroup(!dataItem.dropdownShow, dataItem)">
@@ -70,8 +70,7 @@
                                                     &nbsp;
                                                     <span [popper]="popperContent4" [popperTrigger]="triggers.hover"
                                                         [popperModifiers]="offsetModifiers">
-                                                        <img src="../../../assets/icons/info.svg" width="15"
-                                                            height="15" />
+                                                        <img src="./assets/icons/info.svg" width="15" height="15" />
                                                     </span>
                                                     <popper-content #popperContent4>
                                                         <span>xxxxxxxxxxx</span><br />
@@ -95,7 +94,7 @@
                             Reachable Audience
                             <span [popper]="popperContent5" [popperTrigger]="triggers.hover"
                                 [popperModifiers]="offsetModifiers">
-                                <img src="../../../assets/icons/info-ligth.svg" width="15" height="15" />
+                                <img src="./assets/icons/info-ligth.svg" width="15" height="15" />
                             </span>
                         </div>
                         <popper-content #popperContent5>

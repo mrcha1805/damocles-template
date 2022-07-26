@@ -28,12 +28,12 @@ export class StepperComponent implements OnInit {
 
   stepDisplay(tab: number, current: number) {
     if (tab === 1 || (tab === 4 && current === 4)) {
-      return '../../../assets/images/step-active.svg';
+      return './assets/images/step-active.svg';
     }
     if (tab <= current) {
-      return '../../../assets/images/step-continue.svg';
+      return './assets/images/step-continue.svg';
     } else {
-      return '../../../assets/images/step.svg';
+      return './assets/images/step.svg';
     }
   }
 

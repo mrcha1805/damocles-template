@@ -4,8 +4,8 @@ import * as _ from 'lodash';
 @Pipe({ name: 'filterKpiDropdown' })
 export class FilterKpiDropDownPipe implements PipeTransform {
   transform(value: any, search: string): any {
-    var arrowDown = '../assets/images/down.png';
-    var arrowUp = '../assets/images/up.png';
+    var arrowDown = './assets/images/down.png';
+    var arrowUp = './assets/images/up.png';
 
     if (!value) return null;
     if (!search) {

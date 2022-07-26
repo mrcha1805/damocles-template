@@ -10,7 +10,7 @@ export class RegisterComponent implements OnInit {
 
   constructor(private router: Router) { }
   industrySelected= "";
-  dropdownIconSrc = "../../../assets/icons/arrow_Close_black.svg";
+  dropdownIconSrc = "./assets/icons/arrow_Close_black.svg";
   ngOnInit(): void {
     this.industrySelected = "Banking"
   }

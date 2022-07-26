@@ -3,7 +3,7 @@
         <div fxLayout="row" fxLayout.lt-md="column" fxLayoutGap="10px" fxFlex="50">
             <div fxFlex fxLayoutAlign="start center" fxFlexFill class="btn grid-item-layout py-4"
                 (click)="sendDataToParent()">
-                <img src="../../../assets/icons/previous.svg" width="20" height="30" />
+                <img src="./assets/icons/previous.svg" width="20" height="30" />
             </div>
             <div fxFlex="85" fxLayoutAlign="center center" fxFlexFill class="grid-item-layout p-4">
                 <div fxFlexFill fxLayout="column" fxLayoutGap="20px">
@@ -12,7 +12,7 @@
                     </div>
                     <div fxLayout.gt-sm="row" fxLayout.lt-md="column" class="p-2 mb-0">
                         <div fxFlex.gt-sm="60%" fxFlex.lt-md="60%" fxLayoutAlign="center center" class="p-2">
-                            <img class="search-icon" src="../../../assets/icons/search.svg" width="15" height="15" />
+                            <img class="search-icon" src="./assets/icons/search.svg" width="15" height="15" />
                             <div class="input-group">
                                 <input type="text" class="form-control input-search" placeholder="Search"
                                     [(ngModel)]="search">
@@ -21,7 +21,7 @@
                         <div fxFlex.gt-sm="40%" fxFlex.lt-md="40%" fxLayoutAlign="end center" class="p-2 px-3">
                             <div fxLayout="row" fxLayoutAlign="end center" class="input-group">
                                 <button type="button" class="btn btn-add">
-                                    <img src="../../../assets/icons/add.svg" width="15" height="15" />
+                                    <img src="./assets/icons/add.svg" width="15" height="15" />
                                     &nbsp;
                                     Add KPI
                                 </button>
@@ -49,7 +49,7 @@
                                                 &nbsp;
                                                 <span [popper]="popperContent" [popperTrigger]="triggers.hover"
                                                     [popperModifiers]="offsetModifiers">
-                                                    <img src="../../../assets/icons/info.svg" width="20" height="20" />
+                                                    <img src="./assets/icons/info.svg" width="20" height="20" />
                                                 </span>
                                             </div>
                                             <div class="text-start text-description p-1">{{ item.description }}</div>

@@ -27,7 +27,7 @@ export class DashboardComponent implements OnInit {
   ];
   kpiSelected= "";
   kpiValue: number = 0;
-  dropdownIconSrc ="../../../assets/icons/dropdown.svg";
+  dropdownIconSrc ="./assets/icons/dropdown.svg";
   project = [
     {
       name: 'Test KPI',

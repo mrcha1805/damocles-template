@@ -32,7 +32,7 @@ export class SelectChannelComponent implements AfterViewInit, OnInit {
       },
     },
   ];
-  dropdownIconSrc = '../assets/images/down.png';
+  dropdownIconSrc = './assets/images/down.png';
   openOption = true;
   selectItemAll = false;
   search = '';

@@ -65,7 +65,7 @@ export class KpiComponent implements OnInit {
       },
     },
   ];
-  dropdownIconSrc = '../assets/images/down.png';
+  dropdownIconSrc = './assets/images/down.png';
   openOption = true;
   selectItemAll = false;
   search = '';
@@ -242,9 +242,9 @@ export class KpiComponent implements OnInit {
       if (element.group === header.group) {
         element.dropdownShow = open;
         if (open) {
-          element.iconSrc = '../assets/images/down.png';
+          element.iconSrc = './assets/images/down.png';
         } else {
-          element.iconSrc = '../assets/images/up.png';
+          element.iconSrc = './assets/images/up.png';
         }
       }
     });
@@ -256,9 +256,9 @@ export class KpiComponent implements OnInit {
         if (data.label === header.label) {
           data.dropdownShow = open;
           if (open) {
-            data.iconSrc = '../assets/images/down.png';
+            data.iconSrc = './assets/images/down.png';
           } else {
-            data.iconSrc = '../assets/images/up.png';
+            data.iconSrc = './assets/images/up.png';
           }
         }
       });
