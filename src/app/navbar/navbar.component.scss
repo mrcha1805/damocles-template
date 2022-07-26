@@ -17,6 +17,9 @@
 .nav {
   cursor: pointer;
 }
+.nav:active {
+  color: red;
+}
 
 .navbar{
   
@@ -33,6 +36,10 @@
   .menu-header {
     margin-top: 5px;
     @include font-format(700, 15.71px, 26px, #FFFFFF);
+  }
+  .menu-header-active {
+    margin-top: 5px;
+    @include font-format(700, 15.71px, 26px, #B3D235);
   }
   .user-container {
     display: inline-flex;

@@ -6,7 +6,11 @@
         <div class="bd-highlight"><img class="img-nav" src="../../../assets/images/home2.svg"></div>
         <div class="p-1 menu-header nav" (click)="homeNav()">Home</div>
       </div>
-      <div class="grid-item" fxLayout="row">
+      <div *ngIf='dashboardActive' class="grid-item" fxLayout="row">
+        <div class="bd-highlight"><img class="img-nav" src="../../../assets/images/dashboard3.svg"></div>
+        <div class="p-1 menu-header-active nav" (click)="dashboardNav()">Dashboard</div>
+      </div>
+      <div *ngIf='!dashboardActive' class="grid-item" fxLayout="row">
         <div class="bd-highlight"><img class="img-nav" src="../../../assets/images/dashboard2.svg"></div>
         <div class="p-1 menu-header nav" (click)="dashboardNav()">Dashboard</div>
       </div>

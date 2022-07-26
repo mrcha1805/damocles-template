@@ -34,7 +34,7 @@ export class ColumnStackedChartComponent implements OnInit {
   constructor() { 
     this.chartOptions = {
       
-      // colors: ['#FFBD98', '#808080', '#A48EE2', '#E1F594', '#FFA36F', '#7F61D6', '#4E4E4E', '#D5F169'],
+      //colors: ['#FFBD98', '#808080', '#A48EE2', '#E1F594', '#FFA36F', '#7F61D6', '#4E4E4E', '#D5F169'],
       colors: ['#D5F169', '#4E4E4E', '#7F61D6', '#FFA36F', '#E1F594', '#A48EE2', '#808080', '#FFBD98'],
       series: [
         {
@@ -104,7 +104,7 @@ export class ColumnStackedChartComponent implements OnInit {
       },
       yaxis: {
         tickAmount: 4,
-        //  reversed: true,
+        //reversed: true,
       },
       xaxis: {
         type: "category",
