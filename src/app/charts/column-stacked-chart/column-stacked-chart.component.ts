@@ -9,7 +9,8 @@ import {
   ApexXAxis,
   ApexLegend,
   ApexFill,
-  ApexYAxis
+  ApexYAxis,
+  ApexTooltip
 } from "ng-apexcharts";
 
 export type ChartOptions = {
@@ -22,6 +23,7 @@ export type ChartOptions = {
   xaxis: ApexXAxis;
   legend: ApexLegend;
   fill: ApexFill;
+  tooltip: ApexTooltip;
 };
 @Component({
   selector: 'app-column-stacked-chart',
@@ -135,6 +137,11 @@ export class ColumnStackedChartComponent implements OnInit {
       fill: {
         colors: ['#D5F169', '#4E4E4E', '#7F61D6', '#FFA36F', '#E1F594', '#A48EE2', '#808080', '#FFBD98'],
         opacity: 1
+      },
+      tooltip: {
+        custom: function({series, seriesIndex, dataPointIndex, w}:any): any {
+          return '<div class="p-1">Age group: '+w.globals.labels[dataPointIndex]+ '</div><div class="p-1">Count: ' + series[seriesIndex][dataPointIndex]+' </div>' 
+        }
       }
     };
   }
