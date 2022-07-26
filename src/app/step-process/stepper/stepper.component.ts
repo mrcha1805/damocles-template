@@ -115,6 +115,7 @@ export class StepperComponent implements OnInit {
       this.stepCurrent = 1;
       this.stepToggleShow = true;
     }
+    this.goDashboard();
   }
 
   receiveChildDataDashboard(e: any) {
@@ -125,6 +126,7 @@ export class StepperComponent implements OnInit {
   }
 
   goDashboard() {
+    console.log('to dashboard');
     this.router.navigateByUrl('/dashboard');
   }
 }
