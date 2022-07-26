@@ -47,6 +47,7 @@ export class StepperComponent implements OnInit {
     } else {
       this.stepCurrent += 1;
       if (this.stepCurrent > 4) {
+        this.stepToggleShow = false;
         this.goDashboard();
       }
     }
@@ -108,25 +109,24 @@ export class StepperComponent implements OnInit {
     }
   }
 
-  receiveChildDataTestProduct(e: any) {
+  receiveChildDataTestProject(e: any) {
     console.log(e);
 
     if (e == 'previous') {
       this.stepCurrent = 1;
       this.stepToggleShow = true;
     }
-    this.goDashboard();
   }
 
   receiveChildDataDashboard(e: any) {
-    if (!e) {
-      console.log(e);
-      this.goDashboard();
-    }
+    console.log(e);
+
+    this.goDashboard();
   }
 
   goDashboard() {
-    console.log('to dashboard');
-    this.router.navigateByUrl('/dashboard');
+    setTimeout(() => {
+      this.router.navigateByUrl('/dashboard');
+    }, 500);
   }
 }
