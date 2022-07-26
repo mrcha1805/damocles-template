@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { NgxPopperjsPlacements, NgxPopperjsTriggers } from 'ngx-popperjs';
 
 @Component({
@@ -26,26 +26,38 @@ export class DashboardComponent implements OnInit {
     },
   ];
   kpiSelected= "";
+  kpiValue: number = 0;
   dropdownIconSrc ="../../../assets/icons/dropdown.svg";
   project = [
     {
       name: 'Test KPI',
-      value: 0
-    },
-    {
-      name: 'ChartB',
       value: 1
     },
     {
-      name: 'ChartC',
+      name: 'ChartB',
       value: 2
+    },
+    {
+      name: 'ChartC',
+      value: 3
     },
   ]
   dropdownShow = false;
-  selectChart!: number;
+  @ViewChild('kpis') kpis!: ElementRef;
   ngOnInit(): void {
-    this.selectChart = 3;
+   
     this.kpiSelected = this.project[0].name;
+    this.kpiValue = this.project[0].value;
+  }
+
+  openDropdown(open: boolean) {
+    console.log('dropdown')
+    this.dropdownShow = !this.dropdownShow;
+  }
+  selectItem(select: any) {
+    console.log(select)
+    this.kpiValue = select;
+    this.dropdownShow = !this.dropdownShow;
   }
 
 }
