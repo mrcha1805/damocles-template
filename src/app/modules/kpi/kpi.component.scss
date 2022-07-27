@@ -86,6 +86,17 @@ input {
   border-radius: 15px;
 }
 
+.btn:active {
+  color: transparent !important;
+  background-color: transparent;
+  border-color: transparent !important;
+}
+.btn:focus {
+  color: transparent !important;
+  background-color: transparent;
+  border-color: transparent !important;
+}
+
 // .grid-item {
 //   background-color: lightsalmon !important;
 // }
