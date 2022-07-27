@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
@@ -7,6 +7,8 @@ import { ActivatedRoute, Router } from '@angular/router';
   styleUrls: ['./stepper.component.scss'],
 })
 export class StepperComponent implements OnInit {
+  @Output() outputFromChildKpiList: any;
+
   stepCurrent!: number;
   userIsExist: boolean = false;
 
@@ -107,6 +109,12 @@ export class StepperComponent implements OnInit {
       this.nextToKpiList = true;
       this.buttonShow = true;
     }
+  }
+
+  receiveChildDataKpiName(e: any) {
+    console.log(e);
+    this.outputFromChildKpiList = e;
+    console.log(this.outputFromChildKpiList);
   }
 
   receiveChildDataTestProject(e: any) {

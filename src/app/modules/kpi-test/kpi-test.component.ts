@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewChild } from '@angular/core';
+import { Component, Input, OnInit, ViewChild } from '@angular/core';
 import Prototype from '../../data/prototype-data.json';
 import * as _ from 'lodash';
 import { ThemePalette } from '@angular/material/core';
@@ -46,7 +46,9 @@ export interface Task {
   styleUrls: ['./kpi-test.component.scss'],
 })
 export class KpiTestComponent implements OnInit {
+  @Input() kpiList: any;
   @ViewChild('chart') chart: ChartComponent | any;
+
   public chartOptions: Partial<ChartOptions> | any;
 
   triggers = NgxPopperjsTriggers;
@@ -167,8 +169,27 @@ export class KpiTestComponent implements OnInit {
   ngOnInit() {
     this.affinitySelected = '';
     this.selectItemAll = true;
-    this.dataMaster = Prototype.KpiTest;
 
+    if (this.kpiList === undefined) {
+      this.dataMaster = Prototype.KpiTest;
+    } else {
+      var dataMaster = this.kpiList.filter((item: any) => {
+        return item.selected == true;
+      });
+
+      dataMaster.forEach((item: any) => {
+        console.log(
+          this.dataMaster.push(
+            Prototype.KpiTestRef.find((data: any) => {
+              return item.group == data.group;
+            })
+          )
+        );
+      });
+      this.dataMaster = this.dataMaster;
+
+      console.log('dataMaster : ', this.dataMaster);
+    }
     this.summary = _.sum(this.chartOptions.series);
   }
 

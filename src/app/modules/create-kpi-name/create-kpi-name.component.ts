@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import Prototype from '../../data/prototype-data.json';
 import { ThemePalette } from '@angular/material/core';
 import { NgxPopperjsTriggers, NgxPopperjsPlacements } from 'ngx-popperjs';
@@ -16,6 +16,8 @@ export interface Task {
   styleUrls: ['./create-kpi-name.component.scss'],
 })
 export class CreateKpiNameComponent implements OnInit {
+  @Output() outputFromChild = new EventEmitter<any>();
+
   triggers = NgxPopperjsTriggers;
   placements = NgxPopperjsPlacements;
   offsetModifiers = [
@@ -34,24 +36,21 @@ export class CreateKpiNameComponent implements OnInit {
   ];
   name: any;
   search: any;
-  dataMaster = Prototype.Kpi;
+  dataMaster = Prototype.KpiTest;
   groupList: any[] = [];
 
   constructor() {}
 
-  ngOnInit(): void {
-    this.dataMaster.forEach((element) => {
-      this.groupList.push({
-        group: element.group,
-        selected: element.selected,
-      });
-    });
-  }
+  ngOnInit(): void {}
 
   toggle1(list: any, item: any, index: number) {
     list.forEach((e: any, i: any) => {
       if (i !== index) e.isSelected = false;
     });
     item.isSelected = true;
+  }
+
+  isSelect() {
+    this.outputFromChild.emit( this.dataMaster);
   }
 }

@@ -46,9 +46,9 @@
                     </div>
                     <div class="dropdown p-2">
                         <span class="dropdown-content">
-                            <div *ngFor="let item of groupList | filterAttribute : search : 'group'; let i = index;">
+                            <div *ngFor="let item of dataMaster | filterAttribute : search : 'group'; let i = index;">
                                 <mat-checkbox class="col-12 col-sm-6 col-md-4 col-lg-4" [(ngModel)]="item.selected"
-                                    style="float: left;">
+                                    (change)="isSelect()" style="float: left;">
                                     {{ item.group }}
                                 </mat-checkbox>
                             </div>

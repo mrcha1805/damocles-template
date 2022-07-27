@@ -29,7 +29,7 @@
                                     <div>
                                         <div>
                                             <mat-checkbox [checked]="item.selected" [indeterminate]="item.indeterminate"
-                                                (change)="setAllItem($event.checked, item)">
+                                                (change)="setAllItem($event.checked, item)" [(ngModel)]="item.selected">
                                                 {{ item.group }}
                                             </mat-checkbox>
                                             &nbsp;

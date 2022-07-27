@@ -1175,5 +1175,306 @@
         }
       ]
     }
+  ],
+  "KpiTestRef": [
+    {
+      "group": "Finance",
+      "selected": false,
+      "indeterminate": false,
+      "dropdownShow": false,
+      "iconSrc": "./assets/images/down.png",
+      "slider": false,
+      "value": 0,
+      "min": 0,
+      "max": 100,
+      "subLevel": [
+        {
+          "selected": false,
+          "indeterminate": false,
+          "label": "Job Type - Freelance"
+        },
+        {
+          "selected": false,
+          "indeterminate": false,
+          "label": "Job Type - Employee"
+        }
+      ]
+    },
+    {
+      "group": "Affinity",
+      "selected": false,
+      "indeterminate": false,
+      "dropdownShow": false,
+      "iconSrc": "./assets/images/down.png",
+      "slider": false,
+      "value": 0,
+      "min": 0,
+      "max": 100,
+      "subLevel": [
+        {
+          "selected": false,
+          "indeterminate": false,
+          "label": "Mock Up 1"
+        },
+        {
+          "selected": false,
+          "indeterminate": false,
+          "label": "Mock Up 2"
+        }
+      ]
+    },
+    {
+      "group": "Financial Behavior",
+      "selected": false,
+      "indeterminate": false,
+      "dropdownShow": false,
+      "iconSrc": "./assets/images/down.png",
+      "slider": false,
+      "value": 0,
+      "min": 0,
+      "max": 100,
+      "subLevel": [
+        {
+          "selected": false,
+          "indeterminate": false,
+          "label": "Mock Up 1"
+        },
+        {
+          "selected": false,
+          "indeterminate": false,
+          "label": "Mock Up 2"
+        }
+      ]
+    },
+    {
+      "group": "Personality Traits",
+      "selected": false,
+      "indeterminate": false,
+      "dropdownShow": false,
+      "iconSrc": "./assets/images/down.png",
+      "slider": true,
+      "value": 0,
+      "min": 0,
+      "max": 100,
+      "subLevel": [
+        {
+          "selected": false,
+          "indeterminate": false,
+          "label": "Mock Up 1"
+        },
+        {
+          "selected": false,
+          "indeterminate": false,
+          "label": "Mock Up 2"
+        }
+      ]
+    },
+    {
+      "group": "Product Demand",
+      "selected": false,
+      "indeterminate": false,
+      "dropdownShow": false,
+      "iconSrc": "./assets/images/down.png",
+      "slider": false,
+      "value": 0,
+      "min": 0,
+      "max": 100,
+      "subLevel": [
+        {
+          "selected": false,
+          "indeterminate": false,
+          "label": "Mock Up 1"
+        },
+        {
+          "selected": false,
+          "indeterminate": false,
+          "label": "Mock Up 2"
+        }
+      ]
+    },
+    {
+      "group": "Audience Presennce",
+      "selected": false,
+      "indeterminate": false,
+      "dropdownShow": false,
+      "iconSrc": "./assets/images/down.png",
+      "slider": false,
+      "value": 0,
+      "min": 0,
+      "max": 100,
+      "subLevel": [
+        {
+          "selected": false,
+          "indeterminate": false,
+          "label": "Mock Up 1"
+        },
+        {
+          "selected": false,
+          "indeterminate": false,
+          "label": "Mock Up 2"
+        }
+      ]
+    },
+    {
+      "group": "Digital Activity",
+      "selected": false,
+      "indeterminate": false,
+      "dropdownShow": false,
+      "iconSrc": "./assets/images/down.png",
+      "slider": false,
+      "value": 0,
+      "min": 0,
+      "max": 100,
+      "subLevel": [
+        {
+          "selected": false,
+          "indeterminate": false,
+          "label": "Mock Up 1"
+        },
+        {
+          "selected": false,
+          "indeterminate": false,
+          "label": "Mock Up 2"
+        }
+      ]
+    },
+    {
+      "group": "Life Event",
+      "selected": false,
+      "indeterminate": false,
+      "dropdownShow": false,
+      "iconSrc": "./assets/images/down.png",
+      "slider": false,
+      "value": 0,
+      "min": 0,
+      "max": 100,
+      "subLevel": [
+        {
+          "selected": false,
+          "indeterminate": false,
+          "label": "Mock Up 1"
+        },
+        {
+          "selected": false,
+          "indeterminate": false,
+          "label": "Mock Up 2"
+        }
+      ]
+    },
+    {
+      "group": "Life Stage",
+      "selected": false,
+      "indeterminate": false,
+      "dropdownShow": false,
+      "iconSrc": "./assets/images/down.png",
+      "slider": false,
+      "value": 0,
+      "min": 0,
+      "max": 100,
+      "subLevel": [
+        {
+          "selected": false,
+          "indeterminate": false,
+          "label": "Mock Up 1"
+        },
+        {
+          "selected": false,
+          "indeterminate": false,
+          "label": "Mock Up 2"
+        }
+      ]
+    },
+    {
+      "group": "Location",
+      "selected": false,
+      "indeterminate": false,
+      "dropdownShow": false,
+      "iconSrc": "./assets/images/down.png",
+      "slider": false,
+      "value": 0,
+      "min": 0,
+      "max": 100,
+      "subLevel": [
+        {
+          "selected": false,
+          "indeterminate": false,
+          "label": "Mock Up 1"
+        },
+        {
+          "selected": false,
+          "indeterminate": false,
+          "label": "Mock Up 2"
+        }
+      ]
+    },
+    {
+      "group": "Bank Engagement",
+      "selected": false,
+      "indeterminate": false,
+      "dropdownShow": false,
+      "iconSrc": "./assets/images/down.png",
+      "slider": false,
+      "value": 0,
+      "min": 0,
+      "max": 100,
+      "subLevel": [
+        {
+          "selected": false,
+          "indeterminate": false,
+          "label": "Mock Up 1"
+        },
+        {
+          "selected": false,
+          "indeterminate": false,
+          "label": "Mock Up 2"
+        }
+      ]
+    },
+    {
+      "group": "Demographics",
+      "selected": false,
+      "indeterminate": false,
+      "dropdownShow": false,
+      "iconSrc": "./assets/images/down.png",
+      "slider": false,
+      "value": 0,
+      "min": 0,
+      "max": 100,
+      "subLevel": [
+        {
+          "selected": false,
+          "indeterminate": false,
+          "label": "Mock Up 1"
+        },
+        {
+          "selected": false,
+          "indeterminate": false,
+          "label": "Mock Up 2"
+        }
+      ]
+    },
+    {
+      "group": "Operational Tasks",
+      "selected": false,
+      "indeterminate": false,
+      "dropdownShow": false,
+      "iconSrc": "./assets/images/down.png",
+      "slider": false,
+      "value": 0,
+      "min": 0,
+      "max": 100,
+      "subLevel": [
+        {
+          "selected": false,
+          "indeterminate": false,
+          "label": "Mock Up 1"
+        },
+        {
+          "selected": false,
+          "indeterminate": false,
+          "label": "Mock Up 2"
+        }
+      ]
+    }
   ]
 }

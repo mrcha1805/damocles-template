@@ -57,10 +57,10 @@
             </div>
 
             <div *ngIf="permissionTarget == 2" [ngStyle]="{ display: nextToKpiTest ? 'none' : null }">
-              <app-create-kpi-name></app-create-kpi-name>
+              <app-create-kpi-name (outputFromChild)="receiveChildDataKpiName($event)"></app-create-kpi-name>
             </div>
             <div *ngIf="permissionTarget == 2 && nextToKpiTest">
-              <app-kpi-test></app-kpi-test>
+              <app-kpi-test [kpiList]="outputFromChildKpiList"></app-kpi-test>
             </div>
 
             <div *ngIf="permissionTarget == 3">
