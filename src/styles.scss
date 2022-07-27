@@ -56,12 +56,12 @@
 ::-webkit-scrollbar-thumb:hover {
   background: #e5e5e5;
 }
-.btn-check:focus + .btn,
-.btn:focus {
-  box-shadow: none !important;
-}
-.btn-check:focus + .btn,
-.btn:focus {
+// .btn-check:focus + .btn,
+// .btn:focus {
+//   box-shadow: none !important;
+// }
+button:focus:not(:focus-visible) {
+  outline: none !important;
   box-shadow: none !important;
 }
 
