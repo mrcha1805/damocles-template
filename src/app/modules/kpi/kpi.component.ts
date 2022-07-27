@@ -242,9 +242,9 @@ export class KpiComponent implements OnInit {
       if (element.group === header.group) {
         element.dropdownShow = open;
         if (open) {
-          element.iconSrc = './assets/images/down.png';
-        } else {
           element.iconSrc = './assets/images/up.png';
+        } else {
+          element.iconSrc = './assets/images/down.png';
         }
       }
     });
@@ -256,9 +256,9 @@ export class KpiComponent implements OnInit {
         if (data.label === header.label) {
           data.dropdownShow = open;
           if (open) {
-            data.iconSrc = './assets/images/down.png';
-          } else {
             data.iconSrc = './assets/images/up.png';
+          } else {
+            data.iconSrc = './assets/images/down.png';
           }
         }
       });

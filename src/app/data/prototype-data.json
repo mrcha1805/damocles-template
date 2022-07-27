@@ -121,13 +121,13 @@
       "selected": false,
       "indeterminate": false,
       "dropdownShow": false,
-      "iconSrc": "./assets/images/up.png",
+      "iconSrc": "./assets/images/down.png",
       "data": [
         {
           "selected": false,
           "indeterminate": false,
           "dropdownShow": false,
-          "iconSrc": "./assets/images/up.png",
+          "iconSrc": "./assets/images/down.png",
           "label": "Affluence",
           "subLevel": [
             {
@@ -147,13 +147,13 @@
       "selected": false,
       "indeterminate": false,
       "dropdownShow": false,
-      "iconSrc": "./assets/images/up.png",
+      "iconSrc": "./assets/images/down.png",
       "data": [
         {
           "selected": false,
           "indeterminate": false,
           "dropdownShow": false,
-          "iconSrc": "./assets/images/up.png",
+          "iconSrc": "./assets/images/down.png",
           "label": "Automotive",
           "subLevel": [
             {
@@ -186,7 +186,7 @@
           "selected": false,
           "indeterminate": false,
           "dropdownShow": false,
-          "iconSrc": "./assets/images/up.png",
+          "iconSrc": "./assets/images/down.png",
           "label": "Books and Literature",
           "subLevel": [
             {
@@ -211,7 +211,7 @@
           "selected": false,
           "indeterminate": false,
           "dropdownShow": false,
-          "iconSrc": "./assets/images/up.png",
+          "iconSrc": "./assets/images/down.png",
           "label": "Business and Finance",
           "subLevel": [
             {
@@ -232,7 +232,7 @@
           "selected": false,
           "indeterminate": false,
           "dropdownShow": false,
-          "iconSrc": "./assets/images/up.png",
+          "iconSrc": "./assets/images/down.png",
           "label": "Entertainment",
           "subLevel": [
             {
@@ -257,7 +257,7 @@
           "selected": false,
           "indeterminate": false,
           "dropdownShow": false,
-          "iconSrc": "./assets/images/up.png",
+          "iconSrc": "./assets/images/down.png",
           "label": "Events and Attractions",
           "subLevel": [
             {
@@ -274,7 +274,7 @@
           "selected": false,
           "indeterminate": false,
           "dropdownShow": false,
-          "iconSrc": "./assets/images/up.png",
+          "iconSrc": "./assets/images/down.png",
           "label": "Food and Drink",
           "subLevel": [
             {
@@ -299,7 +299,7 @@
           "selected": false,
           "indeterminate": false,
           "dropdownShow": false,
-          "iconSrc": "./assets/images/up.png",
+          "iconSrc": "./assets/images/down.png",
           "label": "Healthy living",
           "subLevel": [
             {
@@ -320,7 +320,7 @@
           "selected": false,
           "indeterminate": false,
           "dropdownShow": false,
-          "iconSrc": "./assets/images/up.png",
+          "iconSrc": "./assets/images/down.png",
           "label": "Hobbies & Interests",
           "subLevel": [
             {
@@ -345,7 +345,7 @@
           "selected": false,
           "indeterminate": false,
           "dropdownShow": false,
-          "iconSrc": "./assets/images/up.png",
+          "iconSrc": "./assets/images/down.png",
           "label": "Real estate",
           "subLevel": [
             {
@@ -362,7 +362,7 @@
           "selected": false,
           "indeterminate": false,
           "dropdownShow": false,
-          "iconSrc": "./assets/images/up.png",
+          "iconSrc": "./assets/images/down.png",
           "label": "Shopping",
           "subLevel": [
             {
@@ -395,7 +395,7 @@
           "selected": false,
           "indeterminate": false,
           "dropdownShow": false,
-          "iconSrc": "./assets/images/up.png",
+          "iconSrc": "./assets/images/down.png",
           "label": "Sports",
           "subLevel": [
             {
@@ -416,7 +416,7 @@
           "selected": false,
           "indeterminate": false,
           "dropdownShow": false,
-          "iconSrc": "./assets/images/up.png",
+          "iconSrc": "./assets/images/down.png",
           "label": "Style & Fashion",
           "subLevel": [
             {
@@ -429,7 +429,7 @@
           "selected": false,
           "indeterminate": false,
           "dropdownShow": false,
-          "iconSrc": "./assets/images/up.png",
+          "iconSrc": "./assets/images/down.png",
           "label": "Travel",
           "subLevel": [
             {
@@ -529,13 +529,13 @@
       "selected": false,
       "indeterminate": false,
       "dropdownShow": false,
-      "iconSrc": "./assets/images/up.png",
+      "iconSrc": "./assets/images/down.png",
       "data": [
         {
           "selected": false,
           "indeterminate": false,
           "dropdownShow": false,
-          "iconSrc": "./assets/images/up.png",
+          "iconSrc": "./assets/images/down.png",
           "label": "Mock Up",
           "subLevel": [
             {
@@ -559,13 +559,13 @@
       "selected": false,
       "indeterminate": false,
       "dropdownShow": false,
-      "iconSrc": "./assets/images/up.png",
+      "iconSrc": "./assets/images/down.png",
       "data": [
         {
           "selected": false,
           "indeterminate": false,
           "dropdownShow": false,
-          "iconSrc": "./assets/images/up.png",
+          "iconSrc": "./assets/images/down.png",
           "label": "Mock Up",
           "subLevel": [
             {
@@ -589,13 +589,13 @@
       "selected": false,
       "indeterminate": false,
       "dropdownShow": false,
-      "iconSrc": "./assets/images/up.png",
+      "iconSrc": "./assets/images/down.png",
       "data": [
         {
           "selected": false,
           "indeterminate": false,
           "dropdownShow": false,
-          "iconSrc": "./assets/images/up.png",
+          "iconSrc": "./assets/images/down.png",
           "label": "Mock Up",
           "subLevel": [
             {
@@ -619,13 +619,13 @@
       "selected": false,
       "indeterminate": false,
       "dropdownShow": false,
-      "iconSrc": "./assets/images/up.png",
+      "iconSrc": "./assets/images/down.png",
       "data": [
         {
           "selected": false,
           "indeterminate": false,
           "dropdownShow": false,
-          "iconSrc": "./assets/images/up.png",
+          "iconSrc": "./assets/images/down.png",
           "label": "Mock Up",
           "subLevel": [
             {
@@ -649,13 +649,13 @@
       "selected": false,
       "indeterminate": false,
       "dropdownShow": false,
-      "iconSrc": "./assets/images/up.png",
+      "iconSrc": "./assets/images/down.png",
       "data": [
         {
           "selected": false,
           "indeterminate": false,
           "dropdownShow": false,
-          "iconSrc": "./assets/images/up.png",
+          "iconSrc": "./assets/images/down.png",
           "label": "Mock Up",
           "subLevel": [
             {
@@ -679,13 +679,13 @@
       "selected": false,
       "indeterminate": false,
       "dropdownShow": false,
-      "iconSrc": "./assets/images/up.png",
+      "iconSrc": "./assets/images/down.png",
       "data": [
         {
           "selected": false,
           "indeterminate": false,
           "dropdownShow": false,
-          "iconSrc": "./assets/images/up.png",
+          "iconSrc": "./assets/images/down.png",
           "label": "Mock Up",
           "subLevel": [
             {
@@ -709,13 +709,13 @@
       "selected": false,
       "indeterminate": false,
       "dropdownShow": false,
-      "iconSrc": "./assets/images/up.png",
+      "iconSrc": "./assets/images/down.png",
       "data": [
         {
           "selected": false,
           "indeterminate": false,
           "dropdownShow": false,
-          "iconSrc": "./assets/images/up.png",
+          "iconSrc": "./assets/images/down.png",
           "label": "Mock Up",
           "subLevel": [
             {
@@ -739,13 +739,13 @@
       "selected": false,
       "indeterminate": false,
       "dropdownShow": false,
-      "iconSrc": "./assets/images/up.png",
+      "iconSrc": "./assets/images/down.png",
       "data": [
         {
           "selected": false,
           "indeterminate": false,
           "dropdownShow": false,
-          "iconSrc": "./assets/images/up.png",
+          "iconSrc": "./assets/images/down.png",
           "label": "Mock Up",
           "subLevel": [
             {
@@ -769,13 +769,13 @@
       "selected": false,
       "indeterminate": false,
       "dropdownShow": false,
-      "iconSrc": "./assets/images/up.png",
+      "iconSrc": "./assets/images/down.png",
       "data": [
         {
           "selected": false,
           "indeterminate": false,
           "dropdownShow": false,
-          "iconSrc": "./assets/images/up.png",
+          "iconSrc": "./assets/images/down.png",
           "label": "Mock Up",
           "subLevel": [
             {
@@ -799,13 +799,13 @@
       "selected": false,
       "indeterminate": false,
       "dropdownShow": false,
-      "iconSrc": "./assets/images/up.png",
+      "iconSrc": "./assets/images/down.png",
       "data": [
         {
           "selected": false,
           "indeterminate": false,
           "dropdownShow": false,
-          "iconSrc": "./assets/images/up.png",
+          "iconSrc": "./assets/images/down.png",
           "label": "Mock Up",
           "subLevel": [
             {
@@ -829,13 +829,13 @@
       "selected": false,
       "indeterminate": false,
       "dropdownShow": false,
-      "iconSrc": "./assets/images/up.png",
+      "iconSrc": "./assets/images/down.png",
       "data": [
         {
           "selected": false,
           "indeterminate": false,
           "dropdownShow": false,
-          "iconSrc": "./assets/images/up.png",
+          "iconSrc": "./assets/images/down.png",
           "label": "Mock Up",
           "subLevel": [
             {
@@ -881,7 +881,7 @@
       "selected": false,
       "indeterminate": false,
       "dropdownShow": false,
-      "iconSrc": "./assets/images/up.png",
+      "iconSrc": "./assets/images/down.png",
       "slider": false,
       "value": 0,
       "min": 0,
@@ -904,7 +904,7 @@
       "selected": false,
       "indeterminate": false,
       "dropdownShow": false,
-      "iconSrc": "./assets/images/up.png",
+      "iconSrc": "./assets/images/down.png",
       "slider": false,
       "value": 0,
       "min": 0,
@@ -927,7 +927,7 @@
       "selected": false,
       "indeterminate": false,
       "dropdownShow": false,
-      "iconSrc": "./assets/images/up.png",
+      "iconSrc": "./assets/images/down.png",
       "slider": false,
       "value": 0,
       "min": 0,
@@ -950,7 +950,7 @@
       "selected": false,
       "indeterminate": false,
       "dropdownShow": false,
-      "iconSrc": "./assets/images/up.png",
+      "iconSrc": "./assets/images/down.png",
       "slider": true,
       "value": 0,
       "min": 0,
@@ -973,7 +973,7 @@
       "selected": false,
       "indeterminate": false,
       "dropdownShow": false,
-      "iconSrc": "./assets/images/up.png",
+      "iconSrc": "./assets/images/down.png",
       "slider": false,
       "value": 0,
       "min": 0,
@@ -996,7 +996,7 @@
       "selected": false,
       "indeterminate": false,
       "dropdownShow": false,
-      "iconSrc": "./assets/images/up.png",
+      "iconSrc": "./assets/images/down.png",
       "slider": false,
       "value": 0,
       "min": 0,
@@ -1019,7 +1019,7 @@
       "selected": false,
       "indeterminate": false,
       "dropdownShow": false,
-      "iconSrc": "./assets/images/up.png",
+      "iconSrc": "./assets/images/down.png",
       "slider": false,
       "value": 0,
       "min": 0,
@@ -1042,7 +1042,7 @@
       "selected": false,
       "indeterminate": false,
       "dropdownShow": false,
-      "iconSrc": "./assets/images/up.png",
+      "iconSrc": "./assets/images/down.png",
       "slider": false,
       "value": 0,
       "min": 0,
@@ -1065,7 +1065,7 @@
       "selected": false,
       "indeterminate": false,
       "dropdownShow": false,
-      "iconSrc": "./assets/images/up.png",
+      "iconSrc": "./assets/images/down.png",
       "slider": false,
       "value": 0,
       "min": 0,
@@ -1088,7 +1088,7 @@
       "selected": false,
       "indeterminate": false,
       "dropdownShow": false,
-      "iconSrc": "./assets/images/up.png",
+      "iconSrc": "./assets/images/down.png",
       "slider": false,
       "value": 0,
       "min": 0,
@@ -1111,7 +1111,7 @@
       "selected": false,
       "indeterminate": false,
       "dropdownShow": false,
-      "iconSrc": "./assets/images/up.png",
+      "iconSrc": "./assets/images/down.png",
       "slider": false,
       "value": 0,
       "min": 0,
@@ -1134,7 +1134,7 @@
       "selected": false,
       "indeterminate": false,
       "dropdownShow": false,
-      "iconSrc": "./assets/images/up.png",
+      "iconSrc": "./assets/images/down.png",
       "slider": false,
       "value": 0,
       "min": 0,
@@ -1157,7 +1157,7 @@
       "selected": false,
       "indeterminate": false,
       "dropdownShow": false,
-      "iconSrc": "./assets/images/up.png",
+      "iconSrc": "./assets/images/down.png",
       "slider": false,
       "value": 0,
       "min": 0,
