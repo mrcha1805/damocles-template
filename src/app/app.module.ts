@@ -45,6 +45,8 @@ import { MediaPlanComponent } from './modules/media-plan/media-plan.component';
 import { KpiTestComponent } from './modules/kpi-test/kpi-test.component';
 import { FilterAttributePipe } from 'src/pipes/search-attribute.pipe';
 import { FilterKpiTestDropDownPipe } from 'src/pipes/dropdownKpiTest.pipe';
+import { HomepageComponent } from './modules/homepage/homepage.component';
+import { ProjectListComponent } from './modules/project-list/project-list.component';
 
 export const TOOLTIP_DEFAULT_OPTIONS: NgxPopperjsOptions = {
   trigger: NgxPopperjsTriggers.hover,
@@ -80,6 +82,8 @@ export const TOOLTIP_DEFAULT_OPTIONS: NgxPopperjsOptions = {
     KpiTestComponent,
     FilterAttributePipe,
     FilterKpiTestDropDownPipe,
+    HomepageComponent,
+    ProjectListComponent,
   ],
   imports: [
     BrowserModule,
