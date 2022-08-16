@@ -1,0 +1,56 @@
+@mixin font-format($weight, $size, $height, $hexcolor) {
+  font-family: Noto Sans, sans-serif !important;
+  font-style: normal;
+  font-weight: $weight;
+  font-size: $size;
+  line-height: $height;
+  color: $hexcolor;
+  margin: 0;
+}
+
+.text-header {
+  @include font-format(700, 24px, 45px, #404040);
+}
+
+.text-title {
+  @include font-format(400, 14px, 45px, #404040);
+}
+
+.div-resize-handle {
+  border-top: 1.5px solid #e6e6e6;
+}
+.resize-handle {
+  width: 40px;
+  height: 2px;
+  background-color: #e6e6e6;
+  border-radius: 1px;
+  cursor: n-resize;
+}
+
+.wh {
+  height: 100% !important;
+  min-height: 100% !important;
+  min-width: 67% !important;
+  width: 0 !important;
+}
+
+// .grid-item {
+//   background-color: lightsalmon;
+//   border-radius: 5px;
+// }
+
+// .grid-item-layout {
+//   background-color: cadetblue;
+// }
+
+// .top-div-left {
+//   background-color: #ffbbf9;
+// }
+
+// .top-div-right {
+//   background-color: #e9e59b;
+// }
+
+// .bottom-div {
+//   background-color: #6acadd;
+// }

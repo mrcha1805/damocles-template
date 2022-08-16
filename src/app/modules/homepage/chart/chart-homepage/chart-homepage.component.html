@@ -1,0 +1,23 @@
+<div fxFlex fxLayout="column" class="grid-item" [ngStyle]="style" mwlResizable [validateResize]="validate"
+    [enableGhostResize]="true" (resizeEnd)="onResizeEnd($event)">
+    <div fxLayout="row" class="p-2">
+        <div fxFlex="8"></div>
+        <div fxFlex fxLayout="column">
+            <label class="text-header">Welcome to Damocles insight.</label>
+            <label class="text-title">Damocles insight services.</label>
+        </div>
+    </div>
+    <div fxFlex fxLayout="column" class="p-2">
+        <div fxFlex fxLayout="row" fxLayout.lt-md="column">
+            <div fxFlex fxFlexFill fxLayoutAlign="center center" class="grid-item-layout p-4">
+                <img fxFlexFill src="../../../../../assets/images/chart-homepage_chart.png" class="wh">
+            </div>
+            <div fxFlex fxFlexFill fxLayoutAlign="center start" class="grid-item-layout p-4">
+                <img src="../../../../../assets/icons/chart-homepage_list.svg">
+            </div>
+        </div>
+    </div>
+    <div fxLayout="column" fxLayoutAlign="end center" class="my-2 div-resize-handle">
+        <div class="resize-handle" mwlResizeHandle [resizeEdges]="{bottom : true}"></div>
+    </div>
+</div>

@@ -47,6 +47,8 @@ import { FilterAttributePipe } from 'src/pipes/search-attribute.pipe';
 import { FilterKpiTestDropDownPipe } from 'src/pipes/dropdownKpiTest.pipe';
 import { HomepageComponent } from './modules/homepage/homepage.component';
 import { ProjectListComponent } from './modules/project-list/project-list.component';
+import { ChartHomepageComponent } from './modules/homepage/chart/chart-homepage/chart-homepage.component';
+import { ResizableModule } from 'angular-resizable-element';
 
 export const TOOLTIP_DEFAULT_OPTIONS: NgxPopperjsOptions = {
   trigger: NgxPopperjsTriggers.hover,
@@ -84,6 +86,7 @@ export const TOOLTIP_DEFAULT_OPTIONS: NgxPopperjsOptions = {
     FilterKpiTestDropDownPipe,
     HomepageComponent,
     ProjectListComponent,
+    ChartHomepageComponent,
   ],
   imports: [
     BrowserModule,
@@ -100,6 +103,7 @@ export const TOOLTIP_DEFAULT_OPTIONS: NgxPopperjsOptions = {
     NgxPopperjsModule.forRoot(TOOLTIP_DEFAULT_OPTIONS),
     NgApexchartsModule,
     NgxSliderModule,
+    ResizableModule
   ],
   providers: [],
   bootstrap: [AppComponent],

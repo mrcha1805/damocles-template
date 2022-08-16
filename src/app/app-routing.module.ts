@@ -4,6 +4,7 @@ import { LoginComponent } from './login/login.component';
 import { DashboardComponent } from './modules/dashboard/dashboard.component';
 import { ExampleComponent } from './modules/example/example.component';
 import { HomeComponent } from './modules/home/home.component';
+import { HomepageComponent } from './modules/homepage/homepage.component';
 import { RegisterComponent } from './register/register/register.component';
 import { VerifyComponent } from './register/verify/verify.component';
 
@@ -35,7 +36,7 @@ const routes: Routes = [
   },
   {
     path: 'home',
-    component: HomeComponent,
+    component: HomepageComponent,
     data: { hideNavbar: true }
   },
 
