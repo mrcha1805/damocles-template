@@ -23,9 +23,9 @@
     </div>
   </div>
   <p class="header1 mt-2 p-2">Recent</p>
-  <table class="table p-2">
+  <table class="table p-2 table-responsive-sm">
     <tbody>
-      <tr *ngFor="let item of recent">
+      <tr *ngFor="let item of recent" style="cursor: pointer;">
 
         <td><img src="./assets/images/recent-icon.svg">
           <span class="header3 p-2">{{item.name}}</span>
