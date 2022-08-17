@@ -1,5 +1,5 @@
 <div fxFlex fxLayout="column" class="grid-item" [ngStyle]="style" mwlResizable [validateResize]="validate"
-    [enableGhostResize]="true" (resizeEnd)="onResizeEnd($event)">
+    [enableGhostResize]="true" (resizeEnd)="onResizeEnd($event)" #chart>
     <div fxLayout="row" class="p-2">
         <div fxFlex="8"></div>
         <div fxFlex fxLayout="column">
@@ -17,7 +17,9 @@
             </div>
         </div>
     </div>
-    <div fxLayout="column" fxLayoutAlign="end center" class="my-2 div-resize-handle">
-        <div class="resize-handle" mwlResizeHandle [resizeEdges]="{bottom : true}"></div>
+    <div class="m-auto">
+        <div class="resize-handle-border"></div>
+        <div class="resize-handle-icon" mwlResizeHandle [resizeEdges]="{ bottom: true }">
+        </div>
     </div>
 </div>
