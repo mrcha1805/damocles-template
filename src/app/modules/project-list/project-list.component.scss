@@ -1,0 +1,65 @@
+@mixin font-format($weight, $size, $height, $hexcolor) {
+  font-family: Noto Sans, sans-serif !important;
+  font-style: normal;
+  font-weight: $weight;
+  font-size: $size;
+  line-height: $height;
+  color: $hexcolor;
+  margin: 0;
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+.container {
+  padding: 15px;
+  .header1 {
+    @include font-format(700, 20px, 45px, #404040);
+  }
+  .header2 {
+    @include font-format(500, 16px, 45px, #B3D235);
+  }
+  .header3 {
+    @include font-format(400, 16px, 20px, #4E4E4E);
+  }
+}
+.pointer {
+  cursor: pointer;
+}
+.project-container {
+  padding: 10px;
+  display: flex;
+  position: relative;
+  overflow-y: auto;
+  //height: 30vh;
+}
+
+
+.grid-item {
+  //background-color: lightsalmon;
+  border-radius: 5px;
+  padding: 10px;
+  min-width: 300px;
+  height: 80px;
+  margin: 5px;
+  background: #FFFFFF;
+  border: 1px solid #E6E6E6;
+  border-radius: 10px;
+  position: relative;
+  .img-logo {
+    width: 30px;
+    height: 30px;
+    white-space: nowrap; 
+    //width: 50px; 
+    overflow: hidden;
+    justify-content: center;
+  }
+  .item-name {
+    position: absolute;
+    text-overflow: ellipsis;
+    @include font-format(700, 16px, 20px, #4E4E4E);
+  }
+}
+.col-position {
+  position: relative;
+}
