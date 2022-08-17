@@ -2,9 +2,11 @@ import { AfterViewInit, Component } from '@angular/core';
 import * as Highcharts from 'highcharts';
 import HighchartsMore from 'highcharts/highcharts-more';
 import HighchartsSolidGauge from 'highcharts/modules/solid-gauge';
+import HighchartsFunnel from 'highcharts/modules/funnel';
 
 HighchartsMore(Highcharts);
 HighchartsSolidGauge(Highcharts);
+HighchartsFunnel(Highcharts);
 
 @Component({
   selector: 'app-highcharts-template',
@@ -17,6 +19,7 @@ export class HighchartsTemplateComponent implements AfterViewInit {
     this.createChartPie();
     this.createChartColumn();
     this.createChartLine();
+    this.createChartFunnel();
   }
 
   private getRandomNumber(min: number, max: number): number {
@@ -276,5 +279,82 @@ export class HighchartsTemplateComponent implements AfterViewInit {
         true
       );
     }, 1500);
+  }
+
+  private createChartFunnel(): void {
+    var data = [
+      ['Total Customers', 2908380],
+      ['Digital Activity', 2840780],
+      ['Demographics', 2756345],
+      ['Financial', 2710000],
+      ['Financial Services Engagement', 2698456],
+      ['Personality Traits', 2623368],
+      ['Product Demand', 2598567],
+      ['Life', 2547896],
+      ['Location', 2495712],
+      ['Affinity', 2440780],
+    ];
+
+    var color: any = [];
+    var red: number = 191;
+    var blue: number = 190;
+    var green: number = 190;
+    for (var i = 0; i <= data.length; i++) {
+      i == 0
+        ? color.push(`rgba(${red}, ${blue}, ${green}, 1)`)
+        : color.push(
+            `rgba(${(red += 1)}, ${(blue += 5)}, ${(green -= 17)}, 1)`
+          );
+    }
+
+    const chart = Highcharts.chart('chart-funnel', {
+      accessibility: {
+        enabled: false,
+      },
+      chart: {
+        type: 'funnel',
+      },
+      colors: color,
+      credits: {
+        enabled: false,
+      },
+      title: {
+        text: 'Funnel',
+      },
+      plotOptions: {
+        series: {
+          dataLabels: {
+            enabled: false,
+            format: '<b>{point.name}</b> ({point.y:,.0f})',
+            color: Highcharts.theme || 'black',
+            softConnector: true,
+          },
+          center: ['50%', '50%'],
+          neckWidth: '30%',
+          neckHeight: 0,
+          width: '80%',
+          borderWidth: 5,
+          states: {
+            hover: {
+              brightness: 0.1,
+              enabled: true,
+            },
+          },
+        },
+      },
+      legend: {
+        enabled: false,
+      },
+      series: [
+        {
+          name: 'Count: ',
+          data: data,
+          enableMouseTracking: false,
+        },
+      ],
+      tooltip: {
+        enabled: false,
+      },
+    } as any);
   }
 }

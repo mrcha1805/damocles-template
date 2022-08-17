@@ -35,35 +35,36 @@
   bottom: 0;
   width: 40px;
   height: 2px;
-  margin-left: -1rem;
   background-color: #e6e6e6;
   border-radius: 1px;
   cursor: n-resize;
 }
 
-.wh {
-  height: 100% !important;
-  min-height: 100% !important;
-  min-width: 67% !important;
-  width: 0 !important;
+.relative {
+  position: relative;
 }
 
 // .grid-item {
 //   background-color: lightsalmon;
+//   border: 1px solid #000000;
 // }
 
 // .grid-item-layout {
 //   background-color: cadetblue;
+//   border: 1px solid #000000;
 // }
 
-// .top-div-left {
+// .div-left {
 //   background-color: #ffbbf9;
+//   border: 1px solid #000000;
 // }
 
-// .top-div-right {
+// .div-right {
 //   background-color: #e9e59b;
+//   border: 1px solid #000000;
 // }
 
-// .bottom-div {
-//   background-color: #6acadd;
+// .div-bottom {
+//   background-color: #4badf9;
+//   border: 1px solid #000000;
 // }

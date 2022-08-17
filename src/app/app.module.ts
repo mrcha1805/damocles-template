@@ -49,6 +49,8 @@ import { HomepageComponent } from './modules/homepage/homepage.component';
 import { ProjectListComponent } from './modules/project-list/project-list.component';
 import { ChartHomepageComponent } from './modules/homepage/chart/chart-homepage/chart-homepage.component';
 import { ResizableModule } from 'angular-resizable-element';
+import { ChartjsTemplateComponent } from './modules/example/charts-themplate/charts-js/chartjs-template/chartjs-template.component';
+import { ChartsModule, ThemeService } from 'ng2-charts';
 
 export const TOOLTIP_DEFAULT_OPTIONS: NgxPopperjsOptions = {
   trigger: NgxPopperjsTriggers.hover,
@@ -87,6 +89,7 @@ export const TOOLTIP_DEFAULT_OPTIONS: NgxPopperjsOptions = {
     HomepageComponent,
     ProjectListComponent,
     ChartHomepageComponent,
+    ChartjsTemplateComponent,
   ],
   imports: [
     BrowserModule,
@@ -103,9 +106,10 @@ export const TOOLTIP_DEFAULT_OPTIONS: NgxPopperjsOptions = {
     NgxPopperjsModule.forRoot(TOOLTIP_DEFAULT_OPTIONS),
     NgApexchartsModule,
     NgxSliderModule,
-    ResizableModule
+    ResizableModule,
+    ChartsModule,
   ],
-  providers: [],
+  providers: [ThemeService],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

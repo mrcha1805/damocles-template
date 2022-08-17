@@ -1,0 +1,18 @@
+<div fxLayout="row" fxFlexFill fxLayoutAlign="center center" class="container" style="background: aquamarine;">
+    <h4><b>Angular Charts JS</b></h4>
+</div>
+
+<!-- <div style="display: block;">
+    <canvas baseChart *ngIf="funnelChartData" [datasets]="funnelChartData" [labels]="funnelChartLabels"
+        [chartType]="funnelChartType" [options]="funnelChartOptions" [plugins]="funnelChartPlugins"
+        [legend]="funnelChartLegend" [colors]="funnelChartColors">
+    </canvas>
+</div> -->
+
+<div>
+    <div style="display: block">
+        <canvas baseChart [datasets]="barChartData" [labels]="barChartLabels" [options]="barChartOptions"
+            [legend]="barChartLegend" [chartType]="barChartType">
+        </canvas>
+    </div>
+</div>
