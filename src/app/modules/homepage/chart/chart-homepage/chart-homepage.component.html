@@ -1,31 +1,54 @@
 <div class="grid-item relative" [ngStyle]="style" mwlResizable [validateResize]="validate" [enableGhostResize]="true"
     (resizeEnd)="onResizeEnd($event)" #section>
-    <div fxLayout="column" class="container">
+    <div fxLayout="column">
         <div fxLayout="row" fxLayout.lt-md="column" #chart_header>
-            <div fxFlex fxHide.lt-md fxLayoutAlign="center center" fxFlexFill class="grid-item-layout"></div>
-            <div fxFlex="100" fxLayout="column" fxFlexFill class="grid-item-layout p-2">
+            <div fxFlex fxHide.lt-md fxFlexFill class="grid-item-layout"></div>
+            <div fxFlex="90" fxLayout="column" fxFlexFill class="grid-item-layout p-2">
                 <label class="text-header">Welcome to Damocles insight.</label>
                 <label class="text-title">Damocles insight services.</label>
             </div>
-            <div fxFlex fxHide.lt-md fxLayoutAlign="center center" fxFlexFill class="grid-item-layout"></div>
+            <div fxFlex fxHide.lt-md fxFlexFill class="grid-item-layout"></div>
         </div>
-        <div fxLayout="row" fxLayout.lt-md="column" #chart_funnel>
-            <div fxFlex fxHide.lt-md fxLayoutAlign="center center" fxFlexFill class="grid-item-layout"></div>
-            <div fxFlex="100" fxLayout="row" fxLayout.lt-md="column" fxFlexFill class="grid-item-layout p-2">
-                <div fxFlex="50" fxLayoutAlign="center center" fxFlexFill class="grid-item-layout">
-                    <div fxFlex id="chart-funnel"></div>
+        <div fxLayout="row" fxLayout.lt-md="column">
+            <div fxFlex fxHide.lt-md fxFlexFill class="grid-item-layout"></div>
+            <div fxFlex="90" fxLayout="row" fxLayout.lt-md="column" fxFlexFill class="grid-item-layout p-2">
+                <div fxLayout="column" fxFlex="50" fxLayoutAlign="center center" fxFlexFill class="grid-item-layout"
+                    #chart_funnel>
+                    <div id="chart-funnel"></div>
+                    <div fxFlexFill fxHide.gt-md class="m-auto div-bottom " fxLayoutAlign="center center">
+                        <div class="resize-handle-border-sm"></div>
+                        <div class="resize-handle-icon-sm" mwlResizeHandle [resizeEdges]="{ bottom: true }">
+                        </div>
+                    </div>
                 </div>
-                <div fxFlex="50" fxLayout.gt-sm="row" fxLayout.lt-md="column" fxLayoutAlign="center center" fxFlexFill
-                    class="grid-item-layout p-2">
-                    <img src="../../../../../assets/icons/chart-homepage_list.svg">
+                <div fxFlex="50" fxLayout="column" fxLayoutAlign="center center" fxFlexFill class="grid-item-layout p-2"
+                    #chart_funnel_list>
+                    <div fxLayout="row" fxFlexFill *ngFor="let item of integrateData; let i = index">
+                        <div fxFlex fxHide.lt-sm class="grid-item-layout"></div>
+                        <div fxFlex="70" fxFlex.lt-sm="100" fxLayout="row" [ngStyle]="getColor(i)">
+                            <div fxFlex="15" fxFlex.lt-sm="10" fxFlex.lt-md="10" fxLayoutAlign="start center"
+                                class="grid-item-layout p-1">
+                                <img src="../../../../../assets/icons/user_homepage.svg" width="32" height="32"
+                                    class="rounded-circle p-1" [ngStyle]="userBackgroundColor[i]">
+                            </div>
+                            <div fxFlex="45" fxFlex.lt-sm="50" fxFlex.lt-md="50" fxLayoutAlign="start center"
+                                class="grid-item-layout p-1 text-customer">{{
+                                item.customer }}
+                            </div>
+                            <div fxFlex="40" fxLayoutAlign="end center" class="grid-item-layout p-1 px-3 text-summary">
+                                {{
+                                item.summary.toLocaleString() }}
+                            </div>
+                        </div>
+                        <div fxFlex fxHide.lt-sm class="grid-item-layout"></div>
+                    </div>
                 </div>
             </div>
-            <div fxFlex fxHide.lt-md fxLayoutAlign="center center" fxFlexFill class="grid-item-layout"></div>
+            <div fxFlex fxHide.lt-md fxFlexFill class="grid-item-layout"></div>
+        </div>
+        <div fxFlexFill fxHide.lt-md class="m-auto div-bottom " fxLayoutAlign="center center">
+            <div class="resize-handle-border-md"></div>
+            <div class="resize-handle-icon-md" mwlResizeHandle [resizeEdges]="{ bottom: true }">
+            </div>
         </div>
     </div>
-    <div class="m-auto div-bottom " fxLayoutAlign="center center">
-        <div class="resize-handle-border"></div>
-        <div class="resize-handle-icon" mwlResizeHandle [resizeEdges]="{ bottom: true }">
-        </div>
-    </div>
-</div>

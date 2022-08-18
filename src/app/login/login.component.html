@@ -1,20 +1,20 @@
-<div fxLayout="row" fxLayoutAlign="center center" class="container">
+<div fxFlex fxLayout="row" fxLayoutAlign="center center" class="container mt-0 py-5 transform-center">
   <form>
-    <p fxLayout="row" fxLayoutAlign="center center " class="header">Login</p>
-    <p fxLayout="row" class="label-1">Login to continue to customer insight data.</p>
-    <div fxLayout="row" fxLayoutAlign="start center" class="form-label header-1 mt-2">Email</div>
-    <div fxLayout="row" fxLayoutAlign="center center">
-      <div fxFill class="input-group mb-3">
+    <p fxLayout="row" fxLayoutAlign="center center" class="header">Login</p>
+    <p fxLayout="row" class="label-1 my-4">Login to continue to customer insight data.</p>
+    <div fxLayout="row" fxLayoutAlign="start center" class="form-label header-1">Email</div>
+    <div fxLayout="row" fxLayoutAlign="center center" class="mb-3">
+      <div fxFill class="input-group">
         <input type="email" class="form-control input-layout label-2" id="emailInput" aria-describedby="emailHelp">
       </div>
     </div>
-    <div fxLayout="row" fxLayoutAlign="start center" class="form-label header-1 mt-2">Password</div>
-    <div fxLayout="row" fxLayoutAlign="center center">
-      <div fxFill class="input-group mb-3">
-
+    <div fxLayout="row" fxLayoutAlign="start center" class="form-label header-1">Password</div>
+    <div fxLayout="row" fxLayoutAlign="center center" class="mb-3">
+      <div fxFill class="input-group">
         <input type="password" class="form-control input-layout label-2" id="passwordInput">
       </div>
     </div>
+
     <!-- <div fxLayout="row" fxLayoutAlign="start center" class="mb-2">Email</div>
     <div fxLayout="row" fxLayoutAlign="center center" class="">
 
@@ -24,16 +24,19 @@
     </div> -->
 
     <div fxLayout="row" fxLayoutAlign="space-between center" class="row-contents">
-      <div>
-        <input id="rememberMe" type="checkbox"><span class="label-3 remember-checkbox">Remember me</span>
+      <div fxLayoutAlign="center center">
+        <label class="container-checkbox-custom label-3">
+          <span>Remember me</span> 
+          <input id="rememberMe" type="checkbox" checked="checked">
+          <span class="checkmark"></span>
+        </label>
       </div>
       <div>
         <p class="label-4">Forgot password</p>
       </div>
-
     </div>
     <div fxLayout="row" fxLayoutAlign="center center" class="row-submit">
-      <div class="mb-2">
+      <div class="mb-3">
         <button type="button" class="header-2 submit-btn" (click)="submit()">Login</button>
       </div>
     </div>
