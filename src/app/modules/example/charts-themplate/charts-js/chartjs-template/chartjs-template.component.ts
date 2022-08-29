@@ -10,94 +10,94 @@ import * as funnelChartPlugins from 'chartjs-plugin-funnel';
 })
 export class ChartjsTemplateComponent implements OnInit {
   constructor() {
-    // Chart.plugins.register(funnelChartPlugins);
-    // Chart.pluginService.register(funnelChartPlugins);
+    Chart.plugins.register(funnelChartPlugins);
+    Chart.pluginService.register(funnelChartPlugins);
   }
 
   ngOnInit(): void {}
 
-  // funnelChartOptions: funnelChartPlugins = {
-  //   sort: 'desc',
-  //   legend: {
-  //     display: false,
-  //     position: 'right',
-  //   },
-  //   gap: 5,
-  // };
+  funnelChartOptions: funnelChartPlugins = {
+    sort: 'desc',
+    legend: {
+      display: false,
+      position: 'right',
+    },
+    gap: 5,
+  };
 
-  // funnelChartLabels: Label[] = [
-  //   'Nitrogen',
-  //   'Oxygen',
-  //   'Argon',
-  //   'Carbon dioxide',
-  // ];
+  funnelChartLabels: Label[] = [
+    'Nitrogen',
+    'Oxygen',
+    'Argon',
+    'Carbon dioxide',
+  ];
 
-  // funnelChartData: ChartDataSets[] = [
-  //   {
-  //     data: [10, 20, 30, 40, 50, 60, 70, 80, 90, 100],
-  //     backgroundColor: [
-  //       'rgba(0,255,0,0.1)',
-  //       'rgba(0,255,0,0.2)',
-  //       'rgba(0,255,0,0.3)',
-  //       'rgba(0,255,0,0.4)',
-  //       'rgba(0,255,0,0.5)',
-  //       'rgba(0,255,0,0.6)',
-  //       'rgba(0,255,0,0.7)',
-  //       'rgba(0,255,0,0.8)',
-  //       'rgba(0,255,0,0.9)',
-  //       'rgba(0,255,0,1.0)',
-  //     ],
-  //     borderWidth: 10,
-  //     borderColor: [
-  //       '#000',
-  //       '#000',
-  //       '#000',
-  //       '#000',
-  //       '#000',
-  //       '#000',
-  //       '#000',
-  //       '#000',
-  //       '#000',
-  //       '#000',
-  //     ],
-  //   },
-  // ];
+  funnelChartData: ChartDataSets[] = [
+    {
+      data: [10, 20, 30, 40, 50, 60, 70, 80, 90, 100],
+      backgroundColor: [
+        'rgba(0,255,0,0.1)',
+        'rgba(0,255,0,0.2)',
+        'rgba(0,255,0,0.3)',
+        'rgba(0,255,0,0.4)',
+        'rgba(0,255,0,0.5)',
+        'rgba(0,255,0,0.6)',
+        'rgba(0,255,0,0.7)',
+        'rgba(0,255,0,0.8)',
+        'rgba(0,255,0,0.9)',
+        'rgba(0,255,0,1.0)',
+      ],
+      borderWidth: 10,
+      borderColor: [
+        '#000',
+        '#000',
+        '#000',
+        '#000',
+        '#000',
+        '#000',
+        '#000',
+        '#000',
+        '#000',
+        '#000',
+      ],
+    },
+  ];
 
-  // funnelChartType: funnelChartPlugins = 'funnel';
+  funnelChartType: funnelChartPlugins = 'funnel';
 
-  // funnelChartLegend: funnelChartPlugins = true;
+  funnelChartLegend: funnelChartPlugins = true;
 
-  // // funnelChartPlugins: any = [funnelChartPlugins];
+  funnelChartPlugins: any = [funnelChartPlugins];
 
-  // funnelChartColors: funnelChartPlugins = [
-  //   {
-  //     backgroundColor: [
-  //       'rgba(0,255,0,0.1)',
-  //       'rgba(0,255,0,0.2)',
-  //       'rgba(0,255,0,0.3)',
-  //       'rgba(0,255,0,0.4)',
-  //       'rgba(0,255,0,0.5)',
-  //       'rgba(0,255,0,0.6)',
-  //       'rgba(0,255,0,0.7)',
-  //       'rgba(0,255,0,0.8)',
-  //       'rgba(0,255,0,0.9)',
-  //       'rgba(0,255,0,1.0)',
-  //     ],
-  //     hoverBackgroundColor: [
-  //       '#fff',
-  //       '#fff',
-  //       '#fff',
-  //       '#fff',
-  //       '#fff',
-  //       '#fff',
-  //       '#fff',
-  //       '#fff',
-  //       '#fff',
-  //       '#fff',
-  //     ],
-  //     borderWidth: 1,
-  //   },
-  // ];
+  funnelChartColors: funnelChartPlugins = [
+    {
+      backgroundColor: [
+        'rgba(0,255,0,0.1)',
+        'rgba(0,255,0,0.2)',
+        'rgba(0,255,0,0.3)',
+        'rgba(0,255,0,0.4)',
+        'rgba(0,255,0,0.5)',
+        'rgba(0,255,0,0.6)',
+        'rgba(0,255,0,0.7)',
+        'rgba(0,255,0,0.8)',
+        'rgba(0,255,0,0.9)',
+        'rgba(0,255,0,1.0)',
+      ],
+      hoverBackgroundColor: [
+        '#fff',
+        '#fff',
+        '#fff',
+        '#fff',
+        '#fff',
+        '#fff',
+        '#fff',
+        '#fff',
+        '#fff',
+        '#fff',
+      ],
+      borderWidth: 1,
+    },
+  ];
 
   public barChartOptions = {
     scaleShowVerticalLines: false,
