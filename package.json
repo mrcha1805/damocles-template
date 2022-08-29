@@ -27,6 +27,7 @@
     "apexcharts": "^3.35.3",
     "bootstrap": "^5.2.0",
     "chart.js": "^2.9.4",
+    "chartjs-funnel": "^1.0.5",
     "chartjs-plugin-funnel": "^1.1.5",
     "core-js": "^2.6.12",
     "highcharts": "^10.2.0",
