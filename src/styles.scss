@@ -115,3 +115,6 @@ button:focus:not(:focus-visible) {
     @include font-format(400, 10px, 15px, #4e4e4e);
   }
 }
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
